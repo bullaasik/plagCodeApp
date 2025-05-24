@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка плагиата</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">Загрузите файлы для проверки</h1>
+        {% if error %}
+            <p class="text-red-500 mb-4 text-center">{{ error }}</p>
+        {% endif %}
+        <form action="{{ url_for('check_plagiarism') }}" method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="orig_file" class="block text-gray-700 font-bold mb-2">Оригинальный файл:</label>
+                <input type="file" name="orig_file" id="orig_file" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="plag_file" class="block text-gray-700 font-bold mb-2">Проверяемый файл:</label>
+                <input type="file" name="plag_file" id="plag_file" class="w-full p-2 border rounded" required>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition w-full">
+                Проверить
+            </button>
+        </form>
+        <a href="{{ url_for('index') }}" class="block text-center mt-4 text-blue-500 hover:underline">Назад</a>
+    </div>
+</body>
+</html>

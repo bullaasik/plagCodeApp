@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{times}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large Отчёт о проверке на плагиат}
+\end{center}
+
+\vspace{0.5cm}
+
+\section*{Общая информация}
+\begin{itemize}
+    \item Первый файл: {file1}
+    \item Второй файл: {file2}
+    \item Дата проверки: \today
+\end{itemize}
+
+\section*{Результаты анализа}
+\begin{itemize}
+    \item Результат: {prediction}
+    \item Вероятность плагиата: {probability}\%
+\end{itemize}
+
+\section*{Метрики сходства}
+\begin{itemize}
+    \item Levenshtein: {levenshtein}
+    \item Token-based: {token}
+    \item AST: {ast}
+    \item N-gram: {ngram}
+    \item AST Structure: {ast_structure}
+\end{itemize}
+
+\end{document}

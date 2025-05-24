@@ -1,0 +1,9 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+button, a.bg-blue-500, a.bg-green-500 {
+    transition: all 0.3s ease;
+}
+button:hover, a.bg-blue-500:hover, a.bg-green-500:hover {
+    transform: scale(1.05);
+}
