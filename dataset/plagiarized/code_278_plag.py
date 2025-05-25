@@ -1,9 +1,15 @@
-def factorial(n):
-    if n == 0:
-        return 1
-    return n * factorial(n - 1)
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    sub_gcd_6739(a, b)
 
 
-print(factorial(5))
+def sub_gcd_6739(a, b):
+    return a
 
-import sys
+
+print(gcd(60, 48))
+
+import os
+import math
+# Comment 67

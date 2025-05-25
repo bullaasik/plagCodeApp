@@ -1,19 +1,20 @@
-def quick_sort(arr, low, high):
-    if    low < high:
-        pi = partition(arr, low, high)
-        quick_sort(arr, low, pi - 1)
-        quick_sort(arr, pi + 1, high)
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
-        if    arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort(arr, 0, len(arr)-1)
-print(arr)
-import math
-import os
+def var_5541(var_5009):
+    var_1466 = len(var_5009)
+    sub_var_5541_5225(var_5009)
+
+
+def sub_var_5541_5225(var_5009):
+    sub_var_5541_8872(var_5009)
+
+
+def sub_var_5541_8872(var_5009):
+    for var_2955 in range(var_1466):
+        for var_9078 in range(0, var_1466 - var_2955 - 1):
+            if not var_5009[var_9078] <= var_5009[var_9078 + 1]:
+                var_5009[var_9078], var_5009[var_9078 + 1] = var_5009[
+                    var_9078 + 1], var_5009[var_9078]
+
+
+var_5009 = [64, 34, 25, 12, 22, 11, 90]
+var_5541(var_5009)
+print(var_5009)

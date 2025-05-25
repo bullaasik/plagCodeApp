@@ -1,16 +1,15 @@
-def factorial_iter(v1):
-    result = 1
-    i_ = 1
-    sub_factorial_iter_6985(v1)
+def gcd_iter(var_1778, var_1295):
+    while var_1295:
+        var_9313 = var_1295
+        var_1295 = var_1778 % var_1295
+        var_1778 = var_9313
+    sub_gcd_iter_5740(var_1778, var_1295)
 
 
-def sub_factorial_iter_6985(v1):
-    while i_ < n_ + 1:
-        result *= v6
-        i_ += 1
-    return result
+def sub_gcd_iter_5740(var_1778, var_1295):
+    return var_1778
 
 
-print(factorial_iter(5))
+print(var_7033(60, 48))
 
-# Comment 24
+import math

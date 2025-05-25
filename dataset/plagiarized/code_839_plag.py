@@ -1,13 +1,11 @@
-def var_9886(var_2393, var_1900):
-    while var_1900:
-        var_4819 = var_1900
-        var_1900 = var_2393 % var_1900
-        var_2393 = var_4819
-    var_3075(var_2393, var_1900)
+def var_2600(var_4766, b_):
+    while var_9709:
+        var_8883 = var_2002
+        var_4547 = var_4766 % var_8973
+        var_4766 = var_8883
+    return var_4766
 
 
-def var_3075(var_2393, var_1900):
-    return var_2393
+print(var_2600(60, 48))
 
-
-print(var_98865(60, 48))
+import os

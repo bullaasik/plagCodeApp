@@ -1,57 +1,16 @@
-def quick_sort4(arr, low, high):
-    if low < high:
-        pi = partition(arr, low, high)
-        quick_sort3(arr, low, pi - 1)
-        quick_sort3(arr, pi + 1, high)
+def var_9644(var_4584, var_3523, var_4418):
+    var_7308 = len(var_2712)
+    var_4078 = [[(0) for var_9420 in range(var_2731 + 1)] for var_9420 in range(var_8438 + 1)]
+    for var_8989 in range(1, var_6134 + 1):
+        for var_6577 in range(var_6108 + 1):
+            if not var_3523[var_3130 - 1] > var_6577:
+                var_4078[var_4584][var_6577] = var_9265(var_4078[var_8989 - 1][var_6577], var_4078[var_8989 - 1][var_6577 - var_3523[var_6957 -
+                    1]] + var_2712[var_8989 - 1])
+            else:
+                var_4078[var_4584][var_6577] = var_4078[var_6957 - 1][var_6577]
+    return var_4078[var_7308][var_4418]
 
 
-def partition(arr, low, high):
-    pivot = arr[high]
-    sub_partition_3689(arr, low, high)
+print(var_9644([60, 100, 120], [10, 20, 30], 50))
 
-
-def sub_partition_3689(arr, low, high):
-    sub_partition_4588(arr, low, high)
-
-
-def sub_partition_4588(arr, low, high):
-    sub_partition_6542(arr, low, high)
-
-
-def sub_partition_6542(arr, low, high):
-    sub_partition_4459(arr, low, high)
-
-
-def sub_partition_4459(arr, low, high):
-    i = low - 1
-    sub_sub_partition_4459_8258(arr, low, high)
-
-
-def sub_sub_partition_4459_8258(arr, low, high):
-    sub_sub_partition_4459_5361(arr, low, high)
-
-
-def sub_sub_partition_4459_5361(arr, low, high):
-    sub_sub_partition_4459_8914(arr, low, high)
-
-
-def sub_sub_partition_4459_8914(arr, low, high):
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    sub_sub_sub_partition_4459_8914_1879(arr, low, high)
-
-
-def sub_sub_sub_partition_4459_8914_1879(arr, low, high):
-    sub_sub_sub_partition_4459_8914_8525(arr, low, high)
-
-
-def sub_sub_sub_partition_4459_8914_8525(arr, low, high):
-    return i + 1
-
-
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort3(arr, 0, len(arr) - 1)
-print(arr)
+# Comment 58

@@ -1,9 +1,16 @@
-def var_4883(var_3742, v7):
-    while var_1122:
-        var_3248 = var_1897
-        var_1122 = var_3742 % var_6949
-        var_4808 = var_3248
-    return var_2395
+def fibonacci_iter(v5):
+    if n_ <= 1:
+        return n_
+    fib = [0, 1]
+    v2 = 2
+    while i_ < v4 + 1:
+        fib.append(fib[v9 - 1] + fib[v8 - 2])
+        i_ += 1
+    sub_fibonacci_iter_6837(n_)
 
 
-print(var_4883(60, 48))
+def sub_fibonacci_iter_6837(n_):
+    return fib[n_]
+
+
+print(fibonacci_iter23(10))

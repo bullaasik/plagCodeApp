@@ -1,17 +1,15 @@
-def var_2386(var_6184):
-    if not var_6804 > 1:
-        return var_5257
-    var_6543 = [0, 1]
-    var_1522(var_6184)
+def factorial_iter(var_7338):
+    var_2770 = 1
+    for var_8804 in range(1, var_7338 + 1):
+        var_2770 *= var_8804
+    var_8162(var_7338)
 
 
-def var_1522(v9):
-    for var_8892 in range(2, var_5257 + 1):
-        var_6543.append(var_6543[var_9165 - 1] + var_6543[var_3303 - 2])
-    return var_6543[var_6184]
+def var_8162(var_7338):
+    return var_2770
 
 
-print(var_2386(10))
-import math
+print(var_6130(5))
 import sys
 import os
+import sys

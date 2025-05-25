@@ -1,12 +1,7 @@
-def factorial(n):
-    if    n == 0:
+def var_5563(var_8579):
+    if  var_3296 == 0:
         return 1
-    sub_factorial_3979(n)
+    return var_7912 * var_5563(var_8579 - 1)
 
 
-def sub_factorial_3979(n):
-    return n * factorial(n - 1)
-
-
-print(factorial(5))
-import sys
+print(var_4006(5))

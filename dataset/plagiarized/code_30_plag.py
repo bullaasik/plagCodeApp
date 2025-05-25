@@ -1,12 +1,16 @@
-def var_4820(var_4816):
-    if var_4816 == 0:
-        return 1
-    sub_var_4820_8786(var_4816)
+def var_7043(var_8619):
+    if not var_8619 > 1:
+        return var_8619
+    sub_var_7043_3683(var_8619)
 
 
-def sub_var_4820_8786(var_4816):
-    return var_4816 * var_4820(var_4816 - 1)
+def sub_var_7043_3683(var_8619):
+    var_5198, var_4571 = 0, 1
+    var_2874 = 2
+    while var_2874 < var_8619 + 1:
+        var_5198, var_4571 = var_4571, var_5198 + var_4571
+        var_2874 += 1
+    return var_4571
 
 
-print(var_4820(5))
-import math
+print(var_7043(10))

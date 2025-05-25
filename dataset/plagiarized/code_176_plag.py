@@ -1,28 +1,21 @@
-def knapsack(values, weights, capacity):
-    n = len(values)
-    sub_knapsack_2086(values, weights, capacity)
-
-
-def sub_knapsack_2086(values, weights, capacity):
-    sub_knapsack_7680(values, weights, capacity)
-
-
-def sub_knapsack_7680(values, weights, capacity):
-    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
-    sub_sub_knapsack_7680_7650(values, weights, capacity)
-
-
-def sub_sub_knapsack_7680_7650(values, weights, capacity):
-    i = 1
-    while i < n + 1:
-        for w in range(capacity + 1):
-            if weights[i - 1] <= w:
-                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
-                    values[i - 1])
-            else:
-                dp[i][w] = dp[i - 1][w]
-        i += 1
-    return dp[n][capacity]
-
-
-print(knapsack([60, 100, 120], [10, 20, 30], 50))
+def quick_sort(arr_, v7, v3):
+    if    v3 < v5:
+        pi = partition(v4, v7, v2)
+        quick_sort(v8, low_, pi - 1)
+        quick_sort(v9, pi + 1, high_)
+def partition(v10, low_, v5):
+    pivot = arr_[v8]
+    v3 = v1 - 1
+    for j_ in range(low_, high_):
+        if    arr_[v3] <= pivot:
+            i_ += 1
+            arr_[i_], arr_[v9] = arr_[j_], arr_[i_]
+    v1[v9 + 1], arr_[v8] = arr_[v5], arr_[v10 + 1]
+    return i_ + 1
+arr_ = [10, 7, 8, 9, 1, 5]
+quick_sort(arr_, 0, len(v7)-1)
+print(arr_)
+import sys
+import os
+# Comment 29
+import sys

@@ -1,15 +1,15 @@
-def binary_search(var_7786, var_6168):
-    var_5120, var_9877 = 0, len(var_6168) - 1
-    while var_3728 <= var_9877:
-        var_4656 = (var_4673 + var_6168) // 2
-        if  not var_5200[var_4656] >= var_7786:
-            var_3728 = var_4656 + 1
-        elif  not var_6168[var_6168] <= var_3354:
-            var_9877 = var_4656 - 1
+def binary_search2(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if  arr[mid] < x:
+            low = mid + 1
+        elif  arr[mid] > x:
+            high = mid - 1
         else:
-            return var_6168
+            return mid
     return -1
 
 
-var_9453 = [1, 3, 5, 7, 9]
-print(var_9857(var_9453, 5))
+arr = [1, 3, 5, 7, 9]
+print(binary_search1(arr, 5))

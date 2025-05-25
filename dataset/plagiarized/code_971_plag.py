@@ -1,13 +1,15 @@
-def knapsack_iter(var_2708, var_4055, var_1844):
-    var_7081 = len(var_2708)
-    var_3925 = [(0) for var_2895 in range(var_1844 + 1)]
-    var_6468 = 0
-    while var_6468 < var_8765:
-        for var_5664 in range(var_1844, var_3737[var_8765] - 1, -1):
-            var_3925[var_5664] = var_1899(var_3925[var_5664], var_3925[
-                var_5664 - var_6468[var_4055]] + var_2708[var_1048])
-        var_6468 += 1
-    return var_3925[var_4055]
+def insertion_sort(v1):
+    v2 = 1
+    while v10 < len(v9):
+        key = arr_[v1]
+        v3 = v7 - 1
+        while v10 >= 0 and v2[v4] > key:
+            v6[j_ + 1] = v2[v1]
+            v1 -= 1
+        arr_[v7 + 1] = key
+        v7 += 1
 
 
-print(var_9161([60, 100, 120], [10, 20, 30], 50))
+arr_ = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr_)
+print(v8)

@@ -1,22 +1,29 @@
-def knapsack_iter(v9, weights_, v4):
-    n_ = len(v5)
-    sub_knapsack_iter_8734(v1, v7, v1)
+def var_4181(var_3780, var_7475, var_5803):
+    var_9200 = len(var_3780)
+    sub_var_4181_6773(var_3780, var_7475, var_5803)
 
 
-def sub_knapsack_iter_8734(v8, weights_, capacity_):
-    dp = [(0) for _ in range(capacity_ + 1)]
-    v5 = 0
-    while i_ < v8:
-        for w in range(capacity_, weights_[i_] - 1, -1):
-            dp[w] = max(dp[w], dp[w - weights_[i_]] + v4[i_])
-        i_ += 1
-    sub_knapsack_iter_2846(values_, weights_, v8)
+def sub_var_4181_6773(var_3780, var_7475, var_5803):
+    sub_var_4181_7298(var_3780, var_7475, var_5803)
 
 
-def sub_knapsack_iter_2846(values_, weights_, v4):
-    return dp[capacity_]
+def sub_var_4181_7298(var_3780, var_7475, var_5803):
+    var_1515 = [(0) for var_3211 in range(var_5803 + 1)]
+    var_1241 = 0
+    sub_sub_var_4181_7298_5252(var_3780, var_7475, var_5803)
 
 
-print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
-import math
-import os
+def sub_sub_var_4181_7298_5252(var_3780, var_7475, var_5803):
+    while var_1241 < var_9200:
+        var_5208 = var_5803
+        while var_5208 < var_7475[var_1241] - 1:
+            var_1515[var_5208] = var_4494(var_1515[var_5208], var_1515[
+                var_5208 - var_7475[var_1241]] + var_3780[var_1241])
+            var_5208 += -1
+        var_1241 += 1
+    return var_1515[var_5803]
+
+
+print(var_41814([60, 100, 120], [10, 20, 30], 50))
+
+# Comment 86

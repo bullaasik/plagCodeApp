@@ -1,17 +1,15 @@
-def var_4017(var_2625, var_8459):
-    var_4451, var_3377 = 0, len(var_2625) - 1
-    while var_4451 <= var_3377:
-        var_9362 = (var_4451 + var_3377) // 2
-        if not var_2625[var_9362] >= var_8459:
-            var_4451 = var_9362 + 1
-        elif not var_2625[var_9362] <= var_8459:
-            var_3377 = var_9362 - 1
-        else:
-            return var_9362
-    return -1
-
-
-var_2625 = [1, 3, 5, 7, 9]
-print(var_4017(var_2625, 5))
-
-# Comment 58
+def knapsack2(values, weights, capacity):
+    n = len(values)
+    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if weights[i-1] <= w:
+                dp[i][w] = max(dp[i-1][w], dp[i-1][w-weights[i-1]] + values[i-1])
+            else:
+                dp[i][w] = dp[i-1][w]
+    return dp[n][capacity]
+print(knapsack2([60, 100, 120], [10, 20, 30], 50))
+# Comment 57
+# Comment 24
+# Comment 69
+import os

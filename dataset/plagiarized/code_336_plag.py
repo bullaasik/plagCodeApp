@@ -1,27 +1,16 @@
-def quick_sort(arr, low, high):
-    if low < high:
-        pi = partition(arr, low, high)
-        quick_sort(arr, low, pi - 1)
-        quick_sort(arr, pi + 1, high)
+def knapsack2(v9, v4, capacity_):
+    v10 = len(values_)
+    dp = [[(0) for _ in range(capacity_ + 1)] for _ in range(v8 + 1)]
+    v7 = 1
+    while v10 < v9 + 1:
+        for w in range(capacity_ + 1):
+            if weights_[i_ - 1] <= w:
+                dp[i_][w] = max(dp[v2 - 1][w], dp[v4 - 1][w - v4[i_ - 1]] +
+                    values_[v4 - 1])
+            else:
+                dp[v7][w] = dp[v10 - 1][w]
+        v2 += 1
+    return dp[n_][capacity_]
 
 
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    sub_partition_9643(arr, low, high)
-
-
-def sub_partition_9643(arr, low, high):
-    return i + 1
-
-
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort(arr, 0, len(arr) - 1)
-print(arr)
-import math
-import sys
+print(knapsack1([60, 100, 120], [10, 20, 30], 50))

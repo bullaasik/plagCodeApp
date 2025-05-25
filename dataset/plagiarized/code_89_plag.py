@@ -1,13 +1,12 @@
-def bubble_sort2(v9):
-    v9 = len(arr_)
-    for v1 in range(v9):
-        for v7 in range(0, v5 - i_ - 1):
-            if arr_[v7] > v8[v10 + 1]:
-                arr_[v3], v7[v2 + 1] = arr_[j_ + 1], arr_[v5]
+def fibonacci4(n_):
+    if v2 <= 1:
+        return n_
+    a_, b_ = 0, 1
+    _ = 2
+    while _ < n_ + 1:
+        v8, b_ = v5, a_ + v1
+        _ += 1
+    return v10
 
 
-v8 = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort4(v9)
-print(v5)
-
-import os
+print(fibonacci35(10))

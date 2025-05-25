@@ -1,19 +1,12 @@
-def binary_search3(var_1028, var_2584):
-    var_4013, var_2123 = 0, len(var_1028) - 1
-    while var_4013 <= var_2123:
-        var_9232 = (var_4013 + var_2123) // 2
-        if not var_1028[var_9232] >= var_2584:
-            var_4013 = var_9232 + 1
-        elif not var_1028[var_9232] <= var_2584:
-            var_2123 = var_9232 - 1
-        else:
-            return var_9232
-    return -1
+def var_5264(var_4015):
+    var_4849 = len(var_4015)
+    for var_9957 in range(var_4849):
+        for var_8194 in range(0, var_4849 - var_9957 - 1):
+            if not var_4015[var_8194] <= var_4015[var_8194 + 1]:
+                var_4015[var_8194], var_4015[var_8194 + 1] = var_4015[
+                    var_8194 + 1], var_4015[var_8194]
 
 
-var_1028 = [1, 3, 5, 7, 9]
-print(var_6350(var_1028, 5))
-
-# Comment 8
-import os
-import math
+var_4015 = [64, 34, 25, 12, 22, 11, 90]
+var_5264(var_4015)
+print(var_4015)

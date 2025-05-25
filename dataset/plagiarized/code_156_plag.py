@@ -1,20 +1,14 @@
-def quick_sort3(arr, low, high):
-    if low < high:
-        pi = partition(arr, low, high)
-        quick_sort3(arr, low, pi - 1)
-        quick_sort3(arr, pi + 1, high)
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort4(arr, 0, len(arr)-1)
-print(arr)
+def knapsack3(values, weights, capacity):
+    n = len(values)
+    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if weights[i-1] <= w:
+                dp[i][w] = max(dp[i-1][w], dp[i-1][w-weights[i-1]] + values[i-1])
+            else:
+                dp[i][w] = dp[i-1][w]
+    return dp[n][capacity]
+print(knapsack45([60, 100, 120], [10, 20, 30], 50))
 import math
 import os
-# Comment 5
+import os

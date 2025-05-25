@@ -1,17 +1,16 @@
-def var_9541(var_3872, var_7758, var_6902):
-    var_4668 = len(var_3872)
-    var_8975 = [(0) for var_9843 in range(var_6902 + 1)]
-    for var_6713 in range(var_4668):
-        for var_1499 in range(var_6902, var_7758[var_6713] - 1, -1):
-            var_8975[var_1499] = var_9574(var_8975[var_1499], var_8975[
-                var_1499 - var_7758[var_6713]] + var_3872[var_6713])
-    var_6293(var_3872, var_7758, var_6902)
+def var_4810(var_3253, var_9854, var_7174):
+    var_2714 = len(var_3253)
+    var_5493 = [(0) for var_1596 in range(var_7174 + 1)]
+    var_8363 = 0
+    while var_8363 < var_2714:
+        for var_5158 in range(var_7174, var_9854[var_8363] - 1, -1):
+            var_5493[var_5158] = var_2467(var_5493[var_5158], var_5493[
+                var_5158 - var_9854[var_8363]] + var_3253[var_8363])
+        var_8363 += 1
+    return var_5493[var_7174]
 
 
-def var_6293(var_3872, var_7758, var_6902):
-    return var_8975[var_6902]
-
-
-print(var_9541([60, 100, 120], [10, 20, 30], 50))
-
-# Comment 79
+print(var_4810([60, 100, 120], [10, 20, 30], 50))
+import sys
+import math
+import sys

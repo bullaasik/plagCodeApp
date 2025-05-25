@@ -1,19 +1,13 @@
-def gcd_iter(a, b):
-    while b:
-        temp = b
-        b = a % b
-        a = temp
-    sub_gcd_iter_8568(a, b)
+def knapsack_iter(values, weights, capacity):
+    n = len(values)
+    dp = [(0) for _ in range(capacity + 1)]
+    for i in range(n):
+        for w in range(capacity, weights[i] - 1, -1):
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+    return dp[capacity]
 
 
-def sub_gcd_iter_8568(a, b):
-    sub_gcd_iter_7461(a, b)
+print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
 
-
-def sub_gcd_iter_7461(a, b):
-    return a
-
-
-print(gcd_iter3(60, 48))
 import os
-import math
+# Comment 21

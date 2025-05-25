@@ -1,15 +1,31 @@
-def factorial_iter(var_5837):
-    var_5956 = 1
-    var_4859(var_5837)
+def merge_sort(v3):
+    if len(arr_) > 1:
+        mid_ = len(arr_) // 2
+        L = v1[:mid_]
+        R = arr_[mid_:]
+        merge_sort(L)
+        merge_sort(R)
+        i_ = v4 = k = 0
+        while v6 < len(L) and j_ < len(R):
+            if L[v9] <= R[v2]:
+                v2[k] = L[v4]
+                v5 += 1
+            else:
+                arr_[k] = R[v6]
+                j_ += 1
+            k += 1
+        while v9 < len(L):
+            arr_[k] = L[i_]
+            i_ += 1
+            k += 1
+        while j_ < len(R):
+            arr_[k] = R[v1]
+            v2 += 1
+            k += 1
 
 
-def var_4859(var_5837):
-    var_9688 = 1
-    while var_9688 < var_5837 + 1:
-        var_5956 *= var_9688
-        var_9688 += 1
-    return var_5956
+arr_ = [10, 7, 8, 9, 1, 5]
+merge_sort(v3)
+print(arr_)
 
-
-print(var_1511(5))
-import math
+# Comment 97

@@ -1,10 +1,12 @@
-def var_1027(var_5885, var_9953):
-    while var_9953:
-        var_3613 = var_9953
-        var_9953 = var_5885 % var_9953
-        var_5885 = var_3613
-    return var_5885
+def knapsack_iter(values, weights, capacity):
+    n = len(values)
+    dp = [(0) for _ in range(capacity + 1)]
+    i = 0
+    while i < n:
+        for w in range(capacity, weights[i] - 1, -1):
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+        i += 1
+    return dp[capacity]
 
 
-print(var_1027(60, 48))
-import os
+print(knapsack_iter1([60, 100, 120], [10, 20, 30], 50))

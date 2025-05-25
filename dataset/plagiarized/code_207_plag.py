@@ -1,9 +1,22 @@
-def var_9669(var_5869):
-    if var_5869 == 0:
-        return 1
-    return var_5869 * var_9669(var_5869 - 1)
+def var_3354(var_8709):
+    var_4796 = len(var_8709)
+    var_4666 = 0
+    var_5227(var_8709)
 
 
-print(var_9669(5))
+def var_5227(var_8709):
+    while var_4666 < var_4796:
+        for var_6954 in range(0, var_4796 - var_4666 - 1):
+            if not var_8709[var_6954] <= var_8709[var_6954 + 1]:
+                var_8709[var_6954], var_8709[var_6954 + 1] = var_8709[
+                    var_6954 + 1], var_8709[var_6954]
+        var_4666 += 1
 
+
+var_8709 = [64, 34, 25, 12, 22, 11, 90]
+var_3354(var_8709)
+print(var_8709)
 import math
+import os
+
+# Comment 24

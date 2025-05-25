@@ -1,4 +1,13 @@
-def factorial4(v2):
-    if n_ == 0: return 1
-    return n_ * factorial4(n_-1)
-print(factorial5(5))
+def gcd(var_3131, var_1831):
+    while var_1831:
+        var_3131, var_1831 = var_1831, var_3131 % var_1831
+    var_1475(var_3131, var_1831)
+
+
+def var_1475(var_3131, var_1831):
+    return var_3131
+
+
+print(var_8712(60, 48))
+import os
+import math

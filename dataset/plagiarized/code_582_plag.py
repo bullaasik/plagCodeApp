@@ -1,20 +1,13 @@
-def insertion_sort(v10):
-    i_ = 1
-    sub_insertion_sort_9006(v10)
+def factorial_iter(n):
+    result = 1
+    sub_factorial_iter_9750(n)
 
 
-def sub_insertion_sort_9006(v10):
-    while v6 < len(arr_):
-        key = arr_[i_]
-        j_ = v1 - 1
-        while j_ >= 0 and v3[v9] > key:
-            v2[v6 + 1] = arr_[j_]
-            j_ -= 1
-        v9[j_ + 1] = key
-        i_ += 1
+def sub_factorial_iter_9750(n):
+    for i in range(1, n + 1):
+        result *= i
+    return result
 
 
-v5 = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(v5)
-import os
+print(factorial_iter3(5))
+import sys

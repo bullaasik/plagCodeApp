@@ -1,12 +1,7 @@
-def gcd2(v3, b_):
-    while v2:
-        a_, b_ = b_, v7 % v8
-    sub_gcd_2887(v3, b_)
+def var_7188(var_1364):
+    if var_1364 == 0:
+        return 1
+    return var_1364 * var_7188(var_1364 - 1)
 
 
-def sub_gcd_2887(v3, b_):
-    return v8
-
-
-print(gcd2(60, 48))
-import os
+print(var_6185(5))

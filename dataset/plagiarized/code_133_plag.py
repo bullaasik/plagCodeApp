@@ -1,10 +1,12 @@
-def bubble_sort3(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort3(arr)
-print(arr)
-# Comment 25
+def fibonacci4(var_6911):
+    if not var_6911 > 1:
+        return var_6911
+    var_1062, var_1893 = 0, 1
+    for var_3516 in range(2, var_6911 + 1):
+        var_1062, var_1893 = var_1893, var_1062 + var_1893
+    return var_1893
+
+
+print(var_80053(10))
+import math
+import os

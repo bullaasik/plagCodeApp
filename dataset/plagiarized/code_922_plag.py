@@ -1,8 +1,29 @@
-def fibonacci_iter(n_):
-    if     v7 <= 1: return n_
-    fib = [0, 1]
-    for v6 in range(2, v9 + 1):
-        fib.append(fib[i_-1] + fib[v5-2])
-    return fib[v1]
-print(fibonacci_iter(10))
-# Comment 44
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+        merge_sort(L)
+        merge_sort(R)
+        i = j = k = 0
+        while i < len(L) and j < len(R):
+            if L[i] <= R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+
+
+arr = [10, 7, 8, 9, 1, 5]
+merge_sort(arr)
+print(arr)

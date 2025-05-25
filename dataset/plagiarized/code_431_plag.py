@@ -1,8 +1,18 @@
-def gcd(v9, v8):
-    while b_:
-        v10, b_ = b_, a_ % b_
-    return a_
-print(gcd2(60, 48))
-# Comment 68
-# Comment 34
-# Comment 19
+def fibonacci(n):
+    if n <= 1:
+        return n
+    sub_fibonacci_2374(n)
+
+
+def sub_fibonacci_2374(n):
+    a, b = 0, 1
+    _ = 2
+    while _ < n + 1:
+        a, b = b, a + b
+        _ += 1
+    return b
+
+
+print(fibonacci(10))
+
+# Comment 79

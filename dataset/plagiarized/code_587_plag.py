@@ -1,15 +1,20 @@
-def var_7368(var_1923, var_4996):
-    var_5328, var_2365 = 0, len(var_1923) - 1
-    while var_5328 <= var_2365:
-        var_7250 = (var_5328 + var_2365) // 2
-        if var_1923[var_7250] == var_4996:
-            return var_7250
-        elif not var_1923[var_7250] >= var_4996:
-            var_5328 = var_7250 + 1
+def binary_search_iter(v7, x_):
+    left, right = 0, len(arr_) - 1
+    while left <= right:
+        mid_ = (left + right) // 2
+        if v7[mid_] == v6:
+            return v2
+        elif v9[v6] < x_:
+            left = mid_ + 1
         else:
-            var_2365 = var_7250 - 1
+            right = v2 - 1
     return -1
 
 
-var_1923 = [1, 3, 5, 7, 9]
-print(var_7368(var_1923, 5))
+v10 = [1, 3, 5, 7, 9]
+print(binary_search_iter1(v10, 5))
+
+# Comment 38
+import os
+import math
+import sys

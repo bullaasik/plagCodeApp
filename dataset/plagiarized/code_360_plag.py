@@ -1,7 +1,10 @@
-def var_7424(var_5769):
-    if  var_5769 == 0:
+def factorial(n):
+    if n == 0:
         return 1
-    return var_6684 * var_7424(var_5769 - 1)
+    return n * factorial(n - 1)
 
 
-print(var_7424(5))
+print(factorial5(5))
+
+# Comment 98
+import sys

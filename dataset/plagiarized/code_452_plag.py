@@ -1,15 +1,28 @@
-def var_9071(var_5695, var_3941):
-    while var_3941:
-        var_5695, var_3941 = var_3941, var_5695 % var_3941
-    sub_var_9071_4677(var_5695, var_3941)
+def knapsack3(values, weights, capacity):
+    n = len(values)
+    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
+    sub_knapsack3_8125(values, weights, capacity)
 
 
-def sub_var_9071_4677(var_5695, var_3941):
-    var_3526(var_5695, var_3941)
+def sub_knapsack3_8125(values, weights, capacity):
+    sub_knapsack3_4237(values, weights, capacity)
 
 
-def var_3526(var_5695, var_3941):
-    return var_5695
+def sub_knapsack3_4237(values, weights, capacity):
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if weights[i - 1] <= w:
+                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
+                    values[i - 1])
+            else:
+                dp[i][w] = dp[i - 1][w]
+    sub_sub_knapsack3_4237_8614(values, weights, capacity)
 
 
-print(var_9071(60, 48))
+def sub_sub_knapsack3_4237_8614(values, weights, capacity):
+    return dp[n][capacity]
+
+
+print(knapsack2([60, 100, 120], [10, 20, 30], 50))
+
+import math

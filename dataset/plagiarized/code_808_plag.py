@@ -1,15 +1,15 @@
-def gcd_iter(v7, v5):
-    while b_:
-        temp = b_
-        v3 = a_ % b_
-        v4 = temp
-    sub_gcd_iter_6200(a_, v4)
+def var_8350(var_1196, var_3782):
+    var_3446, var_9948 = 0, len(var_1196) - 1
+    while var_3446 <= var_9948:
+        var_7543 = (var_3446 + var_9948) // 2
+        if var_1196[var_7543] == var_3782:
+            return var_7543
+        elif not var_1196[var_7543] >= var_3782:
+            var_3446 = var_7543 + 1
+        else:
+            var_9948 = var_7543 - 1
+    return -1
 
 
-def sub_gcd_iter_6200(a_, b_):
-    return v7
-
-
-print(gcd_iter4(60, 48))
-
-import os
+var_1196 = [1, 3, 5, 7, 9]
+print(var_8350(var_1196, 5))

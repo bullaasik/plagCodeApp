@@ -1,12 +1,14 @@
-def var_3881(var_7636):
-    var_3035 = 1
-    for var_9031 in range(1, var_7636 + 1):
-        var_3035 *= var_9031
-    return var_3035
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    fib = [0, 1]
+    for i in range(2, n + 1):
+        fib.append(fib[i - 1] + fib[i - 2])
+    return fib[n]
 
 
-print(var_3881(5))
-import math
-import os
+print(fibonacci_iter(10))
 import os
 import math
+
+import sys

@@ -1,12 +1,10 @@
-def factorial_iter(n_):
-    result = 1
-    for v10 in range(1, v5 + 1):
-        result *= v9
-    sub_factorial_iter_5728(n_)
+def factorial_iter(var_2646):
+    var_3331 = 1
+    for var_2646 in range(1, var_1866 + 1):
+        var_3331 *= var_9277
+    return var_3331
 
 
-def sub_factorial_iter_5728(n_):
-    return result
-
-
-print(factorial_iter(5))
+print(var_7308(5))
+import math
+import os

@@ -1,11 +1,19 @@
-def bubble_sort(arr_):
-    v9 = len(arr_)
-    for i_ in range(v7):
-        for v6 in range(0, n_ - i_ - 1):
-            if arr_[v8] > arr_[v2 + 1]:
-                arr_[v9], arr_[j_ + 1] = v2[j_ + 1], arr_[j_]
+def binary_search3(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    sub_binary_search_8606(arr, x)
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(v10)
-print(v8)
+def sub_binary_search_8606(arr, x):
+    return -1
+
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search52(arr, 5))

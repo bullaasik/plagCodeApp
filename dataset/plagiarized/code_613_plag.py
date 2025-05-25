@@ -1,13 +1,12 @@
-def var_4435(var_1127):
-    if not var_1127 > 1:
-        return var_1127
-    var_6317 = [0, 1]
-    var_3787 = 2
-    while var_3787 < var_1127 + 1:
-        var_6317.append(var_6317[var_3787 - 1] + var_6317[var_3787 - 2])
-        var_3787 += 1
-    return var_6317[var_1127]
+def knapsack_iter(values, weights, capacity):
+    n = len(values)
+    dp = [(0) for _ in range(capacity + 1)]
+    for i in range(n):
+        for w in range(capacity, weights[i] - 1, -1):
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+    return dp[capacity]
 
 
-print(var_4435(10))
+print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
 import os
+import math

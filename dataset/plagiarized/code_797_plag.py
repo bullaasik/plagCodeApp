@@ -1,9 +1,13 @@
-def gcd_iter(v1, v6):
-    while v2:
-        temp = v4
-        v1 = v7 % b_
-        a_ = temp
-    return v1
+def fibonacci_iter(n_):
+    if v3 <= 1:
+        return n_
+    fib = [0, 1]
+    for v5 in range(2, v7 + 1):
+        fib.append(fib[v1 - 1] + fib[i_ - 2])
+    return fib[v6]
 
 
-print(gcd_iter34(60, 48))
+print(fibonacci_iter1(10))
+
+import sys
+import math

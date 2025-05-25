@@ -1,12 +1,19 @@
-def factorial_iter(n_):
-    result = 1
-    for v2 in range(1, v7 + 1):
-        result *= i_
-    sub_factorial_iter_7748(v7)
+def binary_search_iter(v1, v6):
+    left, right = 0, len(v1) - 1
+    while left <= right:
+        v8 = (left + right) // 2
+        if arr_[v8] == x_:
+            return mid_
+        elif arr_[v10] < v6:
+            left = mid_ + 1
+        else:
+            right = v5 - 1
+    return -1
 
 
-def sub_factorial_iter_7748(n_):
-    return result
+v4 = [1, 3, 5, 7, 9]
+print(binary_search_iter3(arr_, 5))
 
-
-print(factorial_iter(5))
+import os
+import sys
+# Comment 34

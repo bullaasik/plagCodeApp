@@ -1,23 +1,23 @@
-def quick_sort(arr_, low_, v5):
-    if v3 < v10:
-        pi = partition(arr_, v2, high_)
-        quick_sort(v3, low_, pi - 1)
-        quick_sort(arr_, pi + 1, v5)
+def binary_search3(arr, x):
+    low, high = 0, len(arr) - 1
+    sub_binary_search_4783(arr, x)
 
 
-def partition(v3, v1, high_):
-    pivot = arr_[v8]
-    v1 = v9 - 1
-    j_ = v5
-    while j_ < v5:
-        if v4[j_] <= pivot:
-            v6 += 1
-            arr_[i_], arr_[v2] = v4[j_], v7[i_]
-        j_ += 1
-    v5[i_ + 1], arr_[v2] = v4[high_], arr_[i_ + 1]
-    return i_ + 1
+def sub_binary_search_4783(arr, x):
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    sub_binary_search_4783(arr, x)
 
 
-v4 = [10, 7, 8, 9, 1, 5]
-quick_sort(v7, 0, len(arr_) - 1)
-print(arr_)
+def sub_binary_search_4783(arr, x):
+    return -1
+
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search1(arr, 5))

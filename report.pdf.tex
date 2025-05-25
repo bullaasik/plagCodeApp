@@ -1,0 +1,60 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{geometry}%
+\geometry{margin=1in}%
+%
+\usepackage{listings}%
+\usepackage{color}%
+\lstset{('language', 'Python')}{('basicstyle', '\textbackslash{}\textbackslash{}ttfamily\textbackslash{}\textbackslash{}small')}{('keywordstyle', '\textbackslash{}\textbackslash{}color\{blue\}\textbackslash{}\textbackslash{}bfseries')}{('stringstyle', '\textbackslash{}\textbackslash{}color\{red\}')}{('commentstyle', '\textbackslash{}\textbackslash{}color\{green!50!black\}')}{('numbers', 'left')}{('numberstyle', '\textbackslash{}\textbackslash{}tiny\textbackslash{}\textbackslash{}color\{gray\}')}{('stepnumber', '1')}{('numbersep', '5pt')}{('showspaces', 'false')}{('showstringspaces', 'false')}{('frame', 'single')}{('breaklines', 'true')}{('breakatwhitespace', 'true')}%
+\title{Отчёт о проверке плагиата}%
+\author{Система анализа кода}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+\section{Исходные файлы}%
+\label{sec:}%
+\subsection{Оригинальный файл}%
+\label{subsec:}%
+\lstinputlisting{\ttfamily{def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total += lst[i]
+    return total
+
+numbers = [1, 2, 3, 4, 5]
+print(sum_list(numbers))
+}}
+
+%
+\subsection{Проверяемый файл}%
+\label{subsec:}%
+\lstinputlisting{\ttfamily{def sum_list(lst):
+    total = 0
+    i = 0
+    while i < len(lst):
+        total += lst[i]
+        i += 1
+    return total
+
+numbers = [1, 2, 3, 4, 5]
+print(sum_list(numbers))
+}}
+
+%
+\section{Результаты анализа}%
+\label{sec:}%
+Общий процент сходства кода: 62.19\%%
+Уровень совпадения структуры: средний%
+Сходство ключевых элементов: 69.57\%%
+Совпадение последовательностей: 35.29\%%
+Рекомендация: Код, скорее всего, является плагиатом.%
+Пояснение: Общий процент сходства кода (62.19\%) высокий, что указывает на значительное совпадение. Ключевые элементы кода (переменные, функции) совпадают на 69.57\%, что может указывать на копирование. Последовательности кода совпадают на 35.29\%, что может быть признаком копирования. Уровень совпадения структуры кода средний, но это значение пока не влияет на результат из{-}за текущих ограничений анализа.
+
+%
+\end{document}

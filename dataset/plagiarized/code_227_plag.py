@@ -1,7 +1,12 @@
-def var_2016(var_3503, var_9109):
-    while var_9109:
-        var_3503, var_9109 = var_9109, var_3503 % var_9109
-    return var_3503
+def fibonacci4(var_7119):
+    if    not var_7119 > 1:
+        return var_7119
+    var_3234, var_7346 = 0, 1
+    for var_3917 in range(2, var_7119 + 1):
+        var_3234, var_7346 = var_7346, var_3234 + var_7346
+    return var_7346
 
 
-print(var_2016(60, 48))
+print(var_8499(10))
+
+import sys

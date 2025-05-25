@@ -1,11 +1,15 @@
-def knapsack_iter(values_, v2, v8):
-    v10 = len(v2)
-    dp = [(0) for _ in range(v4 + 1)]
-    for v6 in range(v5):
-        for w in range(capacity_, weights_[i_] - 1, -1):
-            dp[w] = max(dp[w], dp[w - v1[i_]] + values_[i_])
-    return dp[capacity_]
+def var_2676(var_9785):
+    var_3988 = 1
+    while var_3988 < len(var_9785):
+        var_4168 = var_9785[var_3988]
+        var_5277 = var_3988 - 1
+        while var_5277 >= 0 and var_9785[var_5277] > var_4168:
+            var_9785[var_5277 + 1] = var_9785[var_5277]
+            var_5277 -= 1
+        var_9785[var_5277 + 1] = var_4168
+        var_3988 += 1
 
 
-print(knapsack_iter2([60, 100, 120], [10, 20, 30], 50))
-import os
+var_9785 = [64, 34, 25, 12, 22, 11, 90]
+var_2676(var_9785)
+print(var_9785)

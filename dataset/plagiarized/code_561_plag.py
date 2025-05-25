@@ -1,21 +1,10 @@
-def var_7649(var_5372):
-    var_9657 = 1
-    sub_var_7649_8313(var_5372)
+def var_7299(var_7228):
+    var_8250 = 1
+    for var_3463 in range(1, var_7228 + 1):
+        var_8250 *= var_3463
+    return var_8250
 
 
-def sub_var_7649_8313(var_5372):
-    while var_9657 < len(var_5372):
-        var_1678 = var_5372[var_9657]
-        var_2951 = var_9657 - 1
-        while var_2951 >= 0 and var_5372[var_2951] > var_1678:
-            var_5372[var_2951 + 1] = var_5372[var_2951]
-            var_2951 -= 1
-        var_5372[var_2951 + 1] = var_1678
-        var_9657 += 1
-
-
-var_5372 = [64, 34, 25, 12, 22, 11, 90]
-var_7649(var_5372)
-print(var_5372)
-
-# Comment 98
+print(var_7299(5))
+import os
+import sys

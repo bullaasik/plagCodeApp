@@ -1,15 +1,17 @@
-def var_6246(var_9964):
-    if   not var_9964 > 1:
-        return var_9964
-    var_4603 = [0, 1]
-    var_6601 = 2
-    while var_6601 < var_9964 + 1:
-        var_4603.append(var_4603[var_6601 - 1] + var_4603[var_6601 - 2])
-        var_6601 += 1
-    return var_4603[var_9964]
+def var_2799(var_7300, var_5385):
+    var_4586, var_9350 = 0, len(var_7300) - 1
+    while var_4586 <= var_9350:
+        var_3370 = (var_4586 + var_9350) // 2
+        if var_7300[var_3370] == var_5385:
+            return var_3370
+        elif not var_7300[var_3370] >= var_5385:
+            var_4586 = var_3370 + 1
+        else:
+            var_9350 = var_3370 - 1
+    return -1
 
 
-print(var_6246(10))
+var_7300 = [1, 3, 5, 7, 9]
+print(var_2799(var_7300, 5))
 
-import os
 import sys

@@ -1,21 +1,21 @@
-def binary_search(v2, x_):
-    low_, high_ = 0, len(arr_) - 1
-    sub_binary_search_2325(arr_, x_)
+def var_3604(var_9462, var_2075, var_6097):
+    if not var_2075 >= var_6097:
+        var_9303 = var_7609(var_9462, var_2075, var_6097)
+        var_3604(var_9462, var_2075, var_9303 - 1)
+        var_3604(var_9462, var_9303 + 1, var_6097)
 
 
-def sub_binary_search_2325(v6, x_):
-    while low_ <= v6:
-        mid_ = (v9 + high_) // 2
-        if   v7[mid_] < x_:
-            v7 = mid_ + 1
-        elif   v3[mid_] > x_:
-            v8 = mid_ - 1
-        else:
-            return mid_
-    return -1
+def var_7609(var_9462, var_2075, var_6097):
+    var_7126 = var_9462[var_6097]
+    var_1920 = var_2075 - 1
+    for var_9442 in range(var_2075, var_6097):
+        if not var_9462[var_9442] > var_7126:
+            var_1920 += 1
+            var_9462[var_1920], var_9462[var_9442] = var_9462[var_9442], var_9462[var_1920]
+    var_9462[var_1920 + 1], var_9462[var_6097] = var_9462[var_6097], var_9462[var_1920 + 1]
+    return var_1920 + 1
 
 
-arr_ = [1, 3, 5, 7, 9]
-print(binary_search(v6, 5))
-
-# Comment 69
+var_9462 = [10, 7, 8, 9, 1, 5]
+var_3604(var_9462, 0, len(var_9462) - 1)
+print(var_9462)

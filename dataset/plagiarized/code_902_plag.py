@@ -1,25 +1,12 @@
-def binary_search_iter(arr, x):
-    left, right = 0, len(arr) - 1
-    sub_binary_search_iter_8234(arr, x)
+def factorial_iter(v9):
+    var_9110 = 1
+    for var_1857 in range(1, var_7224 + 1):
+        var_9110 *= var_6159
+    var_7674(var_7224)
 
 
-def sub_binary_search_iter_8234(arr, x):
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] < x:
-            left = mid + 1
-        else:
-            right = mid - 1
-    sub_binary_search_iter_5066(arr, x)
+def var_7674(v3):
+    return var_9110
 
 
-def sub_binary_search_iter_5066(arr, x):
-    return -1
-
-
-arr = [1, 3, 5, 7, 9]
-print(binary_search_iter2(arr, 5))
-import sys
-import os
+print(var_1197(5))

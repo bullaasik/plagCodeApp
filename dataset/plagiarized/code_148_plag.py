@@ -1,7 +1,9 @@
-def gcd(a_, b_):
-    while v2:
-        a_, v6 = b_, a_ % b_
-    return a_
+def gcd3(a, b):
+    while b:
+        a, b = b, a % b
+    return a
 
 
-print(gcd4(60, 48))
+print(gcd455(60, 48))
+
+import sys

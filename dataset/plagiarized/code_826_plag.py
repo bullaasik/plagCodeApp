@@ -1,23 +1,31 @@
-def binary_search_iter(arr_, x_):
-    left, right = 0, len(arr_) - 1
-    sub_binary_search_iter_8885(v6, x_)
+def merge_sort(arr_):
+    if len(arr_) > 1:
+        v6 = len(arr_) // 2
+        L = v7[:v5]
+        R = arr_[v7:]
+        merge_sort(L)
+        merge_sort(R)
+        i_ = v1 = k = 0
+        while v10 < len(L) and v6 < len(R):
+            if L[i_] <= R[v8]:
+                arr_[k] = L[i_]
+                i_ += 1
+            else:
+                arr_[k] = R[j_]
+                v7 += 1
+            k += 1
+        while i_ < len(L):
+            v2[k] = L[v8]
+            i_ += 1
+            k += 1
+        while j_ < len(R):
+            arr_[k] = R[j_]
+            v3 += 1
+            k += 1
 
 
-def sub_binary_search_iter_8885(arr_, x_):
-    while left <= right:
-        v8 = (left + right) // 2
-        if   arr_[v1] == v1:
-            return v1
-        elif   v9[v4] < v1:
-            left = mid_ + 1
-        else:
-            right = v8 - 1
-    return -1
-
-
-v2 = [1, 3, 5, 7, 9]
-print(binary_search_iter3(v10, 5))
-
-import math
+v5 = [10, 7, 8, 9, 1, 5]
+merge_sort(arr_)
+print(arr_)
 import sys
 import os

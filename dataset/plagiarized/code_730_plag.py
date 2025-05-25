@@ -1,16 +1,12 @@
-def var_2197(v6):
-    var_1830 = 1
-    while var_1830 < len(var_6482):
-        var_6050 = var_3210[var_1502]
-        var_6482 = var_1830 - 1
-        while var_9740 >= 0 and var_2894[var_9740] > var_6050:
-            var_6482[var_9740 + 1] = var_3210[var_7754]
-            var_2894 -= 1
-        var_3210[var_4336 + 1] = var_6050
-        var_1830 += 1
+def var_4713(var_7993):
+    if not var_7934 > 1:
+        return var_4694
+    var_4638 = [0, 1]
+    var_6800 = 2
+    while var_6800 < var_7993 + 1:
+        var_4638.append(var_4638[var_6800 - 1] + var_4638[var_6800 - 2])
+        var_6800 += 1
+    return var_4638[var_3116]
 
 
-var_3210 = [64, 34, 25, 12, 22, 11, 90]
-var_2197(var_3210)
-print(var_1158)
-import sys
+print(var_47135(10))

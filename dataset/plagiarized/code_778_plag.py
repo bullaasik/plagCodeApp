@@ -1,10 +1,13 @@
-def factorial_iter(var_3545):
-    var_5986 = 1
-    var_3437 = 1
-    while var_3437 < var_4680 + 1:
-        var_5986 *= var_9258
-        var_3545 += 1
-    return var_5986
+def gcd_iter(var_7499, var_1640):
+    while var_1640:
+        var_7557 = var_1640
+        var_1640 = var_7499 % var_1640
+        var_7499 = var_7557
+    sub_gcd_iter_1296(var_7499, var_1640)
 
 
-print(var_2582(5))
+def sub_gcd_iter_1296(var_7499, var_1640):
+    return var_7499
+
+
+print(var_5749(60, 48))

@@ -1,5 +1,5 @@
 def merge_sort(arr):
-    if  len(arr) > 1:
+    if len(arr) > 1:
         mid = len(arr) // 2
         L = arr[:mid]
         R = arr[mid:]
@@ -7,7 +7,7 @@ def merge_sort(arr):
         merge_sort(R)
         i = j = k = 0
         while i < len(L) and j < len(R):
-            if  L[i] <= R[j]:
+            if L[i] <= R[j]:
                 arr[k] = L[i]
                 i += 1
             else:
@@ -27,5 +27,5 @@ def merge_sort(arr):
 arr = [10, 7, 8, 9, 1, 5]
 merge_sort(arr)
 print(arr)
-
-import math
+import os
+import sys

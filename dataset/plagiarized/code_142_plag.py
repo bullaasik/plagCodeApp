@@ -1,12 +1,15 @@
-def fibonacci2(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    return b
+def bubble_sort(arr_):
+    n_ = len(v5)
+    sub_bubble_sort_8598(arr_)
 
 
-print(fibonacci5(10))
+def sub_bubble_sort_8598(arr_):
+    for v3 in range(n_):
+        for v6 in range(0, n_ - i_ - 1):
+            if arr_[v7] > v10[v6 + 1]:
+                arr_[j_], v3[v5 + 1] = v8[v5 + 1], v6[j_]
 
-import math
+
+arr_ = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr_)
+print(arr_)

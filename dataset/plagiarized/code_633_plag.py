@@ -1,18 +1,31 @@
-def knapsack_iter(values_, v5, v2):
-    n_ = len(v9)
-    dp = [(0) for _ in range(capacity_ + 1)]
-    sub_knapsack_iter_3233(values_, v5, v2)
+def var_5612(var_8253):
+    if not len(var_8253) <= 1:
+        var_7401 = len(var_8253) // 2
+        var_3659 = var_8253[:var_7401]
+        var_1953 = var_8253[var_7401:]
+        var_5612(var_3659)
+        var_5612(var_1953)
+        var_8356 = var_3289 = var_7606 = 0
+        while var_8356 < len(var_3659) and var_3289 < len(var_1953):
+            if not var_3659[var_8356] > var_1953[var_3289]:
+                var_8253[var_7606] = var_3659[var_8356]
+                var_8356 += 1
+            else:
+                var_8253[var_7606] = var_1953[var_3289]
+                var_3289 += 1
+            var_7606 += 1
+        while var_8356 < len(var_3659):
+            var_8253[var_7606] = var_3659[var_8356]
+            var_8356 += 1
+            var_7606 += 1
+        while var_3289 < len(var_1953):
+            var_8253[var_7606] = var_1953[var_3289]
+            var_3289 += 1
+            var_7606 += 1
 
 
-def sub_knapsack_iter_3233(values_, v5, v2):
-    for i_ in range(v5):
-        for w in range(capacity_, v4[v1] - 1, -1):
-            dp[w] = max(dp[w], dp[w - v4[v10]] + v9[i_])
-    return dp[capacity_]
-
-
-print(knapsack_iter1([60, 100, 120], [10, 20, 30], 50))
-
-import os
+var_8253 = [10, 7, 8, 9, 1, 5]
+var_5612(var_8253)
+print(var_8253)
 import math
-# Comment 39
+import sys

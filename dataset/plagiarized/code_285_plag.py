@@ -1,14 +1,10 @@
-def fibonacci(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    _ = 2
-    while _ < n + 1:
-        a, b = b, a + b
-        _ += 1
-    return b
+def var_3742(var_8612):
+    if not var_8612 > 1:
+        return var_8612
+    var_5739, var_1016 = 0, 1
+    for var_1684 in range(2, var_8612 + 1):
+        var_5739, var_1016 = var_1016, var_5739 + var_1016
+    return var_1016
 
 
-print(fibonacci(10))
-
-# Comment 11
+print(var_3742(10))

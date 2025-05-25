@@ -1,17 +1,16 @@
-def var_5512(var_5055, var_1594, var_9605):
-    var_1864 = len(var_5055)
-    var_2120 = [(0) for var_6540 in range(var_9605 + 1)]
-    var_3609 = 0
-    var_6579(var_5055, var_1594, var_9605)
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    fib = [0, 1]
+    sub_fibonacci_iter_3774(n)
 
 
-def var_6579(var_5055, var_1594, var_9605):
-    while var_3609 < var_1864:
-        for var_2525 in range(var_9605, var_1594[var_3609] - 1, -1):
-            var_2120[var_2525] = var_9587(var_2120[var_2525], var_2120[
-                var_2525 - var_1594[var_3609]] + var_5055[var_3609])
-        var_3609 += 1
-    return var_2120[var_9605]
+def sub_fibonacci_iter_3774(n):
+    i = 2
+    while i < n + 1:
+        fib.append(fib[i - 1] + fib[i - 2])
+        i += 1
+    return fib[n]
 
 
-print(var_5512([60, 100, 120], [10, 20, 30], 50))
+print(fibonacci_iter3(10))

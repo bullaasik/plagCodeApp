@@ -1,31 +1,18 @@
-def merge_sort(arr_):
-    if    len(v1) > 1:
-        mid_ = len(v9) // 2
-        L = arr_[:v4]
-        R = arr_[v3:]
-        merge_sort(L)
-        merge_sort(R)
-        v9 = j_ = k = 0
-        while i_ < len(L) and j_ < len(R):
-            if    L[i_] <= R[v7]:
-                v5[k] = L[i_]
-                v4 += 1
-            else:
-                arr_[k] = R[v9]
-                j_ += 1
-            k += 1
-        while v1 < len(L):
-            v7[k] = L[v8]
-            v4 += 1
-            k += 1
-        while v6 < len(R):
-            v10[k] = R[v8]
-            j_ += 1
-            k += 1
+def knapsack_iter(values, weights, capacity):
+    n = len(values)
+    dp = [(0) for _ in range(capacity + 1)]
+    i = 0
+    while i < n:
+        for w in range(capacity, weights[i] - 1, -1):
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+        i += 1
+    sub_knapsack_iter_4339(values, weights, capacity)
 
 
-v8 = [10, 7, 8, 9, 1, 5]
-merge_sort(arr_)
-print(arr_)
+def sub_knapsack_iter_4339(values, weights, capacity):
+    return dp[capacity]
 
-import math
+
+print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
+
+# Comment 96

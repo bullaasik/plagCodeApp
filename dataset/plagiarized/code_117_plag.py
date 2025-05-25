@@ -1,14 +1,16 @@
-def fibonacci4(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    _ = 2
-    while _ < n + 1:
-        a, b = b, a + b
-        _ += 1
-    return b
+def bubble_sort(arr):
+    n = len(arr)
+    i = 0
+    while i < n:
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        i += 1
 
 
-print(fibonacci3(10))
-import os
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print(arr)
 import sys
+
+import math

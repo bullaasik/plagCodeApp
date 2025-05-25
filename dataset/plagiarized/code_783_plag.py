@@ -1,36 +1,15 @@
-def var_8638(var_7660, var_1139, var_8628):
-    var_3640 = len(var_7660)
-    sub_var_8638_3646(var_7660, var_1139, var_8628)
+def var_9866(var_7370):
+    var_5973 = 1
+    while var_5973 < len(var_7370):
+        var_5727 = var_7370[var_5973]
+        var_6335 = var_5973 - 1
+        while var_6335 >= 0 and var_7370[var_6335] > var_5727:
+            var_7370[var_6335 + 1] = var_7370[var_6335]
+            var_6335 -= 1
+        var_7370[var_6335 + 1] = var_5727
+        var_5973 += 1
 
 
-def sub_var_8638_3646(var_7660, var_1139, var_8628):
-    sub_var_8638_8991(var_7660, var_1139, var_8628)
-
-
-def sub_var_8638_8991(var_7660, var_1139, var_8628):
-    sub_var_8638_1262(var_7660, var_1139, var_8628)
-
-
-def sub_var_8638_1262(var_7660, var_1139, var_8628):
-    var_1713 = [(0) for var_9508 in range(var_8628 + 1)]
-    sub_sub_var_8638_1262_1792(var_7660, var_1139, var_8628)
-
-
-def sub_sub_var_8638_1262_1792(var_7660, var_1139, var_8628):
-    sub_sub_var_8638_1262_3067(var_7660, var_1139, var_8628)
-
-
-def sub_sub_var_8638_1262_3067(var_7660, var_1139, var_8628):
-    for var_9160 in range(var_3640):
-        for var_3177 in range(var_8628, var_1139[var_9160] - 1, -1):
-            var_1713[var_3177] = var_9539(var_1713[var_3177], var_1713[
-                var_3177 - var_1139[var_9160]] + var_7660[var_9160])
-    sub_sub_sub_var_8638_1262_3067_2910(var_7660, var_1139, var_8628)
-
-
-def sub_sub_sub_var_8638_1262_3067_2910(var_7660, var_1139, var_8628):
-    return var_1713[var_8628]
-
-
-print(var_8638([60, 100, 120], [10, 20, 30], 50))
-import sys
+var_7370 = [64, 34, 25, 12, 22, 11, 90]
+var_9866(var_7370)
+print(var_7370)

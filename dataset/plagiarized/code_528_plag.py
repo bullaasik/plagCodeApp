@@ -1,31 +1,15 @@
-def var_7968(var_4944):
-    if not len(var_4944) <= 1:
-        var_4477 = len(var_4944) // 2
-        var_7890 = var_4944[:var_4477]
-        var_2962 = var_4944[var_4477:]
-        var_7968(var_7890)
-        var_7968(var_2962)
-        var_5471 = var_6866 = var_9279 = 0
-        while var_5471 < len(var_7890) and var_6866 < len(var_2962):
-            if not var_7890[var_5471] > var_2962[var_6866]:
-                var_4944[var_9279] = var_7890[var_5471]
-                var_5471 += 1
-            else:
-                var_4944[var_9279] = var_2962[var_6866]
-                var_6866 += 1
-            var_9279 += 1
-        while var_5471 < len(var_7890):
-            var_4944[var_9279] = var_7890[var_5471]
-            var_5471 += 1
-            var_9279 += 1
-        while var_6866 < len(var_2962):
-            var_4944[var_9279] = var_2962[var_6866]
-            var_6866 += 1
-            var_9279 += 1
+def var_8596(var_6314):
+    var_7606 = 1
+    while var_7606 < len(var_6314):
+        var_8608 = var_6314[var_7606]
+        var_8408 = var_7606 - 1
+        while var_8408 >= 0 and var_6314[var_8408] > var_8608:
+            var_6314[var_8408 + 1] = var_6314[var_8408]
+            var_8408 -= 1
+        var_6314[var_8408 + 1] = var_8608
+        var_7606 += 1
 
 
-var_4944 = [10, 7, 8, 9, 1, 5]
-var_7968(var_4944)
-print(var_4944)
-
-# Comment 73
+var_6314 = [64, 34, 25, 12, 22, 11, 90]
+var_8596(var_6314)
+print(var_6314)

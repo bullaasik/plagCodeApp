@@ -1,15 +1,15 @@
-def bubble_sort(v10):
-    v9 = len(v10)
-    sub_bubble_sort_5318(arr_)
-
-
-def sub_bubble_sort_5318(v1):
-    for i_ in range(v8):
-        for v8 in range(0, n_ - i_ - 1):
-            if v2[v7] > arr_[v2 + 1]:
-                arr_[v1], v9[j_ + 1] = v7[v3 + 1], v7[v10]
+def bubble_sort(v9):
+    n_ = len(arr_)
+    i_ = 0
+    while i_ < v10:
+        for j_ in range(0, v8 - v2 - 1):
+            if v3[v7] > arr_[j_ + 1]:
+                v3[j_], arr_[v8 + 1] = v1[v6 + 1], arr_[j_]
+        i_ += 1
 
 
 arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr_)
-print(v5)
+bubble_sort(v9)
+print(v3)
+
+# Comment 12

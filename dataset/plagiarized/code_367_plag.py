@@ -1,7 +1,11 @@
-def gcd4(var_1062, var_2671):
-    while var_2671:
-        var_1062, var_2671 = var_2671, var_1062 % var_2671
-    return var_1062
+def factorial5(n):
+    if   n == 0:
+        return 1
+    sub_factorial_9781(n)
 
 
-print(var_6914(60, 48))
+def sub_factorial_9781(n):
+    return n * factorial5(n - 1)
+
+
+print(factorial22(5))

@@ -1,10 +1,11 @@
-def gcd(v10, b_):
-    while b_:
-        v4, v4 = v3, v1 % b_
-    return a_
+def fibonacci(n_):
+    if v3 <= 1:
+        return n_
+    v6, v9 = 0, 1
+    for _ in range(2, n_ + 1):
+        a_, v5 = b_, v8 + v4
+    return v3
 
 
-print(gcd5(60, 48))
-
-import math
+print(fibonacci(10))
 import os

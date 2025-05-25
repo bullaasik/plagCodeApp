@@ -5,22 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Результат проверки</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+        .logo-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .animate-btn {
+            transition: all 0.3s ease;
+        }
+        .animate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #e5e7eb;
+            color: #1f2937;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #d1d5db;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #15803d;
+            transition: width 1s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-        <h1 class="text-2xl font-bold mb-4 text-center">Результат проверки</h1>
-        <p class="text-lg mb-2"><strong>Результат:</strong> {{ result.prediction }}</p>
-        <p class="text-lg mb-4"><strong>Вероятность плагиата:</strong> {{ "%.2f" | format(result.probability) }}%</p>
-        <h2 class="text-xl font-semibold mb-2">Метрики:</h2>
-        <ul class="list-disc pl-5 mb-4">
-            {% for metric, value in result.metrics.items() %}
-                <li>{{ metric }}: {{ "%.2f" | format(value) }}</li>
-            {% endfor %}
-        </ul>
-        <a href="{{ url_for('check_plagiarism') }}" class="block text-center bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">
-            Проверить ещё раз
-        </a>
-        <a href="{{ url_for('index') }}" class="block text-center mt-2 text-blue-500 hover:underline">На главную</a>
-    </div>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+    <nav class="bg-gray-200 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-green-700 logo-font">CodeCheck</h1>
+            <div>
+                <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-green-700 mx-4">Главная</a>
+                <a href="{{ url_for('check_plagiarism') }}" class="text-gray-600 hover:text-green-700 mx-4">Проверить</a>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="bg-gray-200 rounded-lg shadow-lg p-8 max-w-4xl mx-auto fade-in">
+            <h2 class="text-2xl font-semibold text-green-700 mb-4">Параметры анализа:</h2>
+            <div class="mb-6">
+                <div class="progress-bar mb-4">
+                    <div class="progress-fill" style="width: {{ result.metrics['Общий процент сходства кода'] }}%"></div>
+                </div>
+                <ul class="space-y-2">
+                    <li class="text-gray-600">
+                        <span class="tooltip">Общий процент сходства кода: {{ "%.2f" | format(result.metrics['Общий процент сходства кода']) }}%
+                            <span class="tooltiptext">Среднее значение сходства по нескольким метрикам.</span>
+                        </span>
+                    </li>
+                    <li class="text-gray-600">
+                        <span class="tooltip">Уровень совпадения структуры: {{ result.metrics['Уровень совпадения структуры'] }}
+                            <span class="tooltiptext">Оценивает схожесть структуры кода (AST).</span>
+                        </span>
+                    </li>
+                    <li class="text-gray-600">
+                        <span class="tooltip">Сходство ключевых элементов: {{ "%.2f" | format(result.metrics['Сходство ключевых элементов']) }}%
+                            <span class="tooltiptext">Сравнивает переменные, функции и другие элементы.</span>
+                        </span>
+                    </li>
+                    <li class="text-gray-600">
+                        <span class="tooltip">Совпадение последовательностей: {{ "%.2f" | format(result.metrics['Совпадение последовательностей']) }}%
+                            <span class="tooltiptext">Анализирует последовательности кода (n-граммы).</span>
+                        </span>
+                    </li>
+                    <li class="text-gray-600">
+                        <span class="tooltip">Рекомендация: {{ result.metrics['Рекомендация по плагиату'] }}
+                            <span class="tooltiptext">Рекомендация на основе анализа и модели машинного обучения.</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="text-2xl font-semibold text-green-700 mb-4">Почему такой результат?</h2>
+            <p class="text-gray-600 mb-6">{{ result.explanation }}</p>
+            <div class="space-y-4">
+                <a href="{{ url_for('check_plagiarism') }}" class="block text-center bg-green-700 text-white px-8 py-3 rounded-lg animate-btn font-semibold">Проверить ещё раз</a>
+                <a href="{{ url_for('index') }}" class="block text-center text-green-700 hover:text-green-800 font-semibold">На главную</a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-200 text-gray-600 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 CodeCheck. Все права защищены.</p>
+        </div>
+    </footer>
 </body>
 </html>

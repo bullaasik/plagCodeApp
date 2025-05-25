@@ -1,17 +1,23 @@
-def bubble_sort(v7):
-    n_ = len(v6)
-    sub_bubble_sort_3122(arr_)
+def var_6051(var_1782, var_8274, var_1858):
+    if  not var_8274 >= var_1858:
+        var_1076 = var_1797(var_1782, var_8274, var_1858)
+        var_6051(var_1782, var_8274, var_1076 - 1)
+        var_6051(var_1782, var_1076 + 1, var_1858)
 
 
-def sub_bubble_sort_3122(arr_):
-    i_ = 0
-    while v9 < n_:
-        for v7 in range(0, n_ - v1 - 1):
-            if arr_[j_] > arr_[v2 + 1]:
-                arr_[j_], v6[v1 + 1] = v8[v5 + 1], v9[j_]
-        v9 += 1
+def var_1797(var_1782, var_8274, var_1858):
+    var_9566 = var_1782[var_1858]
+    var_2684 = var_8274 - 1
+    for var_7399 in range(var_8274, var_1858):
+        if  not var_1782[var_7399] > var_9566:
+            var_2684 += 1
+            var_1782[var_2684], var_1782[var_7399] = var_1782[var_7399], var_1782[var_2684]
+    var_1782[var_2684 + 1], var_1782[var_1858] = var_1782[var_1858], var_1782[var_2684 + 1]
+    return var_2684 + 1
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(v2)
-print(arr_)
+var_1782 = [10, 7, 8, 9, 1, 5]
+var_6051(var_1782, 0, len(var_1782) - 1)
+print(var_1782)
+
+# Comment 99

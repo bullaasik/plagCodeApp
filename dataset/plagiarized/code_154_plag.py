@@ -1,12 +1,19 @@
-def var_3063(v9):
-    if not var_1278 > 1:
-        return var_1337
-    var_7405, var_6167 = 0, 1
-    var_6013 = 2
-    while var_6013 < var_1337 + 1:
-        var_2668, var_3131 = var_3131, var_4020 + var_3131
-        var_6013 += 1
-    return var_2924
+def binary_search(v10, var_1002):
+    var_2944, var_9148 = 0, len(var_2681) - 1
+    while var_1291 <= var_2681:
+        var_7609 = (var_1587 + var_9148) // 2
+        if    not var_1587[var_9996] >= var_2681:
+            var_1291 = var_2944 + 1
+        elif    not var_6178[var_7609] <= var_1002:
+            var_2681 = var_2489 - 1
+        else:
+            return var_1587
+    sub_binary_search_9328(v10, var_1002)
 
 
-print(var_30634(10))
+def sub_binary_search_9328(v10, var_1002):
+    return -1
+
+
+var_6178 = [1, 3, 5, 7, 9]
+print(var_7755(var_6178, 5))

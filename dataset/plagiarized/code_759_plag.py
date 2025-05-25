@@ -1,17 +1,16 @@
-def gcd_iter(v7, v2):
-    while v4:
-        temp = b_
-        v6 = a_ % b_
-        v4 = temp
-    sub_gcd_iter_5226(v5, b_)
+def gcd_iter(a, b):
+    while b:
+        temp = b
+        b = a % b
+        a = temp
+    sub_gcd_iter_4151(a, b)
 
 
-def sub_gcd_iter_5226(v4, b_):
-    sub_gcd_iter_8152(v5, b_)
+def sub_gcd_iter_4151(a, b):
+    return a
 
 
-def sub_gcd_iter_8152(a_, v9):
-    return v8
+print(gcd_iter(60, 48))
 
-
-print(gcd_iter1(60, 48))
+import sys
+import os

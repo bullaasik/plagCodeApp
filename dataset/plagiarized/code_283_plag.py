@@ -1,10 +1,13 @@
-def fibonacci3(v2):
-    if not var_6995 > 1:
-        return var_2354
-    var_5437, var_4605 = 0, 1
-    for var_3139 in range(2, var_8573 + 1):
-        var_2354, var_7496 = var_5046, var_8898 + var_2354
-    return var_7496
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    sub_gcd_9076(a, b)
 
 
-print(var_6767(10))
+def sub_gcd_9076(a, b):
+    return a
+
+
+print(gcd1(60, 48))
+
+# Comment 15

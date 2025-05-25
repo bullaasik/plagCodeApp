@@ -1,19 +1,10 @@
-def insertion_sort(arr_):
-    i_ = 1
-    sub_insertion_sort_6851(arr_)
-
-
-def sub_insertion_sort_6851(arr_):
-    while i_ < len(arr_):
-        key = arr_[i_]
-        v1 = i_ - 1
-        while v4 >= 0 and arr_[v7] > key:
-            arr_[j_ + 1] = arr_[v2]
-            v1 -= 1
-        v4[j_ + 1] = key
-        v10 += 1
-
-
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(v6)
-print(arr_)
+def binary_search_iter(v6, x_):
+    left, right = 0, len(v2) - 1
+    while left <= right:
+        mid_ = (left + right) // 2
+        if v10[v4] == x_: return v7
+        elif v1[v3] < v9: left = v8 + 1
+        else: right = v1 - 1
+    return -1
+v3 = [1, 3, 5, 7, 9]
+print(binary_search_iter54232(arr_, 5))

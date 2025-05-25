@@ -1,15 +1,24 @@
-def var_8358(var_1163, var_4504):
-    var_9951, var_8760 = 0, len(var_6635) - 1
-    while var_2616 <= var_5812:
-        var_7350 = (var_3345 + var_5812) // 2
-        if not var_1163[var_7970] >= var_8760:
-            var_9899 = var_7970 + 1
-        elif not var_8760[var_7970] <= var_4504:
-            var_5812 = var_7350 - 1
-        else:
-            return var_7970
-    return -1
+def quick_sort5(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort4(arr, low, pi - 1)
+        quick_sort5(arr, pi + 1, high)
 
 
-var_1163 = [1, 3, 5, 7, 9]
-print(var_8358(var_1163, 5))
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    j = low
+    while j < high:
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+        j += 1
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort1(arr, 0, len(arr) - 1)
+print(arr)
+import math

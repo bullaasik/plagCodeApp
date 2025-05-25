@@ -1,29 +1,15 @@
-def merge_sort(v10):
-    if len(arr_) > 1:
-        mid_ = len(arr_) // 2
-        L = arr_[:v5]
-        R = v1[mid_:]
-        merge_sort(L)
-        merge_sort(R)
-        v1 = j_ = k = 0
-        while i_ < len(L) and j_ < len(R):
-            if L[v8] <= R[v10]:
-                v3[k] = L[v3]
-                v9 += 1
-            else:
-                arr_[k] = R[j_]
-                j_ += 1
-            k += 1
-        while i_ < len(L):
-            arr_[k] = L[i_]
-            v2 += 1
-            k += 1
-        while v5 < len(R):
-            arr_[k] = R[j_]
-            j_ += 1
-            k += 1
+def var_7124(var_4819, var_9832, var_9304):
+    var_6833 = len(var_4819)
+    var_9551 = [(0) for var_8170 in range(var_9304 + 1)]
+    var_9407 = 0
+    while var_9407 < var_6833:
+        for var_8214 in range(var_9304, var_9832[var_9407] - 1, -1):
+            var_9551[var_8214] = var_1188(var_9551[var_8214], var_9551[
+                var_8214 - var_9832[var_9407]] + var_4819[var_9407])
+        var_9407 += 1
+    return var_9551[var_9304]
 
 
-v3 = [10, 7, 8, 9, 1, 5]
-merge_sort(arr_)
-print(arr_)
+print(var_7124([60, 100, 120], [10, 20, 30], 50))
+
+import sys

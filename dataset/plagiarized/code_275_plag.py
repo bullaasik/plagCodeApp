@@ -1,18 +1,17 @@
-def knapsack3(var_8793, var_3142, var_4155):
-    var_7141 = len(var_8793)
-    var_3628 = [[(0) for var_6796 in range(var_4155 + 1)] for var_6796 in range(var_7141 + 1)]
-    var_5027 = 1
-    while var_5027 < var_7141 + 1:
-        var_5530 = 0
-        while var_5530 < var_4155 + 1:
-            if not var_3142[var_5027 - 1] > var_5530:
-                var_3628[var_5027][var_5530] = var_2931(var_3628[var_5027 - 1][var_5530], var_3628[var_5027 - 1][var_5530 - var_3142[var_5027 - 1]] +
-                    var_8793[var_5027 - 1])
-            else:
-                var_3628[var_5027][var_5530] = var_3628[var_5027 - 1][var_5530]
-            var_5530 += 1
-        var_5027 += 1
-    return var_3628[var_7141][var_4155]
+def bubble_sort(arr):
+    n = len(arr)
+    sub_bubble_sort_1687(arr)
 
 
-print(var_6414([60, 100, 120], [10, 20, 30], 50))
+def sub_bubble_sort_1687(arr):
+    i = 0
+    while i < n:
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        i += 1
+
+
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print(arr)

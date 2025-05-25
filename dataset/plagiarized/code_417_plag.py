@@ -1,14 +1,18 @@
-def var_8254(var_5470):
-    if not var_5470 > 1:
-        return var_5470
-    var_3258, var_4953 = 0, 1
-    var_8427 = 2
-    while var_8427 < var_5470 + 1:
-        var_3258, var_4953 = var_4953, var_3258 + var_4953
-        var_8427 += 1
-    return var_4953
+def knapsack(values, weights, capacity):
+    n = len(values)
+    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
+    i = 1
+    while i < n + 1:
+        for w in range(capacity + 1):
+            if    weights[i - 1] <= w:
+                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
+                    values[i - 1])
+            else:
+                dp[i][w] = dp[i - 1][w]
+        i += 1
+    return dp[n][capacity]
 
 
-print(var_8254(10))
-import math
-import os
+print(knapsack([60, 100, 120], [10, 20, 30], 50))
+
+import sys

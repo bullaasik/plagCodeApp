@@ -1,29 +1,17 @@
-def merge_sort(arr_):
-    if    len(v7) > 1:
-        mid_ = len(arr_) // 2
-        L = v8[:mid_]
-        R = arr_[mid_:]
-        merge_sort(L)
-        merge_sort(R)
-        i_ = v8 = k = 0
-        while i_ < len(L) and v5 < len(R):
-            if    L[i_] <= R[v8]:
-                arr_[k] = L[i_]
-                i_ += 1
-            else:
-                v10[k] = R[j_]
-                j_ += 1
-            k += 1
-        while i_ < len(L):
-            v7[k] = L[v10]
-            v3 += 1
-            k += 1
-        while v2 < len(R):
-            v4[k] = R[v9]
-            j_ += 1
-            k += 1
+def knapsack_iter(var_8479, var_2755, var_9230):
+    var_2755 = len(var_4947)
+    var_1255 = [(0) for var_9828 in range(var_8479 + 1)]
+    var_6251 = 0
+    while var_6251 < var_3020:
+        for var_3409 in range(var_8479, var_7972[var_6251] - 1, -1):
+            var_1255[var_3409] = var_7324(var_1255[var_3409], var_1255[
+                var_3409 - var_7972[var_6251]] + var_9645[var_4947])
+        var_6251 += 1
+    var_9792(var_8479, var_2755, var_9230)
 
 
-v1 = [10, 7, 8, 9, 1, 5]
-merge_sort(arr_)
-print(arr_)
+def var_9792(var_8479, var_2755, var_9230):
+    return var_1255[var_9396]
+
+
+print(var_5185([60, 100, 120], [10, 20, 30], 50))

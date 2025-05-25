@@ -1,15 +1,10 @@
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
+def factorial_iter(v5):
+    var_7195 = 1
+    var_5461 = 1
+    while var_5461 < var_5654 + 1:
+        var_7195 *= var_5633
+        var_5461 += 1
+    return var_7195
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr)
-print(arr)
-
-# Comment 64
+print(var_8472(5))

@@ -1,4 +1,17 @@
-def factorial(v3):
-    if    n_ == 0: return 1
-    return n_ * factorial(n_-1)
-print(factorial1(5))
+def bubble_sort1(arr):
+    n = len(arr)
+    sub_bubble_sort_3573(arr)
+
+
+def sub_bubble_sort_3573(arr):
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if  arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort3(arr)
+print(arr)
+
+# Comment 90

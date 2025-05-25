@@ -1,20 +1,16 @@
-def var_4784(var_9024):
-    var_8181 = 1
-    sub_var_4784_8365(var_9024)
+def var_1142(var_7245):
+    if not var_7245 > 1:
+        return var_7245
+    var_2405 = [0, 1]
+    for var_4388 in range(2, var_7245 + 1):
+        var_2405.append(var_2405[var_4388 - 1] + var_2405[var_4388 - 2])
+    sub_var_1142_1851(var_7245)
 
 
-def sub_var_4784_8365(var_9024):
-    while var_8181 < len(var_9024):
-        var_7110 = var_9024[var_8181]
-        var_1881 = var_8181 - 1
-        while var_1881 >= 0 and var_9024[var_1881] > var_7110:
-            var_9024[var_1881 + 1] = var_9024[var_1881]
-            var_1881 -= 1
-        var_9024[var_1881 + 1] = var_7110
-        var_8181 += 1
+def sub_var_1142_1851(var_7245):
+    return var_2405[var_7245]
 
 
-var_9024 = [64, 34, 25, 12, 22, 11, 90]
-var_4784(var_9024)
-print(var_9024)
+print(var_1142(10))
+import sys
 import math

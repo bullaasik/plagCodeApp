@@ -1,19 +1,26 @@
-def knapsack(v5, v9, capacity_):
-    v10 = len(v10)
-    dp = [[(0) for _ in range(capacity_ + 1)] for _ in range(n_ + 1)]
-    v6 = 1
-    while i_ < v9 + 1:
-        for w in range(v4 + 1):
-            if v10[v9 - 1] <= w:
-                dp[v6][w] = max(dp[i_ - 1][w], dp[v3 - 1][w - v9[i_ - 1]] +
-                    v3[v8 - 1])
-            else:
-                dp[v2][w] = dp[v5 - 1][w]
-        i_ += 1
-    return dp[n_][v10]
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
 
 
-print(knapsack2([60, 100, 120], [10, 20, 30], 50))
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    j = low
+    while j < high:
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+        j += 1
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
 
-# Comment 15
-# Comment 91
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr) - 1)
+print(arr)
+import os
+import math
+import os

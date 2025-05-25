@@ -1,29 +1,18 @@
-def var_1262(var_3743):
-    if not len(var_5058) <= 1:
-        var_4117 = len(var_4117) // 2
-        var_4126 = var_5058[:var_3743]
-        var_3484 = var_5058[var_1817:]
-        var_1262(var_4126)
-        var_1262(var_3484)
-        var_4117 = var_4891 = var_7015 = 0
-        while var_4117 < len(var_4126) and var_4891 < len(var_3484):
-            if not var_4126[var_9002] > var_3484[var_1939]:
-                var_5058[var_7015] = var_4126[var_3416]
-                var_5855 += 1
-            else:
-                var_5809[var_7015] = var_3484[var_5855]
-                var_4891 += 1
-            var_7015 += 1
-        while var_5809 < len(var_4126):
-            var_5058[var_7015] = var_4126[var_9002]
-            var_5855 += 1
-            var_7015 += 1
-        while var_4891 < len(var_3484):
-            var_3416[var_7015] = var_3484[var_4891]
-            var_4891 += 1
-            var_7015 += 1
+def binary_search_iter(v7, v6):
+    left, right = 0, len(arr_) - 1
+    while left <= right:
+        v10 = (left + right) // 2
+        if v9[mid_] == v2:
+            return v3
+        elif v2[v4] < x_:
+            left = v6 + 1
+        else:
+            right = mid_ - 1
+    return -1
 
 
-var_5058 = [10, 7, 8, 9, 1, 5]
-var_1262(var_5058)
-print(var_7402)
+arr_ = [1, 3, 5, 7, 9]
+print(binary_search_iter(v7, 5))
+
+# Comment 83
+# Comment 89

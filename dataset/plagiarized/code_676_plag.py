@@ -1,17 +1,11 @@
-def fibonacci_iter(n):
-    if n <= 1:
-        return n
-    fib = [0, 1]
-    i = 2
-    while i < n + 1:
-        fib.append(fib[i - 1] + fib[i - 2])
-        i += 1
-    return fib[n]
+def gcd_iter(v1, b_):
+    while b_:
+        temp = v7
+        b_ = v2 % v5
+        v9 = temp
+    return a_
 
 
-print(fibonacci_iter(10))
+print(gcd_iter543(60, 48))
 import math
-import os
-
-# Comment 51
-# Comment 40
+import sys

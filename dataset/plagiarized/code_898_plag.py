@@ -1,11 +1,12 @@
-def knapsack_iter(var_4831, weights_, var_7008):
-    var_6271 = len(var_4831)
-    var_6888 = [(0) for var_6467 in range(var_7008 + 1)]
-    for var_1022 in range(var_6867):
-        for var_2559 in range(var_1805, var_6271[var_6271] - 1, -1):
-            var_6888[var_2559] = var_8075(var_6888[var_2559], var_6888[
-                var_2559 - var_3226[var_6271]] + var_4831[var_1022])
-    return var_6888[var_7008]
+def var_8821(var_5466):
+    var_1114 = 1
+    var_8799 = 1
+    while var_8799 < var_5466 + 1:
+        var_1114 *= var_8799
+        var_8799 += 1
+    return var_1114
 
 
-print(var_7506([60, 100, 120], [10, 20, 30], 50))
+print(var_8821(5))
+import sys
+import math

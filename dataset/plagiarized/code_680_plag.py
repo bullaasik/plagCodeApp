@@ -1,9 +1,14 @@
-def var_6862(var_1164, var_5452):
-    while var_5452:
-        var_5589 = var_5452
-        var_5452 = var_1164 % var_5452
-        var_1164 = var_5589
-    return var_1164
+def gcd_iter(a_, v4):
+    while b_:
+        temp = v3
+        v2 = a_ % b_
+        a_ = temp
+    return a_
 
 
-print(var_686231(60, 48))
+print(gcd_iter(60, 48))
+
+# Comment 44
+import math
+# Comment 81
+# Comment 18

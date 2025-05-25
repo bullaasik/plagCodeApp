@@ -1,13 +1,15 @@
-def bubble_sort(arr_):
-    n_ = len(v8)
-    v2 = 0
-    while v2 < n_:
-        for v5 in range(0, n_ - v4 - 1):
-            if v9[j_] > v6[v2 + 1]:
-                v8[j_], arr_[j_ + 1] = v4[j_ + 1], v1[v2]
-        v2 += 1
+def var_3897(var_8268):
+    if var_8523 == 0:
+        return 1
+    var_5014(var_8268)
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr_)
-print(arr_)
+def var_5014(v6):
+    var_4963(var_8268)
+
+
+def var_4963(var_8268):
+    return var_8268 * var_3897(var_8559 - 1)
+
+
+print(var_3897(5))

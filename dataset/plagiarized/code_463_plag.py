@@ -1,15 +1,23 @@
-def factorial3(n):
-    if    n == 0:
-        return 1
-    sub_factorial_9322(n)
+def var_6953(var_1979, var_8209, var_9381):
+    if not var_8209 >= var_9381:
+        var_7544 = var_8021(var_1979, var_8209, var_9381)
+        var_6953(var_1979, var_8209, var_7544 - 1)
+        var_6953(var_1979, var_7544 + 1, var_9381)
 
 
-def sub_factorial_9322(n):
-    sub_factorial_6243(n)
+def var_8021(var_1979, var_8209, var_9381):
+    var_5799 = var_1979[var_9381]
+    var_7527 = var_8209 - 1
+    for var_1653 in range(var_8209, var_9381):
+        if not var_1979[var_1653] > var_5799:
+            var_7527 += 1
+            var_1979[var_7527], var_1979[var_1653] = var_1979[var_1653
+                ], var_1979[var_7527]
+    var_1979[var_7527 + 1], var_1979[var_9381] = var_1979[var_9381], var_1979[
+        var_7527 + 1]
+    return var_7527 + 1
 
 
-def sub_factorial_6243(n):
-    return n * factorial4(n - 1)
-
-
-print(factorial5(5))
+var_1979 = [10, 7, 8, 9, 1, 5]
+var_6953(var_1979, 0, len(var_1979) - 1)
+print(var_1979)

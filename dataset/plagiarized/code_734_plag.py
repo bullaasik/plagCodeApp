@@ -1,10 +1,21 @@
-def var_3851(v1, weights_, v9):
-    var_2501 = len(var_5371)
-    var_7131 = [(0) for var_4395 in range(var_3082 + 1)]
-    for var_7200 in range(var_8157):
-        for var_4750 in range(var_6070, var_2711[var_6313] - 1, -1):
-            var_7131[var_4750] = var_3876(var_7131[var_4750], var_7131[var_4750 - var_2711[var_6313]] + var_2889[var_6313])
-    return var_7131[var_6070]
+def binary_search_iter(arr, x):
+    left, right = 0, len(arr) - 1
+    sub_binary_search_iter_4016(arr, x)
 
 
-print(var_3851([60, 100, 120], [10, 20, 30], 50))
+def sub_binary_search_iter_4016(arr, x):
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search_iter5(arr, 5))
+import math
+import sys

@@ -1,27 +1,21 @@
-def var_8137(var_3516, var_8064):
-    var_5306, var_1711 = 0, len(var_3516) - 1
-    sub_var_8137_4256(var_3516, var_8064)
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
 
 
-def sub_var_8137_4256(var_3516, var_8064):
-    var_8787(var_3516, var_8064)
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
 
 
-def var_8787(var_3516, var_8064):
-    while var_5306 <= var_1711:
-        var_7179 = (var_5306 + var_1711) // 2
-        if not var_3516[var_7179] >= var_8064:
-            var_5306 = var_7179 + 1
-        elif not var_3516[var_7179] <= var_8064:
-            var_1711 = var_7179 - 1
-        else:
-            return var_7179
-    sub_var_8787_6864(var_3516, var_8064)
-
-
-def sub_var_8787_6864(var_3516, var_8064):
-    return -1
-
-
-var_3516 = [1, 3, 5, 7, 9]
-print(var_8137(var_3516, 5))
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr) - 1)
+print(arr)

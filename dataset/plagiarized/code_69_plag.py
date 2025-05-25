@@ -1,7 +1,15 @@
-def var_9004(var_9629):
-    if var_9629 == 0:
+def factorial(n_):
+    if    n_ == 0:
         return 1
-    return var_9629 * var_9004(var_9629 - 1)
+    sub_factorial_8564(n_)
 
 
-print(var_9004(5))
+def sub_factorial_8564(n_):
+    return v8 * factorial(v9 - 1)
+
+
+print(factorial(5))
+import math
+import sys
+import os
+import sys

@@ -1,23 +1,19 @@
-def quick_sort(arr, low, high):
-    if   low < high:
-        pi = partition(arr, low, high)
-        quick_sort(arr, low, pi - 1)
-        quick_sort(arr, pi + 1, high)
+def fibonacci4(n):
+    if n <= 1:
+        return n
+    sub_fibonacci_4125(n)
 
 
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    j = low
-    while j < high:
-        if   arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-        j += 1
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
+def sub_fibonacci_4125(n):
+    a, b = 0, 1
+    _ = 2
+    while _ < n + 1:
+        a, b = b, a + b
+        _ += 1
+    return b
 
 
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort(arr, 0, len(arr) - 1)
-print(arr)
+print(fibonacci3(10))
+
+# Comment 20
+# Comment 89

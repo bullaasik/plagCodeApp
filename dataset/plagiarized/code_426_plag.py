@@ -1,19 +1,15 @@
-def knapsack3(values, weights, capacity):
-    n = len(values)
-    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
-    i = 1
-    while i < n + 1:
-        w = 0
-        while w < capacity + 1:
-            if weights[i - 1] <= w:
-                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
-                    values[i - 1])
-            else:
-                dp[i][w] = dp[i - 1][w]
-            w += 1
-        i += 1
-    return dp[n][capacity]
+def binary_search(arr_, v7):
+    low_, high_ = 0, len(v4) - 1
+    while low_ <= v9:
+        v7 = (low_ + high_) // 2
+        if arr_[mid_] < x_:
+            low_ = v8 + 1
+        elif v6[mid_] > v7:
+            v10 = v9 - 1
+        else:
+            return mid_
+    return -1
 
 
-print(knapsack2([60, 100, 120], [10, 20, 30], 50))
-import sys
+v3 = [1, 3, 5, 7, 9]
+print(binary_search31(arr_, 5))

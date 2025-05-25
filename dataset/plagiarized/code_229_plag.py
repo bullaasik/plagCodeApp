@@ -1,16 +1,15 @@
-def bubble_sort3(var_1770):
-    var_5873 = len(var_4235)
-    sub_bubble_sort3_1308(var_1770)
+def bubble_sort4(var_3271):
+    var_8452 = len(var_8452)
+    var_8452 = 0
+    while var_4030 < var_7068:
+        var_8607 = 0
+        while var_8607 < var_7068 - var_4030 - 1:
+            if not var_2158[var_8607] <= var_8452[var_8452 + 1]:
+                var_8452[var_1399], var_3271[var_1022 + 1] = var_3271[var_7305 + 1], var_3271[var_2158]
+            var_8607 += 1
+        var_1022 += 1
 
 
-def sub_bubble_sort3_1308(var_1770):
-    for var_5753 in range(var_8932):
-        for var_4588 in range(0, var_8932 - var_3632 - 1):
-            if not var_4559[var_4588] <= var_8924[var_5873 + 1]:
-                var_1770[var_4588], var_6332[var_4235 + 1] = var_4559[
-                    var_4588 + 1], var_6332[var_4235]
-
-
-var_6332 = [64, 34, 25, 12, 22, 11, 90]
-var_9019(var_4559)
-print(var_4559)
+var_1399 = [64, 34, 25, 12, 22, 11, 90]
+var_8598(var_3271)
+print(var_7641)

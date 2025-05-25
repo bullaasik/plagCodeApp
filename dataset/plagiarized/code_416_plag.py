@@ -1,14 +1,15 @@
-def fibonacci(v1):
-    if v6 <= 1:
-        return n_
-    v5, v9 = 0, 1
-    for _ in range(2, v6 + 1):
-        v8, b_ = b_, v1 + v10
-    return b_
+def binary_search2(v2, x_):
+    v6, v6 = 0, len(arr_) - 1
+    while v10 <= high_:
+        v4 = (v9 + v7) // 2
+        if arr_[mid_] < v6:
+            low_ = v7 + 1
+        elif arr_[v4] > v8:
+            v3 = mid_ - 1
+        else:
+            return mid_
+    return -1
 
 
-print(fibonacci(10))
-import os
-import sys
-
-# Comment 16
+v2 = [1, 3, 5, 7, 9]
+print(binary_search1(arr_, 5))

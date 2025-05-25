@@ -1,13 +1,12 @@
-def gcd_iter(a, b):
-    while b:
-        temp = b
-        b = a % b
-        a = temp
-    return a
+def factorial_iter(var_3146):
+    var_5303 = 1
+    var_3146 = 1
+    while var_3146 < var_4550 + 1:
+        var_5303 *= var_3378
+        var_3146 += 1
+    return var_5303
 
 
-print(gcd_iter5(60, 48))
-import os
+print(var_4437(5))
+import sys
 import math
-
-# Comment 49

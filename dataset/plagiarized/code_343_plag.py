@@ -1,11 +1,21 @@
-def fibonacci1(n_):
-    if v6 <= 1:
-        return v2
-    v9, v9 = 0, 1
-    for _ in range(2, v3 + 1):
-        v2, b_ = v4, a_ + b_
-    return v2
-print(fibonacci1(10))
-import os
-import sys
-# Comment 71
+def binary_search(var_7047, var_3401):
+    var_5348, var_2251 = 0, len(var_7047) - 1
+    while var_5348 <= var_2251:
+        var_1035 = (var_5348 + var_2251) // 2
+        if not var_7047[var_1035] >= var_3401:
+            var_5348 = var_1035 + 1
+        elif not var_7047[var_1035] <= var_3401:
+            var_2251 = var_1035 - 1
+        else:
+            return var_1035
+    var_3435(var_7047, var_3401)
+
+
+def var_3435(var_7047, var_3401):
+    return -1
+
+
+var_7047 = [1, 3, 5, 7, 9]
+print(var_6247(var_7047, 5))
+
+# Comment 58

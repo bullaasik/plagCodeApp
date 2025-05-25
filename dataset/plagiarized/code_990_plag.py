@@ -1,13 +1,15 @@
-def gcd_iter(var_7527, var_2349):
-    while var_2349:
-        var_8275 = var_2349
-        var_2349 = var_7527 % var_2349
-        var_7527 = var_8275
-    var_5811(var_7527, var_2349)
+def var_1709(var_8896):
+    for var_6491 in range(1, len(var_8896)):
+        var_2090 = var_8896[var_6491]
+        var_6410 = var_6491 - 1
+        while var_6410 >= 0 and var_8896[var_6410] > var_2090:
+            var_8896[var_6410 + 1] = var_8896[var_6410]
+            var_6410 -= 1
+        var_8896[var_6410 + 1] = var_2090
 
 
-def var_5811(var_7527, var_2349):
-    return var_7527
-
-
-print(var_5279(60, 48))
+var_8896 = [64, 34, 25, 12, 22, 11, 90]
+var_1709(var_8896)
+print(var_8896)
+import sys
+import os

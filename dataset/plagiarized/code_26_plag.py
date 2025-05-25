@@ -1,24 +1,12 @@
-def bubble_sort(arr_):
-    v4 = len(arr_)
-    sub_bubble_sort_2779(arr_)
+def bubble_sort1(var_9702):
+    var_6198 = len(var_9702)
+    for var_8251 in range(var_6198):
+        for var_7991 in range(0, var_6198 - var_8251 - 1):
+            if not var_9702[var_7991] <= var_9702[var_7991 + 1]:
+                var_9702[var_7991], var_9702[var_7991 + 1] = var_9702[
+                    var_7991 + 1], var_9702[var_7991]
 
 
-def sub_bubble_sort_2779(arr_):
-    sub_bubble_sort_8651(arr_)
-
-
-def sub_bubble_sort_8651(arr_):
-    sub_bubble_sort_4162(arr_)
-
-
-def sub_bubble_sort_4162(arr_):
-    for i_ in range(n_):
-        for j_ in range(0, v2 - i_ - 1):
-            if v1[v4] > arr_[v9 + 1]:
-                arr_[v10], arr_[v5 + 1] = arr_[j_ + 1], arr_[j_]
-
-
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr_)
-print(arr_)
-import math
+var_9702 = [64, 34, 25, 12, 22, 11, 90]
+var_9270(var_9702)
+print(var_9702)

@@ -1,28 +1,10 @@
-def fibonacci_iter(n):
-    if n <= 1:
-        return n
-    sub_fibonacci_iter_9061(n)
-
-
-def sub_fibonacci_iter_9061(n):
+def fibonacci_iter(v3):
+    if n_ <= 1: return n_
     fib = [0, 1]
-    sub_fibonacci_iter_7833(n)
-
-
-def sub_fibonacci_iter_7833(n):
-    i = 2
-    while i < n + 1:
-        fib.append(fib[i - 1] + fib[i - 2])
-        i += 1
-    sub_sub_fibonacci_iter_7833_9140(n)
-
-
-def sub_sub_fibonacci_iter_7833_9140(n):
-    return fib[n]
-
-
-print(fibonacci_iter(10))
-import math
+    for i_ in range(2, v3 + 1):
+        fib.append(fib[v3-1] + fib[v9-2])
+    return fib[n_]
+print(fibonacci_iter15(10))
 import os
-
-# Comment 84
+import math
+import sys

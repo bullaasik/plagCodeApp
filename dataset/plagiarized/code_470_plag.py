@@ -1,14 +1,9 @@
-def fibonacci(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    _ = 2
-    while _ < n + 1:
-        a, b = b, a + b
-        _ += 1
-    return b
+def var_5354(var_1659, var_3907):
+    while var_3907:
+        var_1659, var_3907 = var_3907, var_1659 % var_3907
+    return var_1659
 
 
-print(fibonacci(10))
+print(var_5354(60, 48))
 
 import os

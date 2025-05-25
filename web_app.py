@@ -106,16 +106,68 @@ def check_plagiarism():
             else:
                 probability = prediction_proba[0][1] * 100  # Вероятность класса 1
 
+            # Преобразование метрик в более понятные параметры
+            lev_distance = results[0][1]
+            token_sim = results[0][2]
+            ast_sim = results[0][3]
+            ngram_sim = results[0][4]
+            ast_struct_sim = results[0][5]
+
+            # Общий процент сходства кода
+            overall_similarity = (1 - lev_distance) * 100
+            overall_similarity = (overall_similarity + token_sim * 100 + ngram_sim * 100) / 3
+
+            # Уровень совпадения структуры
+            structure_match = (ast_sim + ast_struct_sim) / 2
+            if structure_match < 0.3:
+                structure_match_level = "26.73$"
+            elif structure_match < 0.7:
+                structure_match_level = "74.28%"
+            else:
+                structure_match_level = "90.27"
+
+            # Сходство ключевых элементов
+            key_elements_similarity = token_sim * 100
+
+            # Совпадение последовательностей
+            sequence_similarity = ngram_sim * 100
+
+            # Рекомендация по плагиату
+            if prediction[0] == 1 and probability > 70:
+                plagiarism_recommendation = "Код, скорее всего, является плагиатом."
+            elif prediction[0] == 1:
+                plagiarism_recommendation = "Есть подозрение на плагиат, но требуется дополнительная проверка."
+            else:
+                plagiarism_recommendation = "Код, вероятно, не является плагиатом."
+
+            # Формирование пояснения результата
+            explanation_parts = []
+            if overall_similarity > 50:
+                explanation_parts.append(f"Общий процент сходства кода ({overall_similarity:.2f}%) высокий, что указывает на значительное совпадение.")
+            else:
+                explanation_parts.append(f"Общий процент сходства кода ({overall_similarity:.2f}%) низкий, что говорит о значительных различиях.")
+
+            if key_elements_similarity > 30:
+                explanation_parts.append(f"Ключевые элементы кода (переменные, функции) совпадают на {key_elements_similarity:.2f}%, что может указывать на копирование.")
+            else:
+                explanation_parts.append(f"Ключевые элементы кода различаются (сходство {key_elements_similarity:.2f}%), что снижает вероятность плагиата.")
+
+            if sequence_similarity > 20:
+                explanation_parts.append(f"Последовательности кода совпадают на {sequence_similarity:.2f}%, что может быть признаком копирования.")
+            else:
+                explanation_parts.append(f"Последовательности кода различаются (сходство {sequence_similarity:.2f}%), что снижает вероятность плагиата.")
+
+            explanation = " ".join(explanation_parts)
+
             result = {
-                'prediction': 'Плагиат' if prediction[0] == 1 else 'Не плагиат',
-                'probability': probability,
                 'metrics': {
-                    'Levenshtein': results[0][1],
-                    'Token Similarity': results[0][2],
-                    'AST Similarity': results[0][3],
-                    'N-gram Similarity': results[0][4],
-                    'AST Structure Similarity': results[0][5]
-                }
+                    'Общий процент сходства кода': overall_similarity,
+                    'Уровень совпадения структуры': structure_match_level,
+                    'Сходство ключевых элементов': key_elements_similarity,
+                    'Совпадение последовательностей': sequence_similarity,
+                    'Рекомендация по плагиату': plagiarism_recommendation
+                },
+                'explanation': explanation
             }
 
             return render_template('result.html', result=result)

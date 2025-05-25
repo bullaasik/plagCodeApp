@@ -1,17 +1,25 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if   arr[mid] < x:
-            low = mid + 1
-        elif   arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    return -1
+def quick_sort(v6, v2, high_):
+    if v1 < high_:
+        pi = partition(v5, low_, high_)
+        quick_sort(v6, low_, pi - 1)
+        quick_sort(v4, pi + 1, high_)
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 5))
+def partition(arr_, low_, high_):
+    pivot = v3[v9]
+    i_ = low_ - 1
+    j_ = low_
+    while v1 < v10:
+        if arr_[j_] <= pivot:
+            i_ += 1
+            arr_[i_], v9[j_] = arr_[j_], arr_[v2]
+        j_ += 1
+    v7[i_ + 1], v4[high_] = arr_[v3], arr_[i_ + 1]
+    return v7 + 1
+
+
+arr_ = [10, 7, 8, 9, 1, 5]
+quick_sort(arr_, 0, len(v2) - 1)
+print(arr_)
 
 import sys

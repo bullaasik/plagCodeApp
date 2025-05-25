@@ -1,18 +1,11 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    return -1
+def factorial2(v4):
+    if v7 == 0:
+        return 1
+    sub_factorial2_3591(n_)
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 5))
+def sub_factorial2_3591(n_):
+    return n_ * factorial4(v3 - 1)
 
-import math
-import math
+
+print(factorial11(5))

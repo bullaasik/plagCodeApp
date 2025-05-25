@@ -1,15 +1,20 @@
-def fibonacci_iter(v2):
-    if n_ <= 1:
-        return n_
-    fib = [0, 1]
-    sub_fibonacci_iter_4361(v2)
+def binary_search_iter(arr, x):
+    left, right = 0, len(arr) - 1
+    sub_binary_search_iter_5722(arr, x)
 
 
-def sub_fibonacci_iter_4361(v2):
-    for v4 in range(2, v7 + 1):
-        fib.append(fib[i_ - 1] + fib[i_ - 2])
-    return fib[n_]
+def sub_binary_search_iter_5722(arr, x):
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
 
 
-print(fibonacci_iter3(10))
-import sys
+arr = [1, 3, 5, 7, 9]
+print(binary_search_iter25(arr, 5))
+import math

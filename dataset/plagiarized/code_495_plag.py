@@ -1,11 +1,13 @@
-def gcd2(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd2_9893(a, b)
+def var_6274(var_8667):
+    if var_8667 == 0:
+        return 1
+    return var_8667 * var_6274(var_8667 - 1)
 
 
-def sub_gcd2_9893(a, b):
-    return a
+print(var_6274(5))
+import os
+import sys
 
-
-print(gcd15(60, 48))
+import math
+import math
+import os

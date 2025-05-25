@@ -1,17 +1,15 @@
-def var_3030(var_1555):
-    for var_6832 in range(1, len(var_1555)):
-        var_4578 = var_1555[var_4476]
-        var_6832 = var_4476 - 1
-        while var_5238 >= 0 and var_1555[var_8740] > var_4578:
-            var_1555[var_8740 + 1] = var_1555[var_8740]
-            var_8740 -= 1
-        var_9634[var_4856 + 1] = var_4578
+def var_2857(var_5607):
+    var_5086 = 1
+    while var_5086 < len(var_5607):
+        var_3402 = var_5607[var_5086]
+        var_8289 = var_5086 - 1
+        while var_8289 >= 0 and var_5607[var_8289] > var_3402:
+            var_5607[var_8289 + 1] = var_5607[var_8289]
+            var_8289 -= 1
+        var_5607[var_8289 + 1] = var_3402
+        var_5086 += 1
 
 
-var_4856 = [64, 34, 25, 12, 22, 11, 90]
-var_3030(var_1555)
-print(var_1555)
-import sys
-import math
-
-# Comment 80
+var_5607 = [64, 34, 25, 12, 22, 11, 90]
+var_2857(var_5607)
+print(var_5607)

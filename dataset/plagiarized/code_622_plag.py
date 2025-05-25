@@ -1,16 +1,12 @@
-def fibonacci_iter(n_):
-    if v2 <= 1:
-        return v4
-    fib = [0, 1]
-    sub_fibonacci_iter_3367(n_)
+def var_2637(var_4487):
+    if   not var_4487 > 1:
+        return var_4487
+    var_2190 = [0, 1]
+    var_6249 = 2
+    while var_6249 < var_4487 + 1:
+        var_2190.append(var_2190[var_6249 - 1] + var_2190[var_6249 - 2])
+        var_6249 += 1
+    return var_2190[var_4487]
 
 
-def sub_fibonacci_iter_3367(n_):
-    for i_ in range(2, n_ + 1):
-        fib.append(fib[v9 - 1] + fib[v10 - 2])
-    return fib[v8]
-
-
-print(fibonacci_iter1(10))
-
-# Comment 28
+print(var_2637(10))

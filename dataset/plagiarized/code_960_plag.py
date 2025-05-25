@@ -1,19 +1,13 @@
-def var_9938(var_9766):
-    var_1420 = 1
-    sub_var_9938_1260(var_9766)
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
 
 
-def sub_var_9938_1260(var_9766):
-    while var_1420 < len(var_9766):
-        var_7532 = var_9766[var_1420]
-        var_6814 = var_1420 - 1
-        while var_6814 >= 0 and var_9766[var_6814] > var_7532:
-            var_9766[var_6814 + 1] = var_9766[var_6814]
-            var_6814 -= 1
-        var_9766[var_6814 + 1] = var_7532
-        var_1420 += 1
-
-
-var_9766 = [64, 34, 25, 12, 22, 11, 90]
-var_9938(var_9766)
-print(var_9766)
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)

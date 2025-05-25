@@ -1,15 +1,17 @@
-def factorial_iter(n_):
-    result = 1
-    sub_factorial_iter_9092(n_)
+def gcd_iter(a, b):
+    while b:
+        temp = b
+        b = a % b
+        a = temp
+    sub_gcd_iter_8412(a, b)
 
 
-def sub_factorial_iter_9092(n_):
-    for v5 in range(1, v10 + 1):
-        result *= i_
-    return result
+def sub_gcd_iter_8412(a, b):
+    sub_gcd_iter_9923(a, b)
 
 
-print(factorial_iter1(5))
+def sub_gcd_iter_9923(a, b):
+    return a
 
-import math
-import sys
+
+print(gcd_iter3(60, 48))

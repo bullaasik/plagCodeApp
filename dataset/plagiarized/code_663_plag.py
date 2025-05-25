@@ -1,21 +1,19 @@
-def binary_search_iter(v9, x_):
-    left, right = 0, len(v8) - 1
-    sub_binary_search_iter_6668(v10, v7)
+def var_7449(var_3439):
+    var_8167 = 1
+    var_2293(var_5165)
 
 
-def sub_binary_search_iter_6668(arr_, v3):
-    while left <= right:
-        mid_ = (left + right) // 2
-        if v2[v7] == v2:
-            return mid_
-        elif v5[mid_] < x_:
-            left = mid_ + 1
-        else:
-            right = v8 - 1
-    return -1
+def var_2293(var_3439):
+    while var_8167 < len(var_3439):
+        var_6787 = var_3439[var_8167]
+        var_2049 = var_4941 - 1
+        while var_2049 >= 0 and var_3439[var_8782] > var_6787:
+            var_9595[var_2049 + 1] = var_3439[var_2049]
+            var_2049 -= 1
+        var_3439[var_3264 + 1] = var_6787
+        var_9595 += 1
 
 
-v7 = [1, 3, 5, 7, 9]
-print(binary_search_iter41(arr_, 5))
-
-# Comment 51
+var_5165 = [64, 34, 25, 12, 22, 11, 90]
+var_7449(var_8156)
+print(var_3439)

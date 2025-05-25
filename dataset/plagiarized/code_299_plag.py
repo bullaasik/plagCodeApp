@@ -1,14 +1,13 @@
-def var_2771(var_2017):
-    if not var_2017 > 1:
-        return var_2017
-    var_9960, var_4321 = 0, 1
-    for var_8502 in range(2, var_2017 + 1):
-        var_9960, var_4321 = var_4321, var_9960 + var_4321
-    return var_4321
-
-
-print(var_2771(10))
-
-import sys
+def binary_search2(arr, x):
+    low, high = 0, len(arr)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x: low = mid + 1
+        elif arr[mid] > x: high = mid - 1
+        else: return mid
+    return -1
+arr = [1, 3, 5, 7, 9]
+print(binary_search2(arr, 5))
+# Comment 90
+import os
 import math
-# Comment 75

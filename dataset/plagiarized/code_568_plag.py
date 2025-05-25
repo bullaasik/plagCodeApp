@@ -1,27 +1,17 @@
-def fibonacci_iter(n):
-    if n <= 1:
-        return n
-    sub_fibonacci_iter_2159(n)
+def var_9576(var_9514, var_7679):
+    var_6798, var_7638 = 0, len(var_9514) - 1
+    while var_6798 <= var_7638:
+        var_5119 = (var_6798 + var_7638) // 2
+        if var_9514[var_5119] == var_7679:
+            return var_5119
+        elif not var_9514[var_5119] >= var_7679:
+            var_6798 = var_5119 + 1
+        else:
+            var_7638 = var_5119 - 1
+    return -1
 
 
-def sub_fibonacci_iter_2159(n):
-    fib = [0, 1]
-    sub_fibonacci_iter_1658(n)
-
-
-def sub_fibonacci_iter_1658(n):
-    i = 2
-    while i < n + 1:
-        fib.append(fib[i - 1] + fib[i - 2])
-        i += 1
-    sub_sub_fibonacci_iter_1658_2562(n)
-
-
-def sub_sub_fibonacci_iter_1658_2562(n):
-    return fib[n]
-
-
-print(fibonacci_iter(10))
-
-import math
+var_9514 = [1, 3, 5, 7, 9]
+print(var_9576(var_9514, 5))
+import os
 import sys

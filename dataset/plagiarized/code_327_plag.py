@@ -1,16 +1,26 @@
-def fibonacci(var_7644):
-    if not var_7644 > 1:
-        return var_7644
-    var_3610, var_6970 = 0, 1
-    for var_3984 in range(2, var_7644 + 1):
-        var_3610, var_6970 = var_6970, var_3610 + var_6970
-    var_2306(var_7644)
+def fibonacci(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    sub_fibonacci_2218(n)
 
 
-def var_2306(var_7644):
-    return var_6970
+def sub_fibonacci_2218(n):
+    sub_fibonacci_5544(n)
 
 
-print(var_1117(10))
+def sub_fibonacci_5544(n):
+    _ = 2
+    while _ < n + 1:
+        a, b = b, a + b
+        _ += 1
+    sub_sub_fibonacci_5544_5270(n)
 
-# Comment 21
+
+def sub_sub_fibonacci_5544_5270(n):
+    return b
+
+
+print(fibonacci(10))
+
+# Comment 84

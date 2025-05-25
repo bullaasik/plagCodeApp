@@ -1,17 +1,7 @@
-def var_1006(var_5700, var_1061):
-    while var_1061:
-        var_8102 = var_1061
-        var_1061 = var_5700 % var_1061
-        var_5700 = var_8102
-    var_3562(var_5700, var_1061)
-
-
-def var_3562(var_5700, var_1061):
-    return var_5700
-
-
-print(var_1006(60, 48))
-import os
-import math
-import os
-import math
+def fibonacci_iter(v1):
+    if v1 <= 1: return v1
+    fib = [0, 1]
+    for i_ in range(2, v4 + 1):
+        fib.append(fib[v2-1] + fib[v3-2])
+    return fib[n_]
+print(fibonacci_iter42(10))

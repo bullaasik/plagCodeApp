@@ -1,9 +1,13 @@
-def gcd_iter(var_8384, var_6421):
-    while var_6421:
-        var_7726 = var_6421
-        var_6421 = var_8384 % var_6421
-        var_8384 = var_7726
-    return var_8384
+def var_9789(var_3509, var_8850):
+    while var_8850:
+        var_8441 = var_8850
+        var_8850 = var_3509 % var_8850
+        var_3509 = var_8441
+    return var_3509
 
 
-print(var_5943(60, 48))
+print(var_9789(60, 48))
+
+import sys
+import sys
+# Comment 39

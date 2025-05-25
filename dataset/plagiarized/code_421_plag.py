@@ -1,15 +1,15 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_2420(a, b)
+def binary_search(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
 
 
-def sub_gcd_2420(a, b):
-    sub_gcd_1337(a, b)
-
-
-def sub_gcd_1337(a, b):
-    return a
-
-
-print(gcd(60, 48))
+arr = [1, 3, 5, 7, 9]
+print(binary_search2(arr, 5))

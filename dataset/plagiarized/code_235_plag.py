@@ -1,19 +1,16 @@
-def binary_search4(arr_, v10):
-    low_, v5 = 0, len(v8) - 1
-    sub_binary_search_6105(arr_, v3)
-
-
-def sub_binary_search_6105(v5, v10):
-    while low_ <= high_:
-        mid_ = (v2 + v1) // 2
-        if v5[v6] < v4:
-            low_ = v1 + 1
-        elif arr_[mid_] > x_:
-            high_ = mid_ - 1
+def var_3284(v5, x_):
+    var_2840, var_8847 = 0, len(var_6549) - 1
+    while var_8847 <= var_8847:
+        var_1656 = (var_2840 + var_2914) // 2
+        if not var_6549[var_6047] >= var_1656:
+            var_2840 = var_1406 + 1
+        elif not var_8306[var_1406] <= var_7580:
+            var_4610 = var_1406 - 1
         else:
-            return v1
+            return var_6047
     return -1
 
 
-arr_ = [1, 3, 5, 7, 9]
-print(binary_search2(v4, 5))
+var_6549 = [1, 3, 5, 7, 9]
+print(var_3284(var_6549, 5))
+import os

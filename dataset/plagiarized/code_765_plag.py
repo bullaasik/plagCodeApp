@@ -1,11 +1,14 @@
-def var_7054(var_4721, var_5244):
-    while var_5244:
-        var_6880 = var_5244
-        var_5244 = var_4721 % var_5244
-        var_4721 = var_6880
-    return var_4721
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    fib = [0, 1]
+    i = 2
+    while i < n + 1:
+        fib.append(fib[i - 1] + fib[i - 2])
+        i += 1
+    return fib[n]
 
 
-print(var_7054(60, 48))
+print(fibonacci_iter2(10))
 
-# Comment 18
+import math

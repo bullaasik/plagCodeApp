@@ -1,16 +1,21 @@
-def knapsack_iter(v1, weights_, capacity_):
-    n_ = len(values_)
-    dp = [(0) for _ in range(capacity_ + 1)]
-    for v4 in range(v6):
-        for w in range(v4, v4[i_] - 1, -1):
-            dp[w] = max(dp[w], dp[w - weights_[i_]] + values_[i_])
-    sub_knapsack_iter_6502(v9, v6, capacity_)
+def binary_search_iter(arr, x):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    sub_binary_search_iter_8267(arr, x)
 
 
-def sub_knapsack_iter_6502(v5, weights_, v1):
-    return dp[capacity_]
+def sub_binary_search_iter_8267(arr, x):
+    return -1
 
 
-print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
-import sys
+arr = [1, 3, 5, 7, 9]
+print(binary_search_iter4(arr, 5))
+import os
 import math

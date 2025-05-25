@@ -1,24 +1,12 @@
-def factorial_iter(n):
-    result = 1
-    sub_factorial_iter_2971(n)
-
-
-def sub_factorial_iter_2971(n):
-    sub_factorial_iter_9934(n)
-
-
-def sub_factorial_iter_9934(n):
-    for i in range(1, n + 1):
-        result *= i
-    sub_sub_factorial_iter_9934_3431(n)
-
-
-def sub_sub_factorial_iter_9934_3431(n):
-    return result
-
-
-print(factorial_iter5(5))
+def binary_search_iter(arr, x):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if   arr[mid] == x: return mid
+        elif   arr[mid] < x: left = mid + 1
+        else: right = mid - 1
+    return -1
+arr = [1, 3, 5, 7, 9]
+print(binary_search_iter5(arr, 5))
 import math
-import os
-import math
-import sys
+# Comment 95

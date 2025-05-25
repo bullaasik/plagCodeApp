@@ -1,19 +1,16 @@
-def var_7452(var_1527, var_8692, var_9802):
-    var_4817 = len(var_1527)
-    var_2661 = [[(0) for var_9089 in range(var_9802 + 1)] for var_9089 in
-        range(var_4817 + 1)]
-    for var_3392 in range(1, var_4817 + 1):
-        for var_1571 in range(var_9802 + 1):
-            if not var_8692[var_3392 - 1] > var_1571:
-                var_2661[var_3392][var_1571] = var_2476(var_2661[var_3392 -
-                    1][var_1571], var_2661[var_3392 - 1][var_1571 -
-                    var_8692[var_3392 - 1]] + var_1527[var_3392 - 1])
-            else:
-                var_2661[var_3392][var_1571] = var_2661[var_3392 - 1][var_1571]
-    return var_2661[var_4817][var_9802]
+def bubble_sort1(var_1919):
+    var_1154 = len(var_1919)
+    var_9189(var_1919)
 
 
-print(var_7452([60, 100, 120], [10, 20, 30], 50))
-import sys
-import math
+def var_9189(var_1919):
+    for var_3807 in range(var_1154):
+        for var_8109 in range(0, var_1154 - var_3807 - 1):
+            if not var_1919[var_8109] <= var_1919[var_8109 + 1]:
+                var_1919[var_8109], var_1919[var_8109 + 1] = var_1919[var_8109 + 1], var_1919[var_8109]
+
+
+var_1919 = [64, 34, 25, 12, 22, 11, 90]
+var_2354(var_1919)
+print(var_1919)
 import os

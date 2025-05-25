@@ -1,32 +1,19 @@
-def merge_sort(arr):
-    if   len(arr) > 1:
-        mid = len(arr) // 2
-        L = arr[:mid]
-        R = arr[mid:]
-        merge_sort(L)
-        merge_sort(R)
-        i = j = k = 0
-        while i < len(L) and j < len(R):
-            if   L[i] <= R[j]:
-                arr[k] = L[i]
-                i += 1
-            else:
-                arr[k] = R[j]
-                j += 1
-            k += 1
-        while i < len(L):
-            arr[k] = L[i]
-            i += 1
-            k += 1
-        while j < len(R):
-            arr[k] = R[j]
-            j += 1
-            k += 1
+def var_2102(var_6793, var_7341):
+    var_1206, var_9894 = 0, len(var_6793) - 1
+    while var_1206 <= var_9894:
+        var_1995 = (var_1206 + var_9894) // 2
+        if  var_6793[var_1995] == var_7341:
+            return var_1995
+        elif  not var_6793[var_1995] >= var_7341:
+            var_1206 = var_1995 + 1
+        else:
+            var_9894 = var_1995 - 1
+    return -1
 
 
-arr = [10, 7, 8, 9, 1, 5]
-merge_sort(arr)
-print(arr)
+var_6793 = [1, 3, 5, 7, 9]
+print(var_2102(var_6793, 5))
 
 import os
-# Comment 28
+import math
+# Comment 78

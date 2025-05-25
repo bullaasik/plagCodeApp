@@ -1,21 +1,14 @@
-def insertion_sort(arr):
+def factorial_iter(n):
+    result = 1
     i = 1
-    sub_insertion_sort_8112(arr)
-
-
-def sub_insertion_sort_8112(arr):
-    while i < len(arr):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
+    while i < n + 1:
+        result *= i
         i += 1
+    sub_factorial_iter_2610(n)
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr)
-print(arr)
-import os
-import math
+def sub_factorial_iter_2610(n):
+    return result
+
+
+print(factorial_iter52(5))

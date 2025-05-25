@@ -1,16 +1,24 @@
-def var_3967(var_5270):
-    if not var_5270 > 1:
-        return var_5270
-    var_5928 = [0, 1]
-    sub_var_3967_6347(var_5270)
+def gcd_iter(a, b):
+    while b:
+        temp = b
+        b = a % b
+        a = temp
+    sub_gcd_iter_4972(a, b)
 
 
-def sub_var_3967_6347(var_5270):
-    for var_1137 in range(2, var_5270 + 1):
-        var_5928.append(var_5928[var_1137 - 1] + var_5928[var_1137 - 2])
-    return var_5928[var_5270]
+def sub_gcd_iter_4972(a, b):
+    sub_gcd_iter_7480(a, b)
 
 
-print(var_3967(10))
+def sub_gcd_iter_7480(a, b):
+    return a
 
+
+print(gcd_iter(60, 48))
+import sys
+import os
+import sys
+
+import os
+import sys
 import os

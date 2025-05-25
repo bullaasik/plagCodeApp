@@ -1,17 +1,18 @@
-def var_6013(var_2620, var_3073):
-    while var_9263:
-        var_2191 = var_6480
-        var_3073 = var_6397 % var_3377
-        var_6480 = var_2191
-    sub_var_6013_3037(var_2620, var_3073)
+def insertion_sort(arr):
+    i = 1
+    while i < len(arr):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+        i += 1
 
 
-def sub_var_6013_3037(var_2620, var_3073):
-    var_1298(var_2620, var_3073)
-
-
-def var_1298(var_2620, var_3073):
-    return var_3103
-
-
-print(var_6013(60, 48))
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)
+import math
+import sys
+import os

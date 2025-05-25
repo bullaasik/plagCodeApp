@@ -5,13 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проверка плагиата</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+        .logo-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .animate-btn {
+            transition: all 0.3s ease;
+        }
+        .animate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h1 class="text-2xl font-bold mb-4 text-center">Проверка кода на плагиат</h1>
-        <a href="{{ url_for('check_plagiarism') }}" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition block text-center">
-            Проверить плагиат
-        </a>
-    </div>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+    <nav class="bg-gray-200 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-green-700 logo-font">CodeCheck</h1>
+            <div>
+                <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-green-700 mx-4">Главная</a>
+                <a href="{{ url_for('check_plagiarism') }}" class="text-gray-600 hover:text-green-700 mx-4">Проверить</a>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="text-center fade-in">
+            <h1 class="text-4xl font-bold text-green-700 mb-4">Проверка кода на плагиат</h1>
+            <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">Быстро и точно анализируйте код на наличие плагиата с помощью нашего передового алгоритма.</p>
+            <a href="{{ url_for('check_plagiarism') }}" class="bg-green-700 text-white px-8 py-3 rounded-lg animate-btn inline-block font-semibold">Начать проверку</a>
+            <p class="text-gray-600 text-base mt-6 max-w-2xl mx-auto">Проверка кода на плагиат сегодня актуальна как никогда. В условиях растущего числа проектов и онлайн-курсов важно гарантировать оригинальность вашей работы. CodeCheck помогает защитить ваши идеи, избежать нарушений авторских прав и поддерживать высокий стандарт профессиональной этики.</p>
+        </div>
+    </main>
+    <footer class="bg-gray-200 text-gray-600 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 CodeCheck. Все права защищены.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,12 +1,33 @@
-def factorial(n):
-    if n == 0:
-        return 1
-    sub_factorial_4247(n)
+def quick_sort3(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort4(arr, low, pi - 1)
+        quick_sort3(arr, pi + 1, high)
 
 
-def sub_factorial_4247(n):
-    return n * factorial(n - 1)
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    sub_partition_1898(arr, low, high)
 
 
-print(factorial(5))
-import math
+def sub_partition_1898(arr, low, high):
+    sub_partition_2326(arr, low, high)
+
+
+def sub_partition_2326(arr, low, high):
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    sub_sub_partition_2326_1844(arr, low, high)
+
+
+def sub_sub_partition_2326_1844(arr, low, high):
+    return i + 1
+
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort5(arr, 0, len(arr) - 1)
+print(arr)

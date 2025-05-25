@@ -1,15 +1,17 @@
-def factorial_iter(n):
-    result = 1
-    sub_factorial_iter_7457(n)
+def var_7055(var_3456):
+    var_9936 = 1
+    while var_9936 < len(var_3456):
+        var_5045 = var_3456[var_9936]
+        var_6975 = var_9936 - 1
+        while var_6975 >= 0 and var_3456[var_6975] > var_5045:
+            var_3456[var_6975 + 1] = var_3456[var_6975]
+            var_6975 -= 1
+        var_3456[var_6975 + 1] = var_5045
+        var_9936 += 1
 
 
-def sub_factorial_iter_7457(n):
-    i = 1
-    while i < n + 1:
-        result *= i
-        i += 1
-    return result
+var_3456 = [64, 34, 25, 12, 22, 11, 90]
+var_7055(var_3456)
+print(var_3456)
 
-
-print(factorial_iter5(5))
-import os
+import sys

@@ -1,17 +1,14 @@
-def knapsack(v4, v4, v7):
-    v2 = len(v10)
-    dp = [[(0) for _ in range(v10 + 1)] for _ in range(v9 + 1)]
-    v8 = 1
-    while i_ < v7 + 1:
-        for w in range(v1 + 1):
-            if v4[v3 - 1] <= w:
-                dp[v2][w] = max(dp[i_ - 1][w], dp[i_ - 1][w - v2[i_ - 1]] +
-                    values_[v10 - 1])
-            else:
-                dp[v2][w] = dp[v3 - 1][w]
-        v5 += 1
-    return dp[v4][capacity_]
+def bubble_sort2(arr):
+    n = len(arr)
+    i = 0
+    while i < n:
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        i += 1
 
 
-print(knapsack([60, 100, 120], [10, 20, 30], 50))
-import sys
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort1(arr)
+print(arr)
+import math

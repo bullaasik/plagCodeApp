@@ -1,21 +1,12 @@
-def var_7922(var_2330, var_5978):
-    while var_5978:
-        var_1615 = var_5978
-        var_5978 = var_2330 % var_5978
-        var_2330 = var_1615
-    sub_var_7922_2798(var_2330, var_5978)
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    fib = [0, 1]
+    i = 2
+    while i < n + 1:
+        fib.append(fib[i - 1] + fib[i - 2])
+        i += 1
+    return fib[n]
 
 
-def sub_var_7922_2798(var_2330, var_5978):
-    sub_var_7922_5027(var_2330, var_5978)
-
-
-def sub_var_7922_5027(var_2330, var_5978):
-    var_9668(var_2330, var_5978)
-
-
-def var_9668(var_2330, var_5978):
-    return var_2330
-
-
-print(var_7922(60, 48))
+print(fibonacci_iter134(10))

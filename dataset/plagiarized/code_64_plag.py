@@ -1,14 +1,14 @@
-def var_6731(var_8618, var_2273, v7):
-    var_6189 = len(var_8618)
-    var_1376 = [[(0) for var_2334 in range(var_6429 + 1)] for var_2334 in range(var_4507 + 1)]
-    for var_5371 in range(1, var_1598 + 1):
-        for var_5865 in range(var_6429 + 1):
-            if not var_5371[var_9385 - 1] > var_5865:
-                var_1376[var_4035][var_5865] = var_8627(var_1376[var_5371 - 1][var_5865], var_1376[var_6189 - 1][var_5865 - var_2273[var_4035 -
-                    1]] + var_5706[var_4035 - 1])
+def var_2557(var_8430, var_7992, var_7815):
+    var_4743 = len(var_8430)
+    var_7779 = [[(0) for var_6120 in range(var_7815 + 1)] for var_6120 in range(var_4743 + 1)]
+    for var_6553 in range(1, var_4743 + 1):
+        for var_7532 in range(var_7815 + 1):
+            if not var_7992[var_6553 - 1] > var_7532:
+                var_7779[var_6553][var_7532] = var_6120(var_7779[var_6553 - 1][var_7532], var_7779[var_6553 - 1][var_7532 - var_7992[var_6553 - 1]] +
+                    var_8430[var_6553 - 1])
             else:
-                var_1376[var_4035][var_5865] = var_1376[var_9385 - 1][var_5865]
-    return var_1376[var_1598][var_9385]
+                var_7779[var_6553][var_7532] = var_7779[var_6553 - 1][var_7532]
+    return var_7779[var_4743][var_7815]
 
 
-print(var_6731([60, 100, 120], [10, 20, 30], 50))
+print(var_2557([60, 100, 120], [10, 20, 30], 50))

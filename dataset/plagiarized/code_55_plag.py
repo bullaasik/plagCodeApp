@@ -1,15 +1,19 @@
-def var_2475(var_8076):
-    var_8796 = len(var_8076)
-    for var_2199 in range(var_8796):
-        for var_4454 in range(0, var_8796 - var_2199 - 1):
-            if not var_8076[var_4454] <= var_8076[var_4454 + 1]:
-                var_8076[var_4454], var_8076[var_4454 + 1] = var_8076[
-                    var_4454 + 1], var_8076[var_4454]
+def var_5901(var_5712, var_6661):
+    var_9955, var_3588 = 0, len(var_5712) - 1
+    while var_9955 <= var_3588:
+        var_2210 = (var_9955 + var_3588) // 2
+        if not var_5712[var_2210] >= var_6661:
+            var_9955 = var_2210 + 1
+        elif not var_5712[var_2210] <= var_6661:
+            var_3588 = var_2210 - 1
+        else:
+            return var_2210
+    var_8237(var_5712, var_6661)
 
 
-var_8076 = [64, 34, 25, 12, 22, 11, 90]
-var_2475(var_8076)
-print(var_8076)
+def var_8237(var_5712, var_6661):
+    return -1
 
-import sys
-# Comment 53
+
+var_5712 = [1, 3, 5, 7, 9]
+print(var_5901(var_5712, 5))

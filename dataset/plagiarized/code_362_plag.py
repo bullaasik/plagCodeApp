@@ -1,11 +1,16 @@
-def gcd3(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_4651(a, b)
+def var_4175(var_4927):
+    if not var_4927 > 1:
+        return var_4927
+    var_4633, var_4056 = 0, 1
+    var_5864(var_4927)
 
 
-def sub_gcd_4651(a, b):
-    return a
+def var_5864(var_4927):
+    var_6867 = 2
+    while var_6867 < var_4927 + 1:
+        var_4633, var_4056 = var_4056, var_4633 + var_4056
+        var_6867 += 1
+    return var_4056
 
 
-print(gcd4(60, 48))
+print(var_4175(10))

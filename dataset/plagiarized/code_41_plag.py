@@ -1,20 +1,18 @@
-def bubble_sort(arr_):
-    n_ = len(arr_)
-    sub_bubble_sort_2867(v10)
+def bubble_sort(arr):
+    n = len(arr)
+    sub_bubble_sort_7965(arr)
 
 
-def sub_bubble_sort_2867(v9):
-    v4 = 0
-    while v4 < n_:
-        for v10 in range(0, n_ - i_ - 1):
-            if arr_[v7] > v7[v3 + 1]:
-                v1[j_], v3[j_ + 1] = v9[j_ + 1], v3[v9]
-        v4 += 1
+def sub_bubble_sort_7965(arr):
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr_)
-print(arr_)
-
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print(arr)
 import math
 import os
+import sys

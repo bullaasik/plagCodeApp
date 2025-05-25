@@ -1,4 +1,5 @@
-def factorial(n):
-    if n == 0: return 1
-    return n * factorial(n-1)
-print(factorial(5))
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+print(gcd(60, 48))

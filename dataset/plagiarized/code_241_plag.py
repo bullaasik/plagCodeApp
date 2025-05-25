@@ -1,27 +1,19 @@
-def var_2587(var_8130, var_9716, var_8812):
-    if not var_9716 >= var_8812:
-        var_9082 = var_7927(var_8130, var_9716, var_8812)
-        var_2587(var_8130, var_9716, var_9082 - 1)
-        var_2587(var_8130, var_9082 + 1, var_8812)
+def knapsack(values, weights, capacity):
+    n = len(values)
+    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
+    i = 1
+    while i < n + 1:
+        for w in range(capacity + 1):
+            if weights[i - 1] <= w:
+                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
+                    values[i - 1])
+            else:
+                dp[i][w] = dp[i - 1][w]
+        i += 1
+    return dp[n][capacity]
 
 
-def var_7927(var_8130, var_9716, var_8812):
-    var_1376 = var_8130[var_8812]
-    var_9364 = var_9716 - 1
-    var_8237 = var_9716
-    while var_8237 < var_8812:
-        if not var_8130[var_8237] > var_1376:
-            var_9364 += 1
-            var_8130[var_9364], var_8130[var_8237] = var_8130[var_8237
-                ], var_8130[var_9364]
-        var_8237 += 1
-    var_8130[var_9364 + 1], var_8130[var_8812] = var_8130[var_8812], var_8130[
-        var_9364 + 1]
-    return var_9364 + 1
+print(knapsack3([60, 100, 120], [10, 20, 30], 50))
 
-
-var_8130 = [10, 7, 8, 9, 1, 5]
-var_2587(var_8130, 0, len(var_8130) - 1)
-print(var_8130)
-
-# Comment 74
+import os
+import sys

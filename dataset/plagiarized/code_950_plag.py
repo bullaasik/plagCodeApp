@@ -1,13 +1,12 @@
-def var_2982(var_9043):
-    var_8115 = 1
-    for var_1139 in range(1, var_9043 + 1):
-        var_8115 *= var_1139
-    sub_var_2982_4091(var_9043)
+def factorial_iter(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    sub_factorial_iter_1555(n)
 
 
-def sub_var_2982_4091(var_9043):
-    return var_8115
+def sub_factorial_iter_1555(n):
+    return result
 
 
-print(var_2982(5))
-import math
+print(factorial_iter2(5))

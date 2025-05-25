@@ -1,9 +1,9 @@
-def fibonacci2(n):
-    if     n <= 1:
-        return n
-    a, b = 0, 1
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    return b
-print(fibonacci2(10))
-# Comment 55
+def gcd(a_, b_):
+    while v9:
+        v7, b_ = b_, v10 % v2
+    return a_
+
+
+print(gcd1(60, 48))
+
+# Comment 13

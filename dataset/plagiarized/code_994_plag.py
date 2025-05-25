@@ -1,18 +1,19 @@
-def var_4909(var_2737):
-    if not var_2737 > 1:
-        return var_2737
-    var_9306 = [0, 1]
-    var_5829(var_2737)
+def insertion_sort(arr):
+    i = 1
+    sub_insertion_sort_5233(arr)
 
 
-def var_5829(var_2737):
-    for var_7979 in range(2, var_2737 + 1):
-        var_9306.append(var_9306[var_7979 - 1] + var_9306[var_7979 - 2])
-    var_8126(var_2737)
+def sub_insertion_sort_5233(arr):
+    while i < len(arr):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+        i += 1
 
 
-def var_8126(var_2737):
-    return var_9306[var_2737]
-
-
-print(var_4909(10))
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)

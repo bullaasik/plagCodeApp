@@ -1,16 +1,15 @@
-def factorial_iter(n):
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    sub_factorial_iter_4689(n)
+def binary_search_iter(var_3697, var_1188):
+    var_5527, var_6532 = 0, len(var_3697) - 1
+    while var_5527 <= var_6532:
+        var_1490 = (var_5527 + var_6532) // 2
+        if var_3697[var_1490] == var_1188:
+            return var_1490
+        elif not var_3697[var_1490] >= var_1188:
+            var_5527 = var_1490 + 1
+        else:
+            var_6532 = var_1490 - 1
+    return -1
 
 
-def sub_factorial_iter_4689(n):
-    return result
-
-
-print(factorial_iter(5))
-
-import math
-import math
-import sys
+var_3697 = [1, 3, 5, 7, 9]
+print(var_15423(var_3697, 5))

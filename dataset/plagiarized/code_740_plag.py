@@ -1,15 +1,15 @@
-def knapsack_iter(var_7205, var_1859, var_7036):
-    var_9147 = len(var_7205)
-    sub_knapsack_iter_5523(var_7205, var_1859, var_7036)
+def var_6065(var_7482):
+    var_6016 = 1
+    while var_6016 < len(var_7482):
+        var_9925 = var_7482[var_6016]
+        var_8131 = var_6016 - 1
+        while var_8131 >= 0 and var_7482[var_8131] > var_9925:
+            var_7482[var_8131 + 1] = var_7482[var_8131]
+            var_8131 -= 1
+        var_7482[var_8131 + 1] = var_9925
+        var_6016 += 1
 
 
-def sub_knapsack_iter_5523(var_7205, var_1859, var_7036):
-    var_4595 = [(0) for var_6901 in range(var_7036 + 1)]
-    for var_4498 in range(var_9147):
-        for var_9875 in range(var_7036, var_1859[var_4498] - 1, -1):
-            var_4595[var_9875] = var_1390(var_4595[var_9875], var_4595[
-                var_9875 - var_1859[var_4498]] + var_7205[var_4498])
-    return var_4595[var_7036]
-
-
-print(var_3106([60, 100, 120], [10, 20, 30], 50))
+var_7482 = [64, 34, 25, 12, 22, 11, 90]
+var_6065(var_7482)
+print(var_7482)

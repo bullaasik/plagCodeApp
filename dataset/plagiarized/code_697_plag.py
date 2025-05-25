@@ -1,12 +1,13 @@
-def knapsack_iter(values, weights, capacity):
-    n = len(values)
-    dp = [(0) for _ in range(capacity + 1)]
-    i = 0
-    while i < n:
-        for w in range(capacity, weights[i] - 1, -1):
-            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
-        i += 1
-    return dp[capacity]
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
 
 
-print(knapsack_iter422([60, 100, 120], [10, 20, 30], 50))
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)

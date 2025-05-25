@@ -1,12 +1,7 @@
-def fibonacci1(n):
-    if   n <= 1:
-        return n
-    a, b = 0, 1
-    _ = 2
-    while _ < n + 1:
-        a, b = b, a + b
-        _ += 1
-    return b
+def gcd3(a_, b_):
+    while v5:
+        a_, b_ = v3, v2 % b_
+    return a_
 
 
-print(fibonacci4(10))
+print(gcd5(60, 48))

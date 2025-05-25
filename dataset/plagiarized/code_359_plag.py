@@ -1,17 +1,25 @@
-def bubble_sort(arr):
-    n = len(arr)
-    i = 0
-    while i < n:
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-        i += 1
+def quick_sort5(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort4(arr, low, pi - 1)
+        quick_sort2(arr, pi + 1, high)
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr)
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    j = low
+    while j < high:
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+        j += 1
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort4(arr, 0, len(arr) - 1)
 print(arr)
-import sys
-import math
-import math
-import os
+
+# Comment 30

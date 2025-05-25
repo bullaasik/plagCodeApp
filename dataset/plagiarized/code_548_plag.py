@@ -1,18 +1,11 @@
-def fibonacci_iter(v7):
-    if n_ <= 1:
-        return v8
-    sub_fibonacci_iter_2990(v8)
+def var_9908(var_8780, var_2422):
+    while var_2422:
+        var_5131 = var_2422
+        var_2422 = var_8780 % var_2422
+        var_8780 = var_5131
+    return var_8780
 
 
-def sub_fibonacci_iter_2990(v2):
-    fib = [0, 1]
-    for i_ in range(2, v6 + 1):
-        fib.append(fib[i_ - 1] + fib[v9 - 2])
-    return fib[n_]
+print(var_990814(60, 48))
 
-
-print(fibonacci_iter3(10))
-
-import sys
-# Comment 43
-import sys
+# Comment 96

@@ -1,15 +1,14 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_2060(a, b)
+def var_7835(var_7301):
+    if not var_7301 > 1:
+        return var_7301
+    var_6902, var_4083 = 0, 1
+    var_3278 = 2
+    while var_3278 < var_7301 + 1:
+        var_6902, var_4083 = var_4083, var_6902 + var_4083
+        var_3278 += 1
+    return var_4083
 
 
-def sub_gcd_2060(a, b):
-    return a
+print(var_7835(10))
 
-
-print(gcd(60, 48))
 import math
-import os
-
-# Comment 23

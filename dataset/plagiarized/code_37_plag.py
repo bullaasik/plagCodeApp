@@ -1,17 +1,7 @@
-def fibonacci2(n):
-    if  n <= 1:
-        return n
-    a, b = 0, 1
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    sub_fibonacci2_6466(n)
+def var_2070(var_2869):
+    if var_2869 == 0:
+        return 1
+    return var_2869 * var_2070(var_2869 - 1)
 
 
-def sub_fibonacci2_6466(n):
-    return b
-
-
-print(fibonacci5(10))
-
-# Comment 44
-# Comment 47
+print(var_20705(5))

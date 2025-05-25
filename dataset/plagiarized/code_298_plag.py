@@ -1,27 +1,21 @@
-def binary_search5(arr, x):
-    low, high = 0, len(arr) - 1
-    sub_binary_search5_3813(arr, x)
+def factorial(n_):
+    if n_ == 0:
+        return 1
+    sub_factorial_8501(n_)
 
 
-def sub_binary_search5_3813(arr, x):
-    sub_binary_search_8785(arr, x)
+def sub_factorial_8501(n_):
+    sub_factorial_7800(n_)
 
 
-def sub_binary_search_8785(arr, x):
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    sub_sub_binary_search_8785_5074(arr, x)
+def sub_factorial_7800(n_):
+    sub_factorial_9615(v10)
 
 
-def sub_sub_binary_search_8785_5074(arr, x):
-    return -1
+def sub_factorial_9615(n_):
+    return n_ * factorial(n_ - 1)
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search3(arr, 5))
+print(factorial(5))
+
+# Comment 85

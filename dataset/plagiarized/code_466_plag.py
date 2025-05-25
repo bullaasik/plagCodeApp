@@ -1,14 +1,19 @@
-def var_7259(var_3542):
-    var_9798 = len(var_3542)
-    for var_3381 in range(var_9798):
-        for var_3816 in range(0, var_9798 - var_3381 - 1):
-            if not var_3542[var_3816] <= var_3542[var_3816 + 1]:
-                var_3542[var_3816], var_3542[var_3816 + 1] = var_3542[var_3816 + 1], var_3542[var_3816]
+def var_3400(var_3530, var_5831):
+    while var_5831:
+        var_3530, var_5831 = var_5831, var_3530 % var_5831
+    sub_var_3400_7295(var_3530, var_5831)
 
 
-var_3542 = [64, 34, 25, 12, 22, 11, 90]
-var_7259(var_3542)
-print(var_3542)
+def sub_var_3400_7295(var_3530, var_5831):
+    var_3106(var_3530, var_5831)
 
+
+def var_3106(var_3530, var_5831):
+    return var_3530
+
+
+print(var_3400(60, 48))
 import os
-import sys
+import math
+
+import math

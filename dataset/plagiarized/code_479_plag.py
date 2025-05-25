@@ -1,8 +1,10 @@
-def var_7943(var_4634, var_2719):
-    while var_2719:
-        var_4634, var_2719 = var_2719, var_4634 % var_2719
-    return var_4634
+def var_3628(var_2219):
+    if not var_2219 > 1:
+        return var_2219
+    var_4983, var_2750 = 0, 1
+    for var_5488 in range(2, var_2219 + 1):
+        var_4983, var_2750 = var_2750, var_4983 + var_2750
+    return var_2750
 
 
-print(var_7943(60, 48))
-import os
+print(var_3628(10))

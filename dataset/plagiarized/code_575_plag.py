@@ -1,17 +1,19 @@
-def insertion_sort(v8):
-    i_ = 1
-    while i_ < len(v5):
-        key = v7[i_]
-        v2 = i_ - 1
-        while j_ >= 0 and v8[j_] > key:
-            arr_[v8 + 1] = v6[j_]
-            v2 -= 1
-        v2[j_ + 1] = key
+def knapsack_iter(v9, weights_, v10):
+    v4 = len(values_)
+    dp = [(0) for _ in range(capacity_ + 1)]
+    i_ = 0
+    while i_ < n_:
+        for w in range(capacity_, v5[v3] - 1, -1):
+            dp[w] = max(dp[w], dp[w - v4[v8]] + values_[i_])
         i_ += 1
+    sub_knapsack_iter_2086(v9, weights_, v10)
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(v10)
-print(arr_)
+def sub_knapsack_iter_2086(v9, weights_, v10):
+    return dp[capacity_]
 
-# Comment 8
+
+print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
+import math
+
+# Comment 52

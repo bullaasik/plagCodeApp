@@ -1,4 +1,7 @@
-def factorial4(v6):
-    if v3 == 0: return 1
-    return v6 * factorial4(n_-1)
-print(factorial4(5))
+def gcd(a_, b_):
+    while b_:
+        v4, v5 = v4, a_ % v8
+    return v9
+
+
+print(gcd(60, 48))

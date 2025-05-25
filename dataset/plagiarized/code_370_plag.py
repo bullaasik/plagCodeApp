@@ -1,13 +1,11 @@
-def fibonacci(v1):
-    if   v4 <= 1:
-        return n_
-    v5, b_ = 0, 1
-    for _ in range(2, v9 + 1):
-        v8, b_ = b_, v10 + v5
-    return b_
+def var_9378(var_1553, var_3740):
+    while var_3740:
+        var_1553, var_3740 = var_3740, var_1553 % var_3740
+    return var_1553
 
 
-print(fibonacci(10))
+print(var_9378(60, 48))
 
-import math
+import sys
 import os
+# Comment 4

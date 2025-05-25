@@ -1,15 +1,12 @@
-def binary_search_iter(var_6523, var_3685):
-    var_5930, var_5332 = 0, len(var_6523) - 1
-    while var_5930 <= var_5332:
-        var_6376 = (var_5930 + var_5332) // 2
-        if  var_6523[var_6376] == var_3685:
-            return var_6376
-        elif  not var_6523[var_6376] >= var_3685:
-            var_5930 = var_6376 + 1
-        else:
-            var_5332 = var_6376 - 1
-    return -1
+def fibonacci_iter(n):
+    if    n <= 1:
+        return n
+    fib = [0, 1]
+    for i in range(2, n + 1):
+        fib.append(fib[i - 1] + fib[i - 2])
+    return fib[n]
 
 
-var_6523 = [1, 3, 5, 7, 9]
-print(var_5034(var_6523, 5))
+print(fibonacci_iter53(10))
+
+import sys

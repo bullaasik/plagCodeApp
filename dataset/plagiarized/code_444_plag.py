@@ -1,12 +1,7 @@
-def fibonacci(v6):
-    if not var_7614 > 1:
-        return var_7614
-    var_6174, var_2141 = 0, 1
-    for var_7575 in range(2, var_7753 + 1):
-        var_6174, var_9447 = var_1729, var_1729 + var_9487
-    return var_1729
+def var_8585(var_2410):
+    if var_2410 == 0:
+        return 1
+    return var_2410 * var_8585(var_2410 - 1)
 
 
-print(var_8379(10))
-
-# Comment 89
+print(var_8585122(5))

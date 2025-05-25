@@ -1,10 +1,16 @@
-def factorial_iter(n_):
-    result = 1
-    v9 = 1
-    while v4 < v2 + 1:
-        result *= v7
-        v10 += 1
-    return result
+def knapsack_iter(values, weights, capacity):
+    n = len(values)
+    dp = [(0) for _ in range(capacity + 1)]
+    for i in range(n):
+        for w in range(capacity, weights[i] - 1, -1):
+            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+    sub_knapsack_iter_4112(values, weights, capacity)
 
 
-print(factorial_iter(5))
+def sub_knapsack_iter_4112(values, weights, capacity):
+    return dp[capacity]
+
+
+print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
+import sys
+import math

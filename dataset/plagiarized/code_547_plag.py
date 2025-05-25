@@ -1,11 +1,15 @@
-def factorial_iter(n_):
-    result = 1
-    for i_ in range(1, v1 + 1):
-        result *= v5
-    return result
+def var_6236(var_1516):
+    for var_9191 in range(1, len(var_1516)):
+        var_6758 = var_1516[var_9191]
+        var_1508 = var_9191 - 1
+        while var_1508 >= 0 and var_1516[var_1508] > var_6758:
+            var_1516[var_1508 + 1] = var_1516[var_1508]
+            var_1508 -= 1
+        var_1516[var_1508 + 1] = var_6758
 
 
-print(factorial_iter4(5))
-import os
+var_1516 = [64, 34, 25, 12, 22, 11, 90]
+var_6236(var_1516)
+print(var_1516)
+import sys
 import math
-import os

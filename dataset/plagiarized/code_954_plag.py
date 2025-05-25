@@ -1,14 +1,31 @@
-def var_1788(var_2838, var_6914, var_5095):
-    var_3965 = len(var_2838)
-    var_2491 = [(0) for var_5405 in range(var_5095 + 1)]
-    var_6919 = 0
-    while var_6919 < var_3965:
-        for var_6152 in range(var_5095, var_6914[var_6919] - 1, -1):
-            var_2491[var_6152] = var_2619(var_2491[var_6152], var_2491[
-                var_6152 - var_6914[var_6919]] + var_2838[var_6919])
-        var_6919 += 1
-    return var_2491[var_5095]
+def var_2415(var_2620):
+    if not len(var_2620) <= 1:
+        var_9118 = len(var_2620) // 2
+        var_2900 = var_2620[:var_9118]
+        var_4330 = var_2620[var_9118:]
+        var_2415(var_2900)
+        var_2415(var_4330)
+        var_3215 = var_2601 = var_6069 = 0
+        while var_3215 < len(var_2900) and var_2601 < len(var_4330):
+            if not var_2900[var_3215] > var_4330[var_2601]:
+                var_2620[var_6069] = var_2900[var_3215]
+                var_3215 += 1
+            else:
+                var_2620[var_6069] = var_4330[var_2601]
+                var_2601 += 1
+            var_6069 += 1
+        while var_3215 < len(var_2900):
+            var_2620[var_6069] = var_2900[var_3215]
+            var_3215 += 1
+            var_6069 += 1
+        while var_2601 < len(var_4330):
+            var_2620[var_6069] = var_4330[var_2601]
+            var_2601 += 1
+            var_6069 += 1
 
 
-print(var_17882([60, 100, 120], [10, 20, 30], 50))
+var_2620 = [10, 7, 8, 9, 1, 5]
+var_2415(var_2620)
+print(var_2620)
 import math
+import os

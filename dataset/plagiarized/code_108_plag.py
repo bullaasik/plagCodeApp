@@ -1,16 +1,14 @@
-def knapsack1(values, weights, capacity):
-    n = len(values)
-    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
-    i = 1
-    while i < n + 1:
-        for w in range(capacity + 1):
-            if  weights[i - 1] <= w:
-                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
-                    values[i - 1])
-            else:
-                dp[i][w] = dp[i - 1][w]
-        i += 1
-    return dp[n][capacity]
+def var_4559(var_3480):
+    if not var_3480 > 1:
+        return var_3480
+    var_7745, var_4490 = 0, 1
+    for var_6753 in range(2, var_3480 + 1):
+        var_7745, var_4490 = var_4490, var_7745 + var_4490
+    var_8248(var_3480)
 
 
-print(knapsack5([60, 100, 120], [10, 20, 30], 50))
+def var_8248(var_3480):
+    return var_4490
+
+
+print(var_45591(10))

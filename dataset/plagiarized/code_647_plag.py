@@ -1,21 +1,14 @@
-def binary_search_iter(arr, x):
-    left, right = 0, len(arr) - 1
-    sub_binary_search_iter_9471(arr, x)
+def var_8226(var_8356):
+    if not var_8356 > 1:
+        return var_8356
+    var_4638 = [0, 1]
+    var_7931 = 2
+    while var_7931 < var_8356 + 1:
+        var_4638.append(var_4638[var_7931 - 1] + var_4638[var_7931 - 2])
+        var_7931 += 1
+    return var_4638[var_8356]
 
 
-def sub_binary_search_iter_9471(arr, x):
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] < x:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
-
-
-arr = [1, 3, 5, 7, 9]
-print(binary_search_iter3(arr, 5))
-import sys
+print(var_8226(10))
 import math
+import os

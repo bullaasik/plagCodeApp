@@ -1,16 +1,19 @@
-def var_6576(var_3007):
-    var_5010 = len(var_3007)
-    var_6521 = 0
-    while var_6521 < var_5010:
-        for var_5427 in range(0, var_5010 - var_6521 - 1):
-            if not var_3007[var_5427] <= var_3007[var_5427 + 1]:
-                var_3007[var_5427], var_3007[var_5427 + 1] = var_3007[var_5427 + 1], var_3007[var_5427]
-        var_6521 += 1
+def binary_search5(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
 
 
-var_3007 = [64, 34, 25, 12, 22, 11, 90]
-var_6576(var_3007)
-print(var_3007)
-
+arr = [1, 3, 5, 7, 9]
+print(binary_search22(arr, 5))
+import sys
 import os
+
 # Comment 63

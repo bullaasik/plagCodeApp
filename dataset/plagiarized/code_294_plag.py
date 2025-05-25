@@ -1,8 +1,7 @@
-def fibonacci(n):
-    if   n <= 1:
-        return n
-    a, b = 0, 1
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    return b
-print(fibonacci42(10))
+def gcd(var_6760, var_9500):
+    while var_9500:
+        var_6760, var_9500 = var_9500, var_6760 % var_9500
+    return var_6760
+
+
+print(var_4771(60, 48))

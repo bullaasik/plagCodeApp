@@ -1,19 +1,14 @@
-def binary_search1(var_7776, var_5405):
-    var_9442, var_6037 = 0, len(var_7776) - 1
-    sub_binary_search1_4761(var_7776, var_5405)
-
-
-def sub_binary_search1_4761(var_7776, var_5405):
-    while var_9442 <= var_6037:
-        var_4881 = (var_9442 + var_6037) // 2
-        if not var_7776[var_4881] >= var_5405:
-            var_9442 = var_4881 + 1
-        elif not var_7776[var_4881] <= var_5405:
-            var_6037 = var_4881 - 1
-        else:
-            return var_4881
-    return -1
-
-
-var_7776 = [1, 3, 5, 7, 9]
-print(var_86584(var_7776, 5))
+def knapsack2(values, weights, capacity):
+    n = len(values)
+    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if      weights[i-1] <= w:
+                dp[i][w] = max(dp[i-1][w], dp[i-1][w-weights[i-1]] + values[i-1])
+            else:
+                dp[i][w] = dp[i-1][w]
+    return dp[n][capacity]
+print(knapsack45([60, 100, 120], [10, 20, 30], 50))
+# Comment 88
+import math
+import os

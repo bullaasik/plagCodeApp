@@ -1,15 +1,24 @@
-def var_9715(var_7672, var_2340):
-    var_6244, var_9608 = 0, len(var_7672) - 1
-    while var_6244 <= var_9608:
-        var_2386 = (var_6244 + var_9608) // 2
-        if var_7672[var_2386] == var_2340:
-            return var_2386
-        elif not var_7672[var_2386] >= var_2340:
-            var_6244 = var_2386 + 1
-        else:
-            var_9608 = var_2386 - 1
-    return -1
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    fib = [0, 1]
+    sub_fibonacci_iter_4831(n)
 
 
-var_7672 = [1, 3, 5, 7, 9]
-print(var_5651(var_7672, 5))
+def sub_fibonacci_iter_4831(n):
+    i = 2
+    sub_fibonacci_iter_9049(n)
+
+
+def sub_fibonacci_iter_9049(n):
+    while i < n + 1:
+        fib.append(fib[i - 1] + fib[i - 2])
+        i += 1
+    sub_sub_fibonacci_iter_9049_4795(n)
+
+
+def sub_sub_fibonacci_iter_9049_4795(n):
+    return fib[n]
+
+
+print(fibonacci_iter(10))

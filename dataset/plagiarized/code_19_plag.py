@@ -1,7 +1,12 @@
-def gcd5(a_, v1):
-    while b_:
-        v10, b_ = v2, a_ % v7
-    return v8
-print(gcd4(60, 48))
+def fibonacci(v5):
+    if n_ <= 1:
+        return v10
+    a_, v2 = 0, 1
+    for _ in range(2, v5 + 1):
+        v2, b_ = v10, v6 + b_
+    return v5
+
+
+print(fibonacci2(10))
+
 import sys
-# Comment 55

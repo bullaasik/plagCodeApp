@@ -1,13 +1,12 @@
-def var_2461(var_5084, var_8472):
-    while var_8472:
-        var_4035 = var_8472
-        var_8472 = var_5084 % var_8472
-        var_5084 = var_4035
-    sub_var_2461_5300(var_5084, var_8472)
+def var_5523(var_3453):
+    var_8411 = 1
+    var_6364(var_3453)
 
 
-def sub_var_2461_5300(var_5084, var_8472):
-    return var_5084
+def var_6364(var_3453):
+    for var_2182 in range(1, var_7612 + 1):
+        var_8411 *= var_5987
+    return var_8411
 
 
-print(var_2461(60, 48))
+print(var_5523(5))

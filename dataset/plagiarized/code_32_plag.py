@@ -1,15 +1,14 @@
-def var_9067(var_5032, var_3393):
-    var_3533, var_1520 = 0, len(var_5032) - 1
-    while var_3533 <= var_1520:
-        var_3989 = (var_3533 + var_1520) // 2
-        if not var_5032[var_3989] >= var_3393:
-            var_3533 = var_3989 + 1
-        elif not var_5032[var_3989] <= var_3393:
-            var_1520 = var_3989 - 1
-        else:
-            return var_3989
-    return -1
+def fibonacci(var_6511):
+    if not var_7209 > 1:
+        return var_6511
+    var_1470(var_6511)
 
 
-var_5032 = [1, 3, 5, 7, 9]
-print(var_9067(var_5032, 5))
+def var_1470(var_6325):
+    var_9098, var_6325 = 0, 1
+    for var_4995 in range(2, var_8988 + 1):
+        var_9098, var_8613 = var_8613, var_9098 + var_7209
+    return var_8613
+
+
+print(var_3979(10))

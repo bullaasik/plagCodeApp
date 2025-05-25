@@ -1,11 +1,13 @@
-def gcd_iter(v9, v7):
-    while v3:
-        temp = v3
-        v1 = a_ % v9
-        v3 = temp
-    return v4
-print(gcd_iter(60, 48))
-import sys
-import math
-import os
-import os
+def var_1980(var_1900, var_9969):
+    while var_9969:
+        var_7664 = var_9969
+        var_9969 = var_1900 % var_9969
+        var_1900 = var_7664
+    var_2215(var_1900, var_9969)
+
+
+def var_2215(var_1900, var_9969):
+    return var_1900
+
+
+print(var_1980(60, 48))

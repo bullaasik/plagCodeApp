@@ -1,12 +1,13 @@
-def var_6538(var_3291):
-    var_3899 = len(var_3291)
-    for var_1530 in range(var_3899):
-        for var_4838 in range(0, var_3899 - var_1530 - 1):
-            if  not var_3291[var_4838] <= var_3291[var_4838 + 1]:
-                var_3291[var_4838], var_3291[var_4838 + 1] = var_3291[
-                    var_4838 + 1], var_3291[var_4838]
+def gcd(v5, b_):
+    while v3:
+        v7, v5 = b_, v6 % b_
+    sub_gcd_6283(v5, b_)
 
 
-var_3291 = [64, 34, 25, 12, 22, 11, 90]
-var_6538(var_3291)
-print(var_3291)
+def sub_gcd_6283(v5, b_):
+    return v7
+
+
+print(gcd(60, 48))
+import os
+import sys

@@ -1,14 +1,9 @@
-def gcd_iter(a, b):
-    while b:
-        temp = b
-        b = a % b
-        a = temp
-    sub_gcd_iter_5727(a, b)
-
-
-def sub_gcd_iter_5727(a, b):
-    return a
-
-
-print(gcd_iter(60, 48))
-import os
+def factorial_iter(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+print(factorial_iter5(5))
+# Comment 70
+# Comment 76
+# Comment 15

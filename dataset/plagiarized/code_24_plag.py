@@ -1,12 +1,11 @@
-def var_3268(var_1008):
-    if not var_1008 > 1:
-        return var_1106
-    var_5690, var_7305 = 0, 1
-    var_7357 = 2
-    while var_7357 < var_8936 + 1:
-        var_5690, var_7305 = var_4290, var_8936 + var_6123
-        var_7357 += 1
-    return var_7305
+def var_9445(var_3780):
+    var_2389 = len(var_3780)
+    for var_5649 in range(var_2389):
+        for var_6491 in range(0, var_2389 - var_5649 - 1):
+            if    not var_3780[var_6491] <= var_3780[var_6491 + 1]:
+                var_3780[var_6491], var_3780[var_6491 + 1] = var_3780[var_6491 + 1], var_3780[var_6491]
 
 
-print(var_3268(10))
+var_3780 = [64, 34, 25, 12, 22, 11, 90]
+var_9445(var_3780)
+print(var_3780)

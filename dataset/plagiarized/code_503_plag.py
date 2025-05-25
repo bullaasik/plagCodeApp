@@ -1,22 +1,30 @@
-def insertion_sort(v1):
-    v10 = 1
-    sub_insertion_sort_4870(v3)
+def merge_sort(arr_):
+    if len(arr_) > 1:
+        v6 = len(arr_) // 2
+        L = v2[:mid_]
+        R = arr_[mid_:]
+        merge_sort(L)
+        merge_sort(R)
+        i_ = j_ = k = 0
+        while i_ < len(L) and v6 < len(R):
+            if L[i_] <= R[v1]:
+                arr_[k] = L[i_]
+                v9 += 1
+            else:
+                v7[k] = R[v4]
+                j_ += 1
+            k += 1
+        while v5 < len(L):
+            arr_[k] = L[v7]
+            v7 += 1
+            k += 1
+        while v5 < len(R):
+            v6[k] = R[v8]
+            v4 += 1
+            k += 1
 
 
-def sub_insertion_sort_4870(v10):
-    while i_ < len(arr_):
-        key = arr_[v1]
-        j_ = i_ - 1
-        while j_ >= 0 and arr_[j_] > key:
-            v5[j_ + 1] = v4[v9]
-            v10 -= 1
-        v7[j_ + 1] = key
-        i_ += 1
-
-
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(v7)
-import os
-
-# Comment 97
+v5 = [10, 7, 8, 9, 1, 5]
+merge_sort(v8)
+print(v4)
+import math

@@ -5,27 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проверка плагиата</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+        .logo-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .animate-btn {
+            transition: all 0.3s ease;
+        }
+        .animate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .animate-input {
+            transition: all 0.3s ease;
+        }
+        .animate-input:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(21, 128, 61, 0.5);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .spinner {
+            display: none;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #15803d;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-        <h1 class="text-2xl font-bold mb-4 text-center">Загрузите файлы для проверки</h1>
-        {% if error %}
-            <p class="text-red-500 mb-4 text-center">{{ error }}</p>
-        {% endif %}
-        <form action="{{ url_for('check_plagiarism') }}" method="POST" enctype="multipart/form-data">
-            <div class="mb-4">
-                <label for="orig_file" class="block text-gray-700 font-bold mb-2">Оригинальный файл:</label>
-                <input type="file" name="orig_file" id="orig_file" class="w-full p-2 border rounded" required>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+    <nav class="bg-gray-200 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-green-700 logo-font">CodeCheck</h1>
+            <div>
+                <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-green-700 mx-4">Главная</a>
+                <a href="{{ url_for('check_plagiarism') }}" class="text-gray-600 hover:text-green-700 mx-4">Проверить</a>
             </div>
-            <div class="mb-4">
-                <label for="plag_file" class="block text-gray-700 font-bold mb-2">Проверяемый файл:</label>
-                <input type="file" name="plag_file" id="plag_file" class="w-full p-2 border rounded" required>
-            </div>
-            <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition w-full">
-                Проверить
-            </button>
-        </form>
-        <a href="{{ url_for('index') }}" class="block text-center mt-4 text-blue-500 hover:underline">Назад</a>
-    </div>
+        </div>
+    </nav>
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="bg-gray-200 rounded-lg shadow-lg p-8 max-w-4xl mx-auto fade-in">
+            {% if error %}
+                <p class="text-red-600 mb-6 text-center font-semibold">{{ error }}</p>
+            {% endif %}
+            <form action="{{ url_for('check_plagiarism') }}" method="POST" enctype="multipart/form-data" id="checkForm">
+                <div class="mb-6">
+                    <label for="orig_file" class="block text-gray-700 font-bold mb-2">Оригинальный файл:</label>
+                    <input type="file" name="orig_file" id="orig_file" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-200 text-gray-800 animate-input focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                </div>
+                <div class="mb-6">
+                    <label for="plag_file" class="block text-gray-700 font-bold mb-2">Проверяемый файл:</label>
+                    <input type="file" name="plag_file" id="plag_file" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-200 text-gray-800 animate-input focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                </div>
+                <button type="submit" class="bg-green-700 text-white px-8 py-3 rounded-lg animate-btn w-full font-semibold flex items-center justify-center" id="submitBtn">
+                    <span id="btnText">Проверить</span>
+                    <span class="spinner" id="spinner"></span>
+                </button>
+            </form>
+            <a href="{{ url_for('index') }}" class="block text-center mt-4 text-green-700 hover:text-green-800 font-semibold">Назад</a>
+        </div>
+    </main>
+    <footer class="bg-gray-200 text-gray-600 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 CodeCheck. Все права защищены.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('checkForm').addEventListener('submit', function() {
+            const btnText = document.getElementById('btnText');
+            const spinner = document.getElementById('spinner');
+            btnText.style.display = 'none';
+            spinner.style.display = 'block';
+        });
+    </script>
 </body>
 </html>

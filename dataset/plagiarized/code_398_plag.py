@@ -1,19 +1,14 @@
-def binary_search(var_1767, var_5249):
-    var_1987, var_3494 = 0, len(var_1767) - 1
-    while var_1987 <= var_3494:
-        var_1215 = (var_1987 + var_3494) // 2
-        if not var_1767[var_1215] >= var_5249:
-            var_1987 = var_1215 + 1
-        elif not var_1767[var_1215] <= var_5249:
-            var_3494 = var_1215 - 1
-        else:
-            return var_1215
-    return -1
+def fibonacci(n_):
+    if v7 <= 1:
+        return v10
+    a_, b_ = 0, 1
+    _ = 2
+    while _ < v5 + 1:
+        v4, v7 = v2, v2 + v1
+        _ += 1
+    return b_
 
 
-var_1767 = [1, 3, 5, 7, 9]
-print(var_4469(var_1767, 5))
+print(fibonacci(10))
 
-import math
-# Comment 66
-import os
+# Comment 73

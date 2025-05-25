@@ -1,19 +1,11 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    sub_binary_search_8273(arr, x)
+def var_4094(var_6810, var_4282):
+    while var_4282:
+        var_6810, var_4282 = var_4282, var_6810 % var_4282
+    var_3500(var_6810, var_4282)
 
 
-def sub_binary_search_8273(arr, x):
-    return -1
+def var_3500(var_6810, var_4282):
+    return var_6810
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 5))
+print(var_4094(60, 48))

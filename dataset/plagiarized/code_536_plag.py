@@ -1,17 +1,17 @@
-def knapsack_iter(values, weights, capacity):
-    n = len(values)
-    dp = [(0) for _ in range(capacity + 1)]
-    sub_knapsack_iter_8823(values, weights, capacity)
+def gcd_iter(var_8299, var_1472):
+    while var_1472:
+        var_9385 = var_1472
+        var_1472 = var_8299 % var_1472
+        var_8299 = var_9385
+    sub_gcd_iter_6913(var_8299, var_1472)
 
 
-def sub_knapsack_iter_8823(values, weights, capacity):
-    for i in range(n):
-        for w in range(capacity, weights[i] - 1, -1):
-            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
-    return dp[capacity]
+def sub_gcd_iter_6913(var_8299, var_1472):
+    sub_gcd_iter_4511(var_8299, var_1472)
 
 
-print(knapsack_iter3([60, 100, 120], [10, 20, 30], 50))
+def sub_gcd_iter_4511(var_8299, var_1472):
+    return var_8299
 
-# Comment 39
-# Comment 89
+
+print(var_76461(60, 48))

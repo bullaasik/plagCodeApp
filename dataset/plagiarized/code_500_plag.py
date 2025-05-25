@@ -1,15 +1,11 @@
-def fibonacci1(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    _ = 2
-    while _ < n + 1:
-        a, b = b, a + b
-        _ += 1
-    return b
+def var_1928(var_8085):
+    if var_8085 == 0:
+        return 1
+    var_7908(var_8085)
 
 
-print(fibonacci2(10))
-import sys
+def var_7908(var_8085):
+    return var_8085 * var_1928(var_8085 - 1)
 
-# Comment 15
+
+print(var_19283(5))

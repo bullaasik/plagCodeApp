@@ -1,16 +1,19 @@
-def knapsack_iter(values, weights, capacity):
-    n = len(values)
-    sub_knapsack_iter_2624(values, weights, capacity)
+def binary_search_iter(arr, x):
+    left, right = 0, len(arr) - 1
+    sub_binary_search_iter_2624(arr, x)
 
 
-def sub_knapsack_iter_2624(values, weights, capacity):
-    dp = [(0) for _ in range(capacity + 1)]
-    for i in range(n):
-        for w in range(capacity, weights[i] - 1, -1):
-            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
-    return dp[capacity]
+def sub_binary_search_iter_2624(arr, x):
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
 
 
-print(knapsack_iter35([60, 100, 120], [10, 20, 30], 50))
-import os
-import sys
+arr = [1, 3, 5, 7, 9]
+print(binary_search_iter(arr, 5))

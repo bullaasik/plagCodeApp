@@ -1,12 +1,25 @@
-def fibonacci(n_):
-    if n_ <= 1:
-        return n_
-    a_, b_ = 0, 1
-    for _ in range(2, n_ + 1):
-        a_, v6 = v4, a_ + v7
-    return v7
+def var_1349(var_4812, var_4161, var_7189):
+    if not var_4161 >= var_7189:
+        var_6868 = var_3207(var_4812, var_4161, var_7189)
+        var_1349(var_4812, var_4161, var_6868 - 1)
+        var_1349(var_4812, var_6868 + 1, var_7189)
 
 
-print(fibonacci(10))
+def var_3207(var_4812, var_4161, var_7189):
+    var_6189 = var_4812[var_7189]
+    var_6690 = var_4161 - 1
+    var_8187 = var_4161
+    while var_8187 < var_7189:
+        if not var_4812[var_8187] > var_6189:
+            var_6690 += 1
+            var_4812[var_6690], var_4812[var_8187] = var_4812[var_8187], var_4812[var_6690]
+        var_8187 += 1
+    var_4812[var_6690 + 1], var_4812[var_7189] = var_4812[var_7189], var_4812[var_6690 + 1]
+    return var_6690 + 1
+
+
+var_4812 = [10, 7, 8, 9, 1, 5]
+var_1349(var_4812, 0, len(var_4812) - 1)
+print(var_4812)
 
 import sys

@@ -1,10 +1,13 @@
-def var_3903(var_6066):
-    var_4457 = 1
-    for var_5599 in range(1, var_6066 + 1):
-        var_4457 *= var_5599
-    return var_4457
+def insertion_sort(v10):
+    for i_ in range(1, len(arr_)):
+        key = v7[v10]
+        v3 = v1 - 1
+        while v10 >= 0 and v7[j_] > key:
+            v7[v3 + 1] = v2[v5]
+            j_ -= 1
+        arr_[v7 + 1] = key
 
 
-print(var_39033431(5))
-
-# Comment 10
+v3 = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(v4)
+print(arr_)

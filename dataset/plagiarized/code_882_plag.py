@@ -1,16 +1,9 @@
-def insertion_sort(arr):
-    i = 1
-    while i < len(arr):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
-        i += 1
+def var_2207(var_7680, var_9666):
+    while var_9666:
+        var_5648 = var_9666
+        var_9666 = var_7680 % var_9666
+        var_7680 = var_5648
+    return var_7680
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr)
-print(arr)
-import math
+print(var_2207(60, 48))

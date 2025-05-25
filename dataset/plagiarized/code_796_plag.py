@@ -1,13 +1,15 @@
-def insertion_sort(arr_):
-    for i_ in range(1, len(v1)):
-        key = arr_[i_]
-        j_ = v4 - 1
-        while v10 >= 0 and v8[j_] > key:
-            v8[v9 + 1] = arr_[v9]
-            j_ -= 1
-        arr_[j_ + 1] = key
+def var_1461(var_3977):
+    var_8486 = 1
+    while var_8486 < len(var_3977):
+        var_3595 = var_3977[var_8486]
+        var_9924 = var_8486 - 1
+        while var_9924 >= 0 and var_3977[var_9924] > var_3595:
+            var_3977[var_9924 + 1] = var_3977[var_9924]
+            var_9924 -= 1
+        var_3977[var_9924 + 1] = var_3595
+        var_8486 += 1
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(arr_)
+var_3977 = [64, 34, 25, 12, 22, 11, 90]
+var_1461(var_3977)
+print(var_3977)

@@ -1,22 +1,31 @@
-def binary_search_iter(arr, x):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if   arr[mid] == x:
-            return mid
-        elif   arr[mid] < x:
-            left = mid + 1
-        else:
-            right = mid - 1
-    sub_binary_search_iter_4489(arr, x)
+def var_7745(var_1419):
+    if not len(var_1419) <= 1:
+        var_4673 = len(var_1419) // 2
+        var_4579 = var_1419[:var_4673]
+        var_6384 = var_1419[var_4673:]
+        var_7745(var_4579)
+        var_7745(var_6384)
+        var_4615 = var_2817 = var_1538 = 0
+        while var_4615 < len(var_4579) and var_2817 < len(var_6384):
+            if not var_4579[var_4615] > var_6384[var_2817]:
+                var_1419[var_1538] = var_4579[var_4615]
+                var_4615 += 1
+            else:
+                var_1419[var_1538] = var_6384[var_2817]
+                var_2817 += 1
+            var_1538 += 1
+        while var_4615 < len(var_4579):
+            var_1419[var_1538] = var_4579[var_4615]
+            var_4615 += 1
+            var_1538 += 1
+        while var_2817 < len(var_6384):
+            var_1419[var_1538] = var_6384[var_2817]
+            var_2817 += 1
+            var_1538 += 1
 
 
-def sub_binary_search_iter_4489(arr, x):
-    return -1
-
-
-arr = [1, 3, 5, 7, 9]
-print(binary_search_iter12(arr, 5))
-
+var_1419 = [10, 7, 8, 9, 1, 5]
+var_7745(var_1419)
+print(var_1419)
 import math
 import sys

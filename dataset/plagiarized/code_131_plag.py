@@ -1,14 +1,11 @@
-def fibonacci(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    _ = 2
-    while _ < n + 1:
-        a, b = b, a + b
-        _ += 1
-    return b
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    sub_gcd_1507(a, b)
 
 
-print(fibonacci1(10))
-import sys
-import math
+def sub_gcd_1507(a, b):
+    return a
+
+
+print(gcd53(60, 48))

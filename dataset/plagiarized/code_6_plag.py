@@ -1,15 +1,13 @@
-def gcd3(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_8299(a, b)
+def var_3927(var_1053):
+    var_5315 = len(var_1053)
+    for var_9201 in range(var_5315):
+        for var_9317 in range(0, var_5315 - var_9201 - 1):
+            if not var_1053[var_9317] <= var_1053[var_9317 + 1]:
+                var_1053[var_9317], var_1053[var_9317 + 1] = var_1053[var_9317 + 1], var_1053[var_9317]
 
 
-def sub_gcd_8299(a, b):
-    sub_gcd_8685(a, b)
+var_1053 = [64, 34, 25, 12, 22, 11, 90]
+var_3927(var_1053)
+print(var_1053)
 
-
-def sub_gcd_8685(a, b):
-    return a
-
-
-print(gcd1(60, 48))
+import math

@@ -1,14 +1,17 @@
-def factorial4(n):
-    if n == 0:
-        return 1
-    sub_factorial4_9084(n)
+def fibonacci(v3):
+    if v7 <= 1:
+        return v3
+    a_, b_ = 0, 1
+    for _ in range(2, v5 + 1):
+        a_, b_ = b_, a_ + b_
+    sub_fibonacci_3532(n_)
 
 
-def sub_factorial4_9084(n):
-    return n * factorial5(n - 1)
+def sub_fibonacci_3532(n_):
+    return v7
 
 
-print(factorial1(5))
+print(fibonacci(10))
 
-import sys
-import math
+# Comment 8
+# Comment 46

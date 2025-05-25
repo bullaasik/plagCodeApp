@@ -1,23 +1,20 @@
-def var_8297(var_4870):
-    if not var_4870 > 1:
-        return var_4870
-    sub_var_8297_3765(var_4870)
+def var_5435(var_8935):
+    var_7143 = 1
+    var_5024 = 1
+    while var_5024 < var_8935 + 1:
+        var_7143 *= var_5024
+        var_5024 += 1
+    sub_var_5435_9804(var_8935)
 
 
-def sub_var_8297_3765(var_4870):
-    var_5204 = [0, 1]
-    var_2172 = 2
-    while var_2172 < var_4870 + 1:
-        var_5204.append(var_5204[var_2172 - 1] + var_5204[var_2172 - 2])
-        var_2172 += 1
-    var_3605(var_4870)
+def sub_var_5435_9804(var_8935):
+    var_7416(var_8935)
 
 
-def var_3605(var_4870):
-    return var_5204[var_4870]
+def var_7416(var_8935):
+    return var_7143
 
 
-print(var_8297(10))
-import os
-import math
+print(var_5435(5))
+
 import sys

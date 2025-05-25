@@ -1,7 +1,12 @@
-def gcd5(a, b):
+def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 
 
-print(gcd5(60, 48))
+print(gcd3(60, 48))
+import sys
+import math
+
+import os
+import math

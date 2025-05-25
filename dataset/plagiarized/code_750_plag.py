@@ -1,15 +1,14 @@
-def knapsack_iter(values, weights, capacity):
-    n = len(values)
-    sub_knapsack_iter_2858(values, weights, capacity)
+def var_4293(v1):
+    var_6517 = 1
+    sub_var_4293_1152(v1)
 
 
-def sub_knapsack_iter_2858(values, weights, capacity):
-    dp = [(0) for _ in range(capacity + 1)]
-    for i in range(n):
-        for w in range(capacity, weights[i] - 1, -1):
-            dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
-    return dp[capacity]
+def sub_var_4293_1152(v1):
+    var_3612 = 1
+    while var_3612 < var_3186 + 1:
+        var_6517 *= var_4259
+        var_3612 += 1
+    return var_6517
 
 
-print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
-import os
+print(var_4293(5))

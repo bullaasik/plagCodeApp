@@ -1,16 +1,17 @@
-def var_3461(var_8185, var_7198, var_2736):
-    var_4550 = len(var_8185)
-    var_6134 = [(0) for var_6997 in range(var_2736 + 1)]
-    sub_var_3461_3659(var_8185, var_7198, var_2736)
+def insertion_sort(v8):
+    i_ = 1
+    while i_ < len(v6):
+        key = arr_[v2]
+        v7 = v5 - 1
+        while j_ >= 0 and v4[j_] > key:
+            arr_[v7 + 1] = arr_[j_]
+            j_ -= 1
+        v8[v6 + 1] = key
+        i_ += 1
 
 
-def sub_var_3461_3659(var_8185, var_7198, var_2736):
-    for var_1660 in range(var_4550):
-        for var_8606 in range(var_2736, var_7198[var_1660] - 1, -1):
-            var_6134[var_8606] = var_7545(var_6134[var_8606], var_6134[
-                var_8606 - var_7198[var_1660]] + var_8185[var_1660])
-    return var_6134[var_2736]
+arr_ = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(v3)
+print(arr_)
 
-
-print(var_3461([60, 100, 120], [10, 20, 30], 50))
 import sys

@@ -1,16 +1,15 @@
-def fibonacci_iter(n_):
-    if v4 <= 1:
-        return n_
-    fib = [0, 1]
-    i_ = 2
-    while v1 < v6 + 1:
-        fib.append(fib[v2 - 1] + fib[i_ - 2])
-        i_ += 1
-    return fib[v10]
+def var_4985(var_2872, var_1718):
+    var_2353, var_6386 = 0, len(var_2872) - 1
+    while var_2353 <= var_6386:
+        var_1608 = (var_2353 + var_6386) // 2
+        if var_2872[var_1608] == var_1718:
+            return var_1608
+        elif not var_2872[var_1608] >= var_1718:
+            var_2353 = var_1608 + 1
+        else:
+            var_6386 = var_1608 - 1
+    return -1
 
 
-print(fibonacci_iter1(10))
-
-import os
-import math
-# Comment 59
+var_2872 = [1, 3, 5, 7, 9]
+print(var_25754(var_2872, 5))

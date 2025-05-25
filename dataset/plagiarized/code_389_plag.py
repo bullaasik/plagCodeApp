@@ -1,22 +1,14 @@
-def knapsack3(values, weights, capacity):
-    n = len(values)
-    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
-    sub_knapsack_8375(values, weights, capacity)
+def fibonacci4(var_1896):
+    if not var_1896 > 1:
+        return var_1896
+    var_5426, var_2753 = 0, 1
+    sub_fibonacci4_6428(var_1896)
 
 
-def sub_knapsack_8375(values, weights, capacity):
-    i = 1
-    while i < n + 1:
-        w = 0
-        while w < capacity + 1:
-            if weights[i - 1] <= w:
-                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
-                    values[i - 1])
-            else:
-                dp[i][w] = dp[i - 1][w]
-            w += 1
-        i += 1
-    return dp[n][capacity]
+def sub_fibonacci4_6428(var_1896):
+    for var_1890 in range(2, var_2595 + 1):
+        var_5760, var_2387 = var_2387, var_5426 + var_2387
+    return var_2387
 
 
-print(knapsack3([60, 100, 120], [10, 20, 30], 50))
+print(var_64635(10))

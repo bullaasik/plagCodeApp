@@ -1,18 +1,21 @@
-def factorial_iter(v10):
-    result = 1
-    sub_factorial_iter_5374(v10)
+def gcd_iter(a, b):
+    while b:
+        temp = b
+        b = a % b
+        a = temp
+    sub_gcd_iter_3513(a, b)
 
 
-def sub_factorial_iter_5374(v10):
-    v3 = 1
-    while v6 < n_ + 1:
-        result *= v3
-        v9 += 1
-    sub_factorial_iter_2833(v5)
+def sub_gcd_iter_3513(a, b):
+    sub_gcd_iter_9714(a, b)
 
 
-def sub_factorial_iter_2833(v10):
-    return result
+def sub_gcd_iter_9714(a, b):
+    return a
 
 
-print(factorial_iter3(5))
+print(gcd_iter4(60, 48))
+import os
+import math
+
+# Comment 76

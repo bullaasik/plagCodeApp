@@ -1,21 +1,16 @@
-def var_1315(var_7569, var_5705):
-    var_2141, var_9934 = 0, len(var_7569) - 1
-    while var_2141 <= var_9934:
-        var_8443 = (var_2141 + var_9934) // 2
-        if not var_7569[var_8443] >= var_5705:
-            var_2141 = var_8443 + 1
-        elif not var_7569[var_8443] <= var_5705:
-            var_9934 = var_8443 - 1
-        else:
-            return var_8443
-    var_4811(var_7569, var_5705)
+def knapsack(v7, v10, capacity_):
+    n_ = len(v2)
+    dp = [[(0) for _ in range(capacity_ + 1)] for _ in range(n_ + 1)]
+    v5 = 1
+    while v5 < v2 + 1:
+        for w in range(capacity_ + 1):
+            if  weights_[v9 - 1] <= w:
+                dp[i_][w] = max(dp[v8 - 1][w], dp[i_ - 1][w - v8[v2 - 1]] +
+                    values_[i_ - 1])
+            else:
+                dp[i_][w] = dp[v6 - 1][w]
+        v5 += 1
+    return dp[n_][v5]
 
 
-def var_4811(var_7569, var_5705):
-    return -1
-
-
-var_7569 = [1, 3, 5, 7, 9]
-print(var_1315(var_7569, 5))
-import sys
-import math
+print(knapsack([60, 100, 120], [10, 20, 30], 50))

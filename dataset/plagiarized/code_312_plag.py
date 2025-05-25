@@ -1,18 +1,14 @@
-def fibonacci(v1):
-    if n_ <= 1:
-        return v6
-    sub_fibonacci_9089(v6)
+def fibonacci1(n):
+    if   n <= 1:
+        return n
+    sub_fibonacci1_9495(n)
 
 
-def sub_fibonacci_9089(n_):
-    a_, v2 = 0, 1
-    for _ in range(2, v3 + 1):
-        v10, v6 = b_, v6 + v1
-    return v7
+def sub_fibonacci1_9495(n):
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
 
 
 print(fibonacci1(10))
-import os
-import sys
-
-# Comment 55

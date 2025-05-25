@@ -1,18 +1,11 @@
-def insertion_sort(v8):
-    v1 = 1
-    while v4 < len(arr_):
-        key = arr_[i_]
-        v4 = v4 - 1
-        while j_ >= 0 and arr_[v2] > key:
-            arr_[v3 + 1] = v9[j_]
-            j_ -= 1
-        v8[j_ + 1] = key
-        i_ += 1
+def gcd_iter(var_8182, v5):
+    while var_5677:
+        var_9048 = var_5677
+        var_5677 = var_8182 % var_9802
+        var_2390 = var_9048
+    return var_9802
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(arr_)
-import os
-import math
-import sys
+print(var_8385(60, 48))
+
+# Comment 98

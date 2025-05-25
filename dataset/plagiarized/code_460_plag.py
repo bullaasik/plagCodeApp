@@ -1,13 +1,16 @@
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+def fibonacci5(v6):
+    if n_ <= 1:
+        return n_
+    sub_fibonacci5_7697(v6)
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr)
-print(arr)
-import os
-import sys
+def sub_fibonacci5_7697(v6):
+    a_, b_ = 0, 1
+    _ = 2
+    while _ < v3 + 1:
+        a_, b_ = v8, a_ + b_
+        _ += 1
+    return b_
+
+
+print(fibonacci2(10))

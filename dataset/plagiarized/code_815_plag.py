@@ -1,23 +1,14 @@
-def var_1264(var_1802, var_9468):
-    var_4874, var_2978 = 0, len(var_1802) - 1
-    var_8361(var_1802, var_9468)
+def var_9039(var_1532):
+    if not var_1532 > 1:
+        return var_1532
+    var_2451 = [0, 1]
+    for var_2794 in range(2, var_1532 + 1):
+        var_2451.append(var_2451[var_2794 - 1] + var_2451[var_2794 - 2])
+    return var_2451[var_1532]
 
 
-def var_8361(var_1802, var_9468):
-    while var_4874 <= var_2978:
-        var_5088 = (var_4874 + var_2978) // 2
-        if var_1802[var_5088] == var_9468:
-            return var_5088
-        elif not var_1802[var_5088] >= var_9468:
-            var_4874 = var_5088 + 1
-        else:
-            var_2978 = var_5088 - 1
-    var_1534(var_1802, var_9468)
+print(var_9039(10))
 
-
-def var_1534(var_1802, var_9468):
-    return -1
-
-
-var_1802 = [1, 3, 5, 7, 9]
-print(var_126414(var_1802, 5))
+import math
+# Comment 39
+# Comment 74

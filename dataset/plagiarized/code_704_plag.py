@@ -1,16 +1,12 @@
-def insertion_sort(arr_):
-    i_ = 1
-    while i_ < len(arr_):
-        key = v10[i_]
-        j_ = v5 - 1
-        while j_ >= 0 and arr_[v3] > key:
-            arr_[v2 + 1] = arr_[v2]
-            v10 -= 1
-        v1[j_ + 1] = key
-        i_ += 1
+def var_2158(v5):
+    if not var_9821 > 1:
+        return var_2354
+    var_4312 = [0, 1]
+    for var_6093 in range(2, var_9821 + 1):
+        var_4312.append(var_4312[var_6093 - 1] + var_4312[var_6093 - 2])
+    return var_4312[var_4493]
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(v9)
+print(var_2158(10))
 import math
+import os

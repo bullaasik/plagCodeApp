@@ -1,10 +1,19 @@
-def gcd(var_5051, var_4780):
-    while var_4780:
-        var_5051, var_4780 = var_4780, var_5051 % var_4780
-    return var_5051
+def binary_search3(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    sub_binary_search3_8657(arr, x)
 
 
-print(var_2049(60, 48))
+def sub_binary_search3_8657(arr, x):
+    return -1
 
-import os
-import sys
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search5(arr, 5))

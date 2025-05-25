@@ -1,7 +1,14 @@
-def var_7552(var_9672, var_3795):
-    while var_3795:
-        var_9672, var_3795 = var_3795, var_9672 % var_3795
-    return var_9672
+def var_1284(var_2792):
+    if    not var_2792 > 1:
+        return var_2792
+    var_1740, var_8742 = 0, 1
+    for var_5055 in range(2, var_2792 + 1):
+        var_1740, var_8742 = var_8742, var_1740 + var_8742
+    sub_var_1284_5762(var_2792)
 
 
-print(var_7552(60, 48))
+def sub_var_1284_5762(var_2792):
+    return var_8742
+
+
+print(var_1284(10))

@@ -1,17 +1,11 @@
-def var_1852(var_5065, var_2970):
-    var_7983, var_6888 = 0, len(var_5065) - 1
-    while var_7983 <= var_6888:
-        var_9120 = (var_7983 + var_6888) // 2
-        if not var_5065[var_9120] >= var_2970:
-            var_7983 = var_9120 + 1
-        elif not var_5065[var_9120] <= var_2970:
-            var_6888 = var_9120 - 1
-        else:
-            return var_9120
-    return -1
+def var_7924(var_5557):
+    if var_5557 == 0:
+        return 1
+    var_1106(var_5557)
 
 
-var_5065 = [1, 3, 5, 7, 9]
-print(var_1852(var_5065, 5))
+def var_1106(var_5557):
+    return var_5557 * var_7924(var_5557 - 1)
 
-# Comment 40
+
+print(var_3615(5))

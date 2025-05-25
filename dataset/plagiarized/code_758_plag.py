@@ -1,25 +1,15 @@
-def insertion_sort(arr):
-    i = 1
-    sub_insertion_sort_1805(arr)
+def fibonacci_iter(n_):
+    if n_ <= 1:
+        return v2
+    fib = [0, 1]
+    v3 = 2
+    while v3 < n_ + 1:
+        fib.append(fib[v5 - 1] + fib[i_ - 2])
+        v3 += 1
+    return fib[v3]
 
 
-def sub_insertion_sort_1805(arr):
-    while i < len(arr):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
-        i += 1
-
-
-arr = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr)
-print(arr)
-import os
-import sys
+print(fibonacci_iter4(10))
 import math
 
-import os
-import math
+# Comment 87

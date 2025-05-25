@@ -1,37 +1,20 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    sub_binary_search_4312(arr, x)
+def var_6133(var_2463, var_5902, var_2690):
+    var_2160 = len(var_2463)
+    var_4751 = [[(0) for var_7022 in range(var_2690 + 1)] for var_7022 in
+        range(var_2160 + 1)]
+    var_7276 = 1
+    while var_7276 < var_2160 + 1:
+        var_2678 = 0
+        while var_2678 < var_2690 + 1:
+            if not var_5902[var_7276 - 1] > var_2678:
+                var_4751[var_7276][var_2678] = var_3246(var_4751[var_7276 -
+                    1][var_2678], var_4751[var_7276 - 1][var_2678 -
+                    var_5902[var_7276 - 1]] + var_2463[var_7276 - 1])
+            else:
+                var_4751[var_7276][var_2678] = var_4751[var_7276 - 1][var_2678]
+            var_2678 += 1
+        var_7276 += 1
+    return var_4751[var_2160][var_2690]
 
 
-def sub_binary_search_4312(arr, x):
-    sub_binary_search_2084(arr, x)
-
-
-def sub_binary_search_2084(arr, x):
-    sub_binary_search_6789(arr, x)
-
-
-def sub_binary_search_6789(arr, x):
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    sub_sub_binary_search_6789_2251(arr, x)
-
-
-def sub_sub_binary_search_6789_2251(arr, x):
-    sub_sub_binary_search_6789_4340(arr, x)
-
-
-def sub_sub_binary_search_6789_4340(arr, x):
-    return -1
-
-
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 5))
-import os
-import math
+print(var_61335([60, 100, 120], [10, 20, 30], 50))

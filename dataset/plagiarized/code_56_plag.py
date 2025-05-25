@@ -1,16 +1,29 @@
-def var_6497(var_1458):
-    if not var_1458 > 1:
-        return var_1458
-    sub_var_6497_2967(var_1458)
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
 
 
-def sub_var_6497_2967(var_1458):
-    var_9958, var_1417 = 0, 1
-    var_8446 = 2
-    while var_8446 < var_1458 + 1:
-        var_9958, var_1417 = var_1417, var_9958 + var_1417
-        var_8446 += 1
-    return var_1417
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    sub_partition_5847(arr, low, high)
 
 
-print(var_6497(10))
+def sub_partition_5847(arr, low, high):
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr) - 1)
+print(arr)
+import sys
+import math
+
+import os

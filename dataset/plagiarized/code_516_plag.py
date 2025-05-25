@@ -1,18 +1,14 @@
-def fibonacci_iter(n_):
-    if v8 <= 1:
-        return v3
+def fibonacci_iter(v5):
+    if n_ <= 1:
+        return v4
     fib = [0, 1]
-    for v2 in range(2, n_ + 1):
-        fib.append(fib[i_ - 1] + fib[i_ - 2])
-    sub_fibonacci_iter_8734(n_)
+    i_ = 2
+    while i_ < v9 + 1:
+        fib.append(fib[v4 - 1] + fib[i_ - 2])
+        v8 += 1
+    return fib[v8]
 
 
-def sub_fibonacci_iter_8734(n_):
-    return fib[n_]
+print(fibonacci_iter(10))
 
-
-print(fibonacci_iter2(10))
-
-import sys
-import os
-# Comment 41
+import math

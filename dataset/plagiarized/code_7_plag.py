@@ -1,19 +1,14 @@
-def binary_search1(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if   arr[mid] < x:
-            low = mid + 1
-        elif   arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    sub_binary_search_6188(arr, x)
+def knapsack5(var_6038, var_2403, var_1949):
+    var_1319 = len(var_6038)
+    var_2832 = [[(0) for var_2290 in range(var_1949 + 1)] for var_2290 in range(var_1319 + 1)]
+    for var_6947 in range(1, var_1319 + 1):
+        for var_4923 in range(var_1949 + 1):
+            if not var_2403[var_6947 - 1] > var_4923:
+                var_2832[var_6947][var_4923] = var_8962(var_2832[var_6947 - 1][var_4923], var_2832[var_6947 - 1][var_4923 - var_2403[var_6947 - 1]] +
+                    var_6038[var_6947 - 1])
+            else:
+                var_2832[var_6947][var_4923] = var_2832[var_6947 - 1][var_4923]
+    return var_2832[var_1319][var_1949]
 
 
-def sub_binary_search_6188(arr, x):
-    return -1
-
-
-arr = [1, 3, 5, 7, 9]
-print(binary_search2(arr, 5))
+print(var_4946([60, 100, 120], [10, 20, 30], 50))

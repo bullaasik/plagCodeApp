@@ -1,11 +1,15 @@
-def factorial(n):
-    if  n == 0:
-        return 1
-    sub_factorial_5408(n)
+def binary_search5(var_3291, var_9818):
+    var_9035, var_6127 = 0, len(var_3291) - 1
+    while var_9035 <= var_6127:
+        var_9563 = (var_9035 + var_6127) // 2
+        if    not var_3291[var_9563] >= var_9818:
+            var_9035 = var_9563 + 1
+        elif    not var_3291[var_9563] <= var_9818:
+            var_6127 = var_9563 - 1
+        else:
+            return var_9563
+    return -1
 
 
-def sub_factorial_5408(n):
-    return n * factorial(n - 1)
-
-
-print(factorial(5))
+var_3291 = [1, 3, 5, 7, 9]
+print(var_6769(var_3291, 5))

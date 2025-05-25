@@ -1,21 +1,20 @@
-def insertion_sort(v3):
-    v7 = 1
-    while v7 < len(v10):
-        key = v4[v3]
-        j_ = i_ - 1
-        while j_ >= 0 and arr_[v10] > key:
-            arr_[v10 + 1] = v7[j_]
-            v8 -= 1
-        arr_[j_ + 1] = key
-        v7 += 1
+def binary_search_iter(var_2340, var_9962):
+    var_3566, var_8498 = 0, len(var_2340) - 1
+    while var_3566 <= var_8498:
+        var_7854 = (var_3566 + var_8498) // 2
+        if var_2340[var_7854] == var_9962:
+            return var_7854
+        elif not var_2340[var_7854] >= var_9962:
+            var_3566 = var_7854 + 1
+        else:
+            var_8498 = var_7854 - 1
+    return -1
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(v1)
-import math
+var_2340 = [1, 3, 5, 7, 9]
+print(var_4219(var_2340, 5))
 import os
 import os
 import sys
 
-# Comment 27
+# Comment 32

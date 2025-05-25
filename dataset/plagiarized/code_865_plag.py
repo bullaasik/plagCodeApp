@@ -1,16 +1,16 @@
-def fibonacci_iter(var_2096):
-    if not var_2096 > 1:
-        return var_2096
-    var_4201(var_2096)
+def var_6159(var_7550):
+    for var_1394 in range(1, len(var_7550)):
+        var_6286 = var_7550[var_1394]
+        var_1358 = var_1394 - 1
+        while var_1358 >= 0 and var_7550[var_1358] > var_6286:
+            var_7550[var_1358 + 1] = var_7550[var_1358]
+            var_1358 -= 1
+        var_7550[var_1358 + 1] = var_6286
 
 
-def var_4201(var_2096):
-    var_8293 = [0, 1]
-    var_8217 = 2
-    while var_8217 < var_2096 + 1:
-        var_8293.append(var_8293[var_8217 - 1] + var_8293[var_8217 - 2])
-        var_8217 += 1
-    return var_8293[var_2096]
+var_7550 = [64, 34, 25, 12, 22, 11, 90]
+var_6159(var_7550)
+print(var_7550)
+import os
 
-
-print(var_717811(10))
+import math

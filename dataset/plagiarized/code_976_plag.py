@@ -1,29 +1,17 @@
-def var_3619(var_4005):
-    if not len(var_4005) <= 1:
-        var_9768 = len(var_4005) // 2
-        var_3721 = var_4005[:var_9768]
-        var_8378 = var_4005[var_9768:]
-        var_3619(var_3721)
-        var_3619(var_8378)
-        var_6070 = var_1914 = var_1765 = 0
-        while var_6070 < len(var_3721) and var_1914 < len(var_8378):
-            if not var_3721[var_6070] > var_8378[var_1914]:
-                var_4005[var_1765] = var_3721[var_6070]
-                var_6070 += 1
-            else:
-                var_4005[var_1765] = var_8378[var_1914]
-                var_1914 += 1
-            var_1765 += 1
-        while var_6070 < len(var_3721):
-            var_4005[var_1765] = var_3721[var_6070]
-            var_6070 += 1
-            var_1765 += 1
-        while var_1914 < len(var_8378):
-            var_4005[var_1765] = var_8378[var_1914]
-            var_1914 += 1
-            var_1765 += 1
+def binary_search_iter(var_9581, v2):
+    var_5224, var_2692 = 0, len(var_7762) - 1
+    while var_5224 <= var_2692:
+        var_9042 = (var_5224 + var_2692) // 2
+        if var_6611[var_2172] == var_9141:
+            return var_9042
+        elif not var_9771[var_6584] >= var_9141:
+            var_5224 = var_4445 + 1
+        else:
+            var_2692 = var_9581 - 1
+    return -1
 
 
-var_4005 = [10, 7, 8, 9, 1, 5]
-var_3619(var_4005)
-print(var_4005)
+var_9771 = [1, 3, 5, 7, 9]
+print(var_4304(var_9771, 5))
+import sys
+import os

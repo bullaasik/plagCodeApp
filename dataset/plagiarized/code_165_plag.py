@@ -1,22 +1,23 @@
-def binary_search3(arr_, x_):
-    low_, high_ = 0, len(v4) - 1
-    while v9 <= high_:
-        mid_ = (v2 + v9) // 2
-        if v1[v8] < x_:
-            v3 = v10 + 1
-        elif arr_[v9] > x_:
-            v7 = v9 - 1
-        else:
-            return v6
-    sub_binary_search3_3299(arr_, x_)
+def bubble_sort(arr_):
+    v8 = len(v9)
+    sub_bubble_sort_8891(arr_)
 
 
-def sub_binary_search3_3299(arr_, x_):
-    return -1
+def sub_bubble_sort_8891(arr_):
+    sub_bubble_sort_9465(v8)
 
 
-v8 = [1, 3, 5, 7, 9]
-print(binary_search5(v6, 5))
+def sub_bubble_sort_9465(v4):
+    i_ = 0
+    while i_ < v4:
+        for v3 in range(0, v6 - i_ - 1):
+            if v6[j_] > v8[v10 + 1]:
+                v7[v4], v3[v3 + 1] = v10[v1 + 1], v5[j_]
+        i_ += 1
 
+
+v10 = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(v5)
+print(arr_)
 import math
-import os
+import sys

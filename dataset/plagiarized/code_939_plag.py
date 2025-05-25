@@ -1,13 +1,13 @@
-def var_9267(var_9273):
-    for var_2161 in range(1, len(var_9273)):
-        var_4875 = var_9273[var_2161]
-        var_5342 = var_2161 - 1
-        while var_5342 >= 0 and var_9273[var_5342] > var_4875:
-            var_9273[var_5342 + 1] = var_9273[var_5342]
-            var_5342 -= 1
-        var_9273[var_5342 + 1] = var_4875
+def gcd_iter(v4, v3):
+    while b_:
+        temp = v7
+        v1 = v10 % v2
+        a_ = temp
+    sub_gcd_iter_4152(v4, v3)
 
 
-var_9273 = [64, 34, 25, 12, 22, 11, 90]
-var_9267(var_9273)
-print(var_9273)
+def sub_gcd_iter_4152(v4, v3):
+    return a_
+
+
+print(gcd_iter(60, 48))

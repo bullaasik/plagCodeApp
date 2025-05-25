@@ -1,21 +1,21 @@
-def var_8401(var_2781, var_2102, var_4986):
-    var_1729 = len(var_2781)
-    var_8480 = [[(0) for var_8835 in range(var_4986 + 1)] for var_8835 in
-        range(var_1729 + 1)]
-    for var_3051 in range(1, var_1729 + 1):
-        for var_7625 in range(var_4986 + 1):
-            if   not var_2102[var_3051 - 1] > var_7625:
-                var_8480[var_3051][var_7625] = var_8449(var_8480[var_3051 -
-                    1][var_7625], var_8480[var_3051 - 1][var_7625 -
-                    var_2102[var_3051 - 1]] + var_2781[var_3051 - 1])
-            else:
-                var_8480[var_3051][var_7625] = var_8480[var_3051 - 1][var_7625]
-    sub_var_8401_9961(var_2781, var_2102, var_4986)
-
-
-def sub_var_8401_9961(var_2781, var_2102, var_4986):
-    return var_8480[var_1729][var_4986]
-
-
-print(var_8401([60, 100, 120], [10, 20, 30], 50))
-import sys
+def quick_sort2(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort4(arr, low, pi - 1)
+        quick_sort4(arr, pi + 1, high)
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort4(arr, 0, len(arr)-1)
+print(arr)
+import os
+import math
+# Comment 88
+# Comment 61

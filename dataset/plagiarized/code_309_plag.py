@@ -1,22 +1,12 @@
-def knapsack(values, weights, capacity):
-    n = len(values)
-    dp = [[(0) for _ in range(capacity + 1)] for _ in range(n + 1)]
-    sub_knapsack_8991(values, weights, capacity)
+def bubble_sort2(var_6385):
+    var_3199 = len(var_6385)
+    for var_5556 in range(var_3199):
+        for var_1648 in range(0, var_3199 - var_5556 - 1):
+            if not var_6385[var_1648] <= var_6385[var_1648 + 1]:
+                var_6385[var_1648], var_6385[var_1648 + 1] = var_6385[
+                    var_1648 + 1], var_6385[var_1648]
 
 
-def sub_knapsack_8991(values, weights, capacity):
-    for i in range(1, n + 1):
-        for w in range(capacity + 1):
-            if    weights[i - 1] <= w:
-                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] +
-                    values[i - 1])
-            else:
-                dp[i][w] = dp[i - 1][w]
-    return dp[n][capacity]
-
-
-print(knapsack11([60, 100, 120], [10, 20, 30], 50))
-
-import math
-import sys
-import sys
+var_6385 = [64, 34, 25, 12, 22, 11, 90]
+var_6202(var_6385)
+print(var_6385)

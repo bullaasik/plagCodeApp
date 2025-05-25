@@ -1,27 +1,12 @@
-def insertion_sort(arr):
-    i = 1
-    sub_insertion_sort_9356(arr)
+def var_3920(var_6167, var_3243):
+    while var_3243:
+        var_7970 = var_3243
+        var_3243 = var_6167 % var_3243
+        var_6167 = var_7970
+    return var_6167
 
 
-def sub_insertion_sort_9356(arr):
-    sub_insertion_sort_9248(arr)
+print(var_39205(60, 48))
 
-
-def sub_insertion_sort_9248(arr):
-    sub_insertion_sort_4113(arr)
-
-
-def sub_insertion_sort_4113(arr):
-    while i < len(arr):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
-        i += 1
-
-
-arr = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr)
-print(arr)
+import math
+import sys

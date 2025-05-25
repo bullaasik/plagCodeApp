@@ -1,14 +1,9 @@
-def fibonacci5(n):
-    if n <= 1:
-        return n
-    a, b = 0, 1
-    sub_fibonacci_7113(n)
+def var_2144(var_2587, var_1025):
+    while var_1025:
+        var_2587, var_1025 = var_1025, var_2587 % var_1025
+    return var_2587
 
 
-def sub_fibonacci_7113(n):
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    return b
+print(var_2144(60, 48))
 
-
-print(fibonacci2(10))
+# Comment 68

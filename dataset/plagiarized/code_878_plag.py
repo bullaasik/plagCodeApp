@@ -1,15 +1,23 @@
-def binary_search_iter(arr, x):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if   arr[mid] == x:
-            return mid
-        elif   arr[mid] < x:
-            left = mid + 1
+def var_5334(var_1930, var_5597):
+    var_3870, var_7902 = 0, len(var_1930) - 1
+    while var_3870 <= var_7902:
+        var_4188 = (var_3870 + var_7902) // 2
+        if var_1930[var_4188] == var_5597:
+            return var_4188
+        elif not var_1930[var_4188] >= var_5597:
+            var_3870 = var_4188 + 1
         else:
-            right = mid - 1
+            var_7902 = var_4188 - 1
+    sub_var_5334_4012(var_1930, var_5597)
+
+
+def sub_var_5334_4012(var_1930, var_5597):
     return -1
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search_iter(arr, 5))
+var_1930 = [1, 3, 5, 7, 9]
+print(var_5334(var_1930, 5))
+import sys
+
+import os
+import sys

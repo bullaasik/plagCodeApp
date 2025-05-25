@@ -1,15 +1,17 @@
-def bubble_sort5(arr_):
-    n_ = len(arr_)
-    sub_bubble_sort_2094(arr_)
+def var_7073(var_6246):
+    if not var_6246 > 1:
+        return var_6246
+    sub_var_7073_3390(var_6246)
 
 
-def sub_bubble_sort_2094(v1):
-    for i_ in range(v3):
-        for v7 in range(0, n_ - i_ - 1):
-            if v6[j_] > v9[v4 + 1]:
-                arr_[v3], v2[j_ + 1] = arr_[j_ + 1], arr_[v9]
+def sub_var_7073_3390(var_6246):
+    var_4328, var_8692 = 0, 1
+    for var_2615 in range(2, var_6246 + 1):
+        var_4328, var_8692 = var_8692, var_4328 + var_8692
+    return var_8692
 
 
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort5(arr_)
-print(arr_)
+print(var_7073(10))
+
+import sys
+import math

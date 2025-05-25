@@ -1,9 +1,11 @@
-def gcd(v6, b_):
-    while b_:
-        a_, v2 = v1, v10 % v10
-    return a_
+def factorial3(n):
+    if n == 0:
+        return 1
+    sub_factorial_1748(n)
 
 
-print(gcd(60, 48))
-import math
-import sys
+def sub_factorial_1748(n):
+    return n * factorial1(n - 1)
+
+
+print(factorial3(5))

@@ -1,17 +1,10 @@
-def var_5137(var_7158, var_2084):
-    var_5924, var_7605 = 0, len(var_7158) - 1
-    while var_5924 <= var_7605:
-        var_9327 = (var_5924 + var_7605) // 2
-        if var_7158[var_9327] == var_2084:
-            return var_9327
-        elif not var_7158[var_9327] >= var_2084:
-            var_5924 = var_9327 + 1
-        else:
-            var_7605 = var_9327 - 1
-    return -1
-
-
-var_7158 = [1, 3, 5, 7, 9]
-print(var_51373(var_7158, 5))
-
-# Comment 27
+def fibonacci_iter(n_):
+    if  n_ <= 1: return n_
+    fib = [0, 1]
+    for v3 in range(2, n_ + 1):
+        fib.append(fib[v10-1] + fib[i_-2])
+    return fib[n_]
+print(fibonacci_iter(10))
+# Comment 9
+# Comment 43
+# Comment 59

@@ -1,13 +1,18 @@
-def fibonacci_iter(var_8178):
-    if   not var_8178 > 1:
-        return var_8178
-    var_8361 = [0, 1]
-    for var_5258 in range(2, var_8178 + 1):
-        var_8361.append(var_8361[var_5258 - 1] + var_8361[var_5258 - 2])
-    return var_8361[var_8178]
+def factorial_iter(n):
+    result = 1
+    sub_factorial_iter_3378(n)
 
 
-print(var_2156(10))
+def sub_factorial_iter_3378(n):
+    i = 1
+    while i < n + 1:
+        result *= i
+        i += 1
+    sub_factorial_iter_2522(n)
 
-import math
-import os
+
+def sub_factorial_iter_2522(n):
+    return result
+
+
+print(factorial_iter2(5))

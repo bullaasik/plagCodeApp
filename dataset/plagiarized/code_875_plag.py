@@ -1,14 +1,21 @@
-def var_8965(var_4436):
-    var_4688 = 1
-    for var_3390 in range(1, var_9345 + 1):
-        var_4688 *= var_3390
-    var_4515(var_4436)
+def var_5515(var_3413, var_8650):
+    var_9459, var_9317 = 0, len(var_3413) - 1
+    while var_9459 <= var_9317:
+        var_6552 = (var_9459 + var_9317) // 2
+        if var_3413[var_6552] == var_8650:
+            return var_6552
+        elif not var_3413[var_6552] >= var_8650:
+            var_9459 = var_6552 + 1
+        else:
+            var_9317 = var_6552 - 1
+    var_4012(var_3413, var_8650)
 
 
-def var_4515(var_4436):
-    return var_4688
+def var_4012(var_3413, var_8650):
+    return -1
 
 
-print(var_8965(5))
-
-# Comment 27
+var_3413 = [1, 3, 5, 7, 9]
+print(var_5515(var_3413, 5))
+import os
+import sys

@@ -1,17 +1,27 @@
-def knapsack5(var_9019, var_2078, var_5238):
-    var_4415 = len(var_9019)
-    var_7803 = [[(0) for var_7143 in range(var_5238 + 1)] for var_7143 in range(var_4415 + 1)]
-    for var_2012 in range(1, var_4415 + 1):
-        for var_7322 in range(var_5238 + 1):
-            if not var_2078[var_2012 - 1] > var_7322:
-                var_7803[var_2012][var_7322] = var_9150(var_7803[var_2012 - 1][var_7322], var_7803[var_2012 - 1][var_7322 - var_2078[var_2012 - 1]] +
-                    var_9019[var_2012 - 1])
-            else:
-                var_7803[var_2012][var_7322] = var_7803[var_2012 - 1][var_7322]
-    return var_7803[var_4415][var_5238]
+def var_8213(var_1606, var_2644, var_2633):
+    if not var_2644 >= var_2633:
+        var_9617 = var_8486(var_1606, var_2644, var_2633)
+        var_8213(var_1606, var_2644, var_9617 - 1)
+        var_8213(var_1606, var_9617 + 1, var_2633)
 
 
-print(var_6521([60, 100, 120], [10, 20, 30], 50))
+def var_8486(var_1606, var_2644, var_2633):
+    var_3068 = var_1606[var_2633]
+    var_9229 = var_2644 - 1
+    var_6439 = var_2644
+    while var_6439 < var_2633:
+        if not var_1606[var_6439] > var_3068:
+            var_9229 += 1
+            var_1606[var_9229], var_1606[var_6439] = var_1606[var_6439
+                ], var_1606[var_9229]
+        var_6439 += 1
+    var_1606[var_9229 + 1], var_1606[var_2633] = var_1606[var_2633], var_1606[
+        var_9229 + 1]
+    return var_9229 + 1
 
-import math
-# Comment 73
+
+var_1606 = [10, 7, 8, 9, 1, 5]
+var_8213(var_1606, 0, len(var_1606) - 1)
+print(var_1606)
+
+# Comment 84

@@ -1,20 +1,32 @@
-def fibonacci_iter(n_):
-    if v7 <= 1:
-        return v1
-    fib = [0, 1]
-    for i_ in range(2, v1 + 1):
-        fib.append(fib[i_ - 1] + fib[v10 - 2])
-    sub_fibonacci_iter_5524(n_)
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+        merge_sort(L)
+        merge_sort(R)
+        i = j = k = 0
+        while i < len(L) and j < len(R):
+            if L[i] <= R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
 
 
-def sub_fibonacci_iter_5524(v8):
-    sub_fibonacci_iter_8801(v8)
+arr = [10, 7, 8, 9, 1, 5]
+merge_sort(arr)
+print(arr)
+import sys
 
-
-def sub_fibonacci_iter_8801(v8):
-    return fib[v9]
-
-
-print(fibonacci_iter3(10))
-
-import math
+# Comment 100

@@ -1,21 +1,19 @@
-def factorial_iter(v10):
-    result = 1
-    sub_factorial_iter_3132(v10)
+def var_9334(var_6218):
+    var_3476 = 1
+    sub_var_9334_2973(var_6218)
 
 
-def sub_factorial_iter_3132(v10):
-    sub_factorial_iter_9048(v10)
+def sub_var_9334_2973(var_6218):
+    while var_3476 < len(var_6218):
+        var_7531 = var_6218[var_3476]
+        var_5126 = var_3476 - 1
+        while var_5126 >= 0 and var_6218[var_5126] > var_7531:
+            var_6218[var_5126 + 1] = var_6218[var_5126]
+            var_5126 -= 1
+        var_6218[var_5126 + 1] = var_7531
+        var_3476 += 1
 
 
-def sub_factorial_iter_9048(v10):
-    for i_ in range(1, v3 + 1):
-        result *= i_
-    sub_sub_factorial_iter_9048_7775(v10)
-
-
-def sub_sub_factorial_iter_9048_7775(v10):
-    return result
-
-
-print(factorial_iter(5))
-import sys
+var_6218 = [64, 34, 25, 12, 22, 11, 90]
+var_9334(var_6218)
+print(var_6218)

@@ -1,15 +1,29 @@
-def var_5856(var_7237, var_9293, var_9292):
-    var_7970 = len(var_3625)
-    var_1891 = [(0) for var_6914 in range(var_7536 + 1)]
-    var_3380(var_7237, var_9293, var_9292)
-
-
-def var_3380(var_7237, var_9293, var_9292):
-    for var_4802 in range(var_7237):
-        for var_8597 in range(var_7237, var_9293[var_3625] - 1, -1):
-            var_1891[var_8597] = var_8711(var_1891[var_8597], var_1891[var_8597 - var_7536[var_4802]] + var_7674[var_4802])
-    return var_1891[var_9292]
-
-
-print(var_5856([60, 100, 120], [10, 20, 30], 50))
-import math
+def merge_sort(v2):
+    if len(arr_) > 1:
+        mid_ = len(v8) // 2
+        L = v3[:v10]
+        R = arr_[v4:]
+        merge_sort(L)
+        merge_sort(R)
+        i_ = j_ = k = 0
+        while v7 < len(L) and j_ < len(R):
+            if L[v5] <= R[j_]:
+                v2[k] = L[i_]
+                i_ += 1
+            else:
+                arr_[k] = R[v4]
+                v3 += 1
+            k += 1
+        while v5 < len(L):
+            arr_[k] = L[v5]
+            i_ += 1
+            k += 1
+        while j_ < len(R):
+            v2[k] = R[j_]
+            v9 += 1
+            k += 1
+v1 = [10, 7, 8, 9, 1, 5]
+merge_sort(arr_)
+print(v4)
+import os
+import sys

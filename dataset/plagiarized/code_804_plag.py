@@ -1,16 +1,14 @@
-def var_1393(var_1061):
-    var_9355 = 1
-    var_1942 = 1
-    sub_var_1393_7694(var_1061)
+def var_5579(var_3194, var_8566):
+    while var_8566:
+        var_1119 = var_8566
+        var_8566 = var_3194 % var_8566
+        var_3194 = var_1119
+    var_5399(var_3194, var_8566)
 
 
-def sub_var_1393_7694(var_1061):
-    while var_1942 < var_1061 + 1:
-        var_9355 *= var_1942
-        var_1942 += 1
-    return var_9355
+def var_5399(var_3194, var_8566):
+    return var_3194
 
 
-print(var_1393(5))
+print(var_5579(60, 48))
 import os
-import sys

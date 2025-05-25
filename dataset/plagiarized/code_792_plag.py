@@ -1,15 +1,13 @@
-def var_4222(var_6936):
-    if not var_6936 > 1:
-        return var_6936
-    var_1497 = [0, 1]
-    for var_2071 in range(2, var_6936 + 1):
-        var_1497.append(var_1497[var_1014 - 1] + var_1497[var_2071 - 2])
-    var_5893(var_1014)
+def var_3985(var_9574, var_4439, var_2359):
+    var_3619 = len(var_9574)
+    var_9570 = [(0) for var_4565 in range(var_2359 + 1)]
+    for var_7409 in range(var_3619):
+        for var_2717 in range(var_2359, var_4439[var_7409] - 1, -1):
+            var_9570[var_2717] = var_1486(var_9570[var_2717], var_9570[
+                var_2717 - var_4439[var_7409]] + var_9574[var_7409])
+    return var_9570[var_2359]
 
 
-def var_5893(v8):
-    return var_1497[var_6936]
+print(var_39851([60, 100, 120], [10, 20, 30], 50))
 
-
-print(var_4222(10))
-import math
+# Comment 69

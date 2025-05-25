@@ -1,17 +1,8 @@
-def var_5656(var_3125):
-    var_4829 = 1
-    while var_2356 < len(var_3125):
-        var_3781 = var_9359[var_1743]
-        var_7211 = var_1743 - 1
-        while var_7211 >= 0 and var_9359[var_4829] > var_3781:
-            var_9359[var_2356 + 1] = var_9359[var_9323]
-            var_9370 -= 1
-        var_4829[var_7211 + 1] = var_3781
-        var_1743 += 1
-
-
-var_2356 = [64, 34, 25, 12, 22, 11, 90]
-var_5656(var_9359)
-print(var_1601)
-
-# Comment 57
+def fibonacci_iter(n_):
+    if   n_ <= 1: return v9
+    fib = [0, 1]
+    for i_ in range(2, v3 + 1):
+        fib.append(fib[i_-1] + fib[v1-2])
+    return fib[v6]
+print(fibonacci_iter(10))
+# Comment 53

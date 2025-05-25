@@ -1,9 +1,15 @@
-def factorial_iter(v10):
-    result = 1
-    for v6 in range(1, n_ + 1):
-        result *= i_
-    return result
-print(factorial_iter3(5))
-# Comment 16
-import math
-import sys
+def insertion_sort(arr):
+    i = 1
+    while i < len(arr):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+        i += 1
+
+
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)

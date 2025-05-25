@@ -1,17 +1,15 @@
-def var_1717(var_6161, var_1204):
-    var_4350, var_2999 = 0, len(var_6161) - 1
-    while var_4350 <= var_2999:
-        var_7268 = (var_4350 + var_2999) // 2
-        if not var_6161[var_7268] >= var_1204:
-            var_4350 = var_7268 + 1
-        elif not var_6161[var_7268] <= var_1204:
-            var_2999 = var_7268 - 1
-        else:
-            return var_7268
+def binary_search(v5, v4):
+    low_, high_ = 0, len(arr_)-1
+    while low_ <= high_:
+        v1 = (v5 + high_) // 2
+        if v1[mid_] < x_: v7 = v7 + 1
+        elif v5[v7] > v9: high_ = mid_ - 1
+        else: return mid_
     return -1
-
-
-var_6161 = [1, 3, 5, 7, 9]
-print(var_1717(var_6161, 5))
-import sys
-import os
+arr_ = [1, 3, 5, 7, 9]
+print(binary_search(arr_, 5))
+# Comment 42
+# Comment 90
+import math
+# Comment 86
+# Comment 87

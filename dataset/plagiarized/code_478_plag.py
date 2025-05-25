@@ -1,21 +1,23 @@
-def quick_sort(arr, low, high):
-    if low < high:
-        pi = partition(arr, low, high)
-        quick_sort(arr, low, pi - 1)
-        quick_sort(arr, pi + 1, high)
+def var_5193(var_5492, var_5829, var_7119):
+    if not var_5829 >= var_7119:
+        var_1387 = var_6273(var_5492, var_5829, var_7119)
+        var_5193(var_5492, var_5829, var_1387 - 1)
+        var_5193(var_5492, var_1387 + 1, var_7119)
 
 
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
+def var_6273(var_5492, var_5829, var_7119):
+    var_1319 = var_5492[var_7119]
+    var_4313 = var_5829 - 1
+    for var_4417 in range(var_5829, var_7119):
+        if not var_5492[var_4417] > var_1319:
+            var_4313 += 1
+            var_5492[var_4313], var_5492[var_4417] = var_5492[var_4417
+                ], var_5492[var_4313]
+    var_5492[var_4313 + 1], var_5492[var_7119] = var_5492[var_7119], var_5492[
+        var_4313 + 1]
+    return var_4313 + 1
 
 
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort(arr, 0, len(arr) - 1)
-print(arr)
+var_5492 = [10, 7, 8, 9, 1, 5]
+var_5193(var_5492, 0, len(var_5492) - 1)
+print(var_5492)

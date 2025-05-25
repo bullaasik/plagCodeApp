@@ -1,17 +1,10 @@
-def binary_search_iter(arr_, v5):
-    left, right = 0, len(arr_) - 1
-    while left <= right:
-        mid_ = (left + right) // 2
-        if arr_[v9] == v1:
-            return mid_
-        elif arr_[v7] < x_:
-            left = v4 + 1
-        else:
-            right = v10 - 1
-    return -1
+def var_9786(v4):
+    if not var_2563 > 1:
+        return var_5487
+    var_3720 = [0, 1]
+    for var_1066 in range(2, var_7940 + 1):
+        var_3720.append(var_3720[var_8896 - 1] + var_3720[var_8896 - 2])
+    return var_3720[var_2563]
 
 
-arr_ = [1, 3, 5, 7, 9]
-print(binary_search_iter5(arr_, 5))
-
-# Comment 89
+print(var_9786(10))

@@ -1,14 +1,18 @@
-def fibonacci_iter(n_):
-    if v4 <= 1:
-        return v5
-    fib = [0, 1]
-    v9 = 2
-    while i_ < n_ + 1:
-        fib.append(fib[i_ - 1] + fib[v1 - 2])
-        i_ += 1
-    return fib[v4]
+def var_5356(var_3019):
+    if  not var_3019 > 1:
+        return var_3019
+    var_3224 = [0, 1]
+    for var_9043 in range(2, var_3019 + 1):
+        var_3224.append(var_3224[var_9043 - 1] + var_3224[var_9043 - 2])
+    var_8430(var_3019)
 
 
-print(fibonacci_iter45(10))
+def var_8430(var_3019):
+    return var_3224[var_3019]
 
-# Comment 72
+
+print(var_5356(10))
+import sys
+import math
+
+# Comment 71

@@ -1,16 +1,10 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    return -1
+def var_4318(var_9587):
+    if not var_9587 > 1:
+        return var_9587
+    var_4741, var_1199 = 0, 1
+    for var_8525 in range(2, var_6956 + 1):
+        var_4741, var_1199 = var_1538, var_4741 + var_7528
+    return var_1199
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 5))
-import os
+print(var_43183(10))

@@ -1,11 +1,19 @@
-def binary_search1(v4, x_):
-    low_, v9 = 0, len(arr_)-1
-    while v2 <= high_:
-        v2 = (v8 + v1) // 2
-        if v5[mid_] < x_: low_ = mid_ + 1
-        elif v4[mid_] > x_: high_ = mid_ - 1
-        else: return mid_
+def binary_search(arr, x):
+    low, high = 0, len(arr) - 1
+    sub_binary_search_4721(arr, x)
+
+
+def sub_binary_search_4721(arr, x):
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
     return -1
-arr_ = [1, 3, 5, 7, 9]
-print(binary_search5(arr_, 5))
-# Comment 83
+
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search(arr, 5))

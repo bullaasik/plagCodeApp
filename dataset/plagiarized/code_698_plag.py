@@ -1,21 +1,17 @@
-def var_5888(var_2264, var_1156):
-    var_2993, var_5361 = 0, len(var_7912) - 1
-    var_8146(var_2264, var_1156)
+def var_4029(var_5862):
+    var_7309 = 1
+    while var_7309 < len(var_5862):
+        var_2222 = var_9877[var_7309]
+        var_2582 = var_3370 - 1
+        while var_2505 >= 0 and var_8139[var_5592] > var_2222:
+            var_9877[var_2582 + 1] = var_7599[var_3257]
+            var_5592 -= 1
+        var_2505[var_5592 + 1] = var_2222
+        var_7309 += 1
 
 
-def var_8146(var_2264, var_1156):
-    while var_2993 <= var_5361:
-        var_8069 = (var_2993 + var_5361) // 2
-        if   var_9347[var_8069] == var_9901:
-            return var_7912
-        elif   not var_6859[var_6859] >= var_9901:
-            var_2993 = var_8861 + 1
-        else:
-            var_5361 = var_8861 - 1
-    return -1
-
-
-var_2868 = [1, 3, 5, 7, 9]
-print(var_5888(var_2868, 5))
-
-# Comment 35
+var_5862 = [64, 34, 25, 12, 22, 11, 90]
+var_4029(var_5862)
+print(var_5862)
+import os
+import math

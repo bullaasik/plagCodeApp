@@ -1,16 +1,10 @@
-def fibonacci_iter(v8):
-    if v6 <= 1:
-        return n_
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
     fib = [0, 1]
-    i_ = 2
-    while v8 < v2 + 1:
-        fib.append(fib[i_ - 1] + fib[v2 - 2])
-        i_ += 1
-    sub_fibonacci_iter_7970(v8)
+    for i in range(2, n + 1):
+        fib.append(fib[i - 1] + fib[i - 2])
+    return fib[n]
 
 
-def sub_fibonacci_iter_7970(v8):
-    return fib[n_]
-
-
-print(fibonacci_iter4(10))
+print(fibonacci_iter3(10))

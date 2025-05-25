@@ -1,19 +1,33 @@
-def var_8817(var_3763, var_8440):
-    var_7494, var_8979 = 0, len(var_1997) - 1
-    while var_7494 <= var_8979:
-        var_5984 = (var_7494 + var_8979) // 2
-        if var_6984[var_7313] == var_4658:
-            return var_8323
-        elif not var_5599[var_7313] >= var_2700:
-            var_7494 = var_7313 + 1
-        else:
-            var_8979 = var_8923 - 1
-    var_7595(var_3763, var_8440)
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+        merge_sort(L)
+        merge_sort(R)
+        i = j = k = 0
+        while i < len(L) and j < len(R):
+            if L[i] <= R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
 
 
-def var_7595(var_3763, var_8440):
-    return -1
+arr = [10, 7, 8, 9, 1, 5]
+merge_sort(arr)
+print(arr)
 
-
-var_4658 = [1, 3, 5, 7, 9]
-print(var_8817(var_6984, 5))
+# Comment 86
+import math
+import sys

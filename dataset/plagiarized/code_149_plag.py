@@ -1,21 +1,22 @@
-def var_3156(var_2075, var_9888, var_9100):
-    var_3964 = len(var_2075)
-    var_3346 = [[(0) for var_6601 in range(var_9100 + 1)] for var_6601 in
-        range(var_3964 + 1)]
-    for var_2930 in range(1, var_3964 + 1):
-        for var_3555 in range(var_9100 + 1):
-            if  not var_9888[var_2930 - 1] > var_3555:
-                var_3346[var_2930][var_3555] = var_3430(var_3346[var_2930 -
-                    1][var_3555], var_3346[var_2930 - 1][var_3555 -
-                    var_9888[var_2930 - 1]] + var_2075[var_2930 - 1])
-            else:
-                var_3346[var_2930][var_3555] = var_3346[var_2930 - 1][var_3555]
-    sub_var_3156_9519(var_2075, var_9888, var_9100)
+def var_4304(var_4254, var_6864, var_7713):
+    if not var_6864 >= var_7713:
+        var_5839 = var_3627(var_4254, var_6864, var_7713)
+        var_4304(var_4254, var_6864, var_5839 - 1)
+        var_4304(var_4254, var_5839 + 1, var_7713)
 
 
-def sub_var_3156_9519(var_2075, var_9888, var_9100):
-    return var_3346[var_3964][var_9100]
+def var_3627(var_4254, var_6864, var_7713):
+    var_4272 = var_4254[var_7713]
+    var_5308 = var_6864 - 1
+    for var_9571 in range(var_6864, var_7713):
+        if not var_4254[var_9571] > var_4272:
+            var_5308 += 1
+            var_4254[var_5308], var_4254[var_9571] = var_4254[var_9571], var_4254[var_5308]
+    var_4254[var_5308 + 1], var_4254[var_7713] = var_4254[var_7713], var_4254[var_5308 + 1]
+    return var_5308 + 1
 
 
-print(var_3156([60, 100, 120], [10, 20, 30], 50))
+var_4254 = [10, 7, 8, 9, 1, 5]
+var_4304(var_4254, 0, len(var_4254) - 1)
+print(var_4254)
 import math

@@ -1,30 +1,15 @@
-def merge_sort(v7):
-    if len(v9) > 1:
-        mid_ = len(v9) // 2
-        L = arr_[:v2]
-        R = v5[mid_:]
-        merge_sort(L)
-        merge_sort(R)
-        i_ = j_ = k = 0
-        while v3 < len(L) and j_ < len(R):
-            if L[i_] <= R[j_]:
-                v6[k] = L[i_]
-                i_ += 1
-            else:
-                arr_[k] = R[v6]
-                j_ += 1
-            k += 1
-        while v5 < len(L):
-            v7[k] = L[v1]
-            i_ += 1
-            k += 1
-        while j_ < len(R):
-            v4[k] = R[j_]
-            v9 += 1
-            k += 1
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
 
 
-v4 = [10, 7, 8, 9, 1, 5]
-merge_sort(v1)
-print(arr_)
-import sys
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)
+
+# Comment 51

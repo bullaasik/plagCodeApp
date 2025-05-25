@@ -1,9 +1,12 @@
-def var_5564(var_5616):
-    if var_5616 == 0:
-        return 1
-    return var_5616 * var_5564(var_5616 - 1)
+def fibonacci(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
 
 
-print(var_5564(5))
+print(fibonacci3(10))
 
-# Comment 36
+import sys

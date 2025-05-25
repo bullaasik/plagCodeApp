@@ -1,17 +1,30 @@
-def var_7251(var_1324):
-    var_8761 = 1
-    while var_1543 < len(var_1090):
-        var_4179 = var_1090[var_4503]
-        var_9216 = var_4481 - 1
-        while var_8775 >= 0 and var_4481[var_9839] > var_4179:
-            var_4503[var_8775 + 1] = var_4887[var_1658]
-            var_8775 -= 1
-        var_1324[var_8775 + 1] = var_4179
-        var_8761 += 1
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+        merge_sort(L)
+        merge_sort(R)
+        i = j = k = 0
+        while i < len(L) and j < len(R):
+            if L[i] <= R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
 
 
-var_4481 = [64, 34, 25, 12, 22, 11, 90]
-var_7251(var_4503)
-print(var_4481)
+arr = [10, 7, 8, 9, 1, 5]
+merge_sort(arr)
+print(arr)
 import math
-import os

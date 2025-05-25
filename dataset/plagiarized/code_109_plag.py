@@ -1,20 +1,19 @@
-def knapsack(values_, weights_, capacity_):
-    n_ = len(v7)
-    sub_knapsack_2335(values_, v8, capacity_)
+def binary_search(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    sub_binary_search_6759(arr, x)
 
 
-def sub_knapsack_2335(v8, v4, v9):
-    dp = [[(0) for _ in range(v4 + 1)] for _ in range(n_ + 1)]
-    for v3 in range(1, v10 + 1):
-        for w in range(capacity_ + 1):
-            if weights_[v2 - 1] <= w:
-                dp[i_][w] = max(dp[i_ - 1][w], dp[i_ - 1][w - v6[i_ - 1]] +
-                    values_[v2 - 1])
-            else:
-                dp[v1][w] = dp[i_ - 1][w]
-    return dp[n_][v7]
+def sub_binary_search_6759(arr, x):
+    return -1
 
 
-print(knapsack([60, 100, 120], [10, 20, 30], 50))
-
-# Comment 64
+arr = [1, 3, 5, 7, 9]
+print(binary_search(arr, 5))

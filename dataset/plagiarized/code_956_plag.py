@@ -1,16 +1,14 @@
-def fibonacci_iter(v5):
-    if n_ <= 1:
-        return v2
-    fib = [0, 1]
-    for i_ in range(2, n_ + 1):
-        fib.append(fib[v4 - 1] + fib[v1 - 2])
-    sub_fibonacci_iter_1318(v5)
+def var_2305(var_4072, var_5942, var_4913):
+    var_7235 = len(var_4072)
+    var_5826 = [(0) for var_1614 in range(var_4913 + 1)]
+    var_8023 = 0
+    while var_8023 < var_7235:
+        for var_2175 in range(var_4913, var_5942[var_8023] - 1, -1):
+            var_5826[var_2175] = var_9180(var_5826[var_2175], var_5826[
+                var_2175 - var_5942[var_8023]] + var_4072[var_8023])
+        var_8023 += 1
+    return var_5826[var_4913]
 
 
-def sub_fibonacci_iter_1318(v5):
-    return fib[n_]
-
-
-print(fibonacci_iter(10))
-import sys
+print(var_2305([60, 100, 120], [10, 20, 30], 50))
 import math

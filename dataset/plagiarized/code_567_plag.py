@@ -1,12 +1,12 @@
-def fibonacci_iter(n_):
-    if n_ <= 1:
-        return n_
-    fib = [0, 1]
-    i_ = 2
-    while v3 < n_ + 1:
-        fib.append(fib[v3 - 1] + fib[v8 - 2])
-        v2 += 1
-    return fib[n_]
+def var_7183(n_):
+    if not var_5066 > 1:
+        return var_5066
+    var_3869 = [0, 1]
+    var_2800 = 2
+    while var_3655 < var_2098 + 1:
+        var_3869.append(var_3869[var_3655 - 1] + var_3869[var_1692 - 2])
+        var_1692 += 1
+    return var_3869[var_2098]
 
 
-print(fibonacci_iter(10))
+print(var_7183(10))

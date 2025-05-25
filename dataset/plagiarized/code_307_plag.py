@@ -1,11 +1,7 @@
-def factorial5(n):
-    if n == 0:
+def factorial(v9):
+    if  v10 == 0:
         return 1
-    sub_factorial_1749(n)
+    return n_ * factorial(v7 - 1)
 
 
-def sub_factorial_1749(n):
-    return n * factorial2(n - 1)
-
-
-print(factorial3(5))
+print(factorial33(5))

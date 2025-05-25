@@ -1,11 +1,25 @@
-def bubble_sort2(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+def var_7633(var_9027, var_8005, var_1685):
+    if not var_8005 >= var_1685:
+        var_7232 = var_6126(var_9027, var_8005, var_1685)
+        var_7633(var_9027, var_8005, var_7232 - 1)
+        var_7633(var_9027, var_7232 + 1, var_1685)
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort4(arr)
-print(arr)
+def var_6126(var_9027, var_8005, var_1685):
+    var_6323 = var_9027[var_1685]
+    var_8496 = var_8005 - 1
+    var_5043 = var_8005
+    while var_5043 < var_1685:
+        if not var_9027[var_5043] > var_6323:
+            var_8496 += 1
+            var_9027[var_8496], var_9027[var_5043] = var_9027[var_5043], var_9027[var_8496]
+        var_5043 += 1
+    var_9027[var_8496 + 1], var_9027[var_1685] = var_9027[var_1685], var_9027[var_8496 + 1]
+    return var_8496 + 1
+
+
+var_9027 = [10, 7, 8, 9, 1, 5]
+var_7633(var_9027, 0, len(var_9027) - 1)
+print(var_9027)
+
+# Comment 79

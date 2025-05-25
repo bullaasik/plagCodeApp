@@ -1,13 +1,18 @@
-def bubble_sort1(arr_):
-    v5 = len(v3)
-    i_ = 0
-    while i_ < v10:
-        for v3 in range(0, n_ - i_ - 1):
-            if v9[j_] > v6[j_ + 1]:
-                arr_[j_], arr_[j_ + 1] = v6[j_ + 1], arr_[j_]
-        i_ += 1
-
-
-arr_ = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort4(arr_)
-print(arr_)
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr)-1)
+print(arr)
+# Comment 7

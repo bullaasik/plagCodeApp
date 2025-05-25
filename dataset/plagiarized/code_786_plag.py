@@ -1,11 +1,14 @@
-def factorial_iter(v9):
-    result = 1
-    i_ = 1
-    while i_ < v8 + 1:
-        result *= i_
-        i_ += 1
-    return result
+def fibonacci_iter(n_):
+    if v3 <= 1:
+        return n_
+    sub_fibonacci_iter_8350(n_)
 
 
-print(factorial_iter54(5))
-import os
+def sub_fibonacci_iter_8350(n_):
+    fib = [0, 1]
+    for i_ in range(2, n_ + 1):
+        fib.append(fib[i_ - 1] + fib[i_ - 2])
+    return fib[n_]
+
+
+print(fibonacci_iter1(10))

@@ -1,30 +1,15 @@
-def var_7394(var_7125):
-    if not len(var_7125) <= 1:
-        var_4174 = len(var_7125) // 2
-        var_7829 = var_7125[:var_4174]
-        var_6766 = var_7125[var_4174:]
-        var_7394(var_7829)
-        var_7394(var_6766)
-        var_2609 = var_6921 = var_4021 = 0
-        while var_2609 < len(var_7829) and var_6921 < len(var_6766):
-            if not var_7829[var_2609] > var_6766[var_6921]:
-                var_7125[var_4021] = var_7829[var_2609]
-                var_2609 += 1
-            else:
-                var_7125[var_4021] = var_6766[var_6921]
-                var_6921 += 1
-            var_4021 += 1
-        while var_2609 < len(var_7829):
-            var_7125[var_4021] = var_7829[var_2609]
-            var_2609 += 1
-            var_4021 += 1
-        while var_6921 < len(var_6766):
-            var_7125[var_4021] = var_6766[var_6921]
-            var_6921 += 1
-            var_4021 += 1
+def var_6956(var_8410, var_6534):
+    var_8272, var_7364 = 0, len(var_8410) - 1
+    while var_8272 <= var_7364:
+        var_8594 = (var_8272 + var_7364) // 2
+        if var_8410[var_8594] == var_6534:
+            return var_8594
+        elif not var_8410[var_8594] >= var_6534:
+            var_8272 = var_8594 + 1
+        else:
+            var_7364 = var_8594 - 1
+    return -1
 
 
-var_7125 = [10, 7, 8, 9, 1, 5]
-var_7394(var_7125)
-print(var_7125)
-import sys
+var_8410 = [1, 3, 5, 7, 9]
+print(var_6956(var_8410, 5))

@@ -1,10 +1,12 @@
-def gcd(a_, b_):
-    while v9:
-        v2, v8 = v8, v5 % v1
-    return v1
-
-
-print(gcd(60, 48))
-
-# Comment 6
-# Comment 72
+def knapsack3(values, weights, capacity):
+    n = len(values)
+    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if weights[i-1] <= w:
+                dp[i][w] = max(dp[i-1][w], dp[i-1][w-weights[i-1]] + values[i-1])
+            else:
+                dp[i][w] = dp[i-1][w]
+    return dp[n][capacity]
+print(knapsack5([60, 100, 120], [10, 20, 30], 50))
+# Comment 64

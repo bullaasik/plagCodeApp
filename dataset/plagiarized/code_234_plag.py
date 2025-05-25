@@ -1,22 +1,11 @@
-def var_7757(var_9410, var_8168, var_6408):
-    var_7407 = len(var_9410)
-    var_1690 = [[(0) for var_3235 in range(var_6408 + 1)] for var_3235 in
-        range(var_7407 + 1)]
-    sub_var_7757_5816(var_9410, var_8168, var_6408)
+def factorial(n_):
+    if n_ == 0:
+        return 1
+    sub_factorial_6021(n_)
 
 
-def sub_var_7757_5816(var_9410, var_8168, var_6408):
-    var_8661 = 1
-    while var_8661 < var_7407 + 1:
-        for var_3039 in range(var_6408 + 1):
-            if not var_8168[var_8661 - 1] > var_3039:
-                var_1690[var_8661][var_3039] = var_5778(var_1690[var_8661 -
-                    1][var_3039], var_1690[var_8661 - 1][var_3039 -
-                    var_8168[var_8661 - 1]] + var_9410[var_8661 - 1])
-            else:
-                var_1690[var_8661][var_3039] = var_1690[var_8661 - 1][var_3039]
-        var_8661 += 1
-    return var_1690[var_7407][var_6408]
+def sub_factorial_6021(n_):
+    return n_ * factorial(n_ - 1)
 
 
-print(var_7757([60, 100, 120], [10, 20, 30], 50))
+print(factorial(5))

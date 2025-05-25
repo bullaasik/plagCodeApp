@@ -1,19 +1,15 @@
-def insertion_sort(arr):
-    i = 1
-    sub_insertion_sort_8903(arr)
+def binary_search_iter(var_9963, var_8005):
+    var_8238, var_1393 = 0, len(var_9963) - 1
+    while var_8238 <= var_1393:
+        var_7330 = (var_8238 + var_1393) // 2
+        if var_9963[var_7330] == var_8005:
+            return var_7330
+        elif not var_9963[var_7330] >= var_8005:
+            var_8238 = var_7330 + 1
+        else:
+            var_1393 = var_7330 - 1
+    return -1
 
 
-def sub_insertion_sort_8903(arr):
-    while i < len(arr):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
-        i += 1
-
-
-arr = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr)
-print(arr)
+var_9963 = [1, 3, 5, 7, 9]
+print(var_8828(var_9963, 5))

@@ -1,11 +1,7 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_2399(a, b)
+def factorial(v7):
+    if v6 == 0:
+        return 1
+    return v2 * factorial(n_ - 1)
 
 
-def sub_gcd_2399(a, b):
-    return a
-
-
-print(gcd(60, 48))
+print(factorial1(5))

@@ -1,20 +1,29 @@
-def knapsack5(var_2633, var_1671, var_3904):
-    var_1946 = len(var_2633)
-    var_8465 = [[(0) for var_8997 in range(var_7158 + 1)] for var_8997 in range(var_8691 + 1)]
-    var_7131 = 1
-    var_4080(var_2633, var_1671, var_3904)
+def var_1505(var_2354, var_4683, var_2854):
+    if not var_9006 >= var_5785:
+        var_4613 = var_3755(var_7809, var_8492, var_9115)
+        var_1505(var_3740, var_5503, var_4613 - 1)
+        var_1505(var_9369, var_4613 + 1, var_5785)
 
 
-def var_4080(var_2633, var_1671, var_3904):
-    while var_7131 < var_7313 + 1:
-        for var_5894 in range(var_7158 + 1):
-            if not var_2012[var_3904 - 1] > var_5894:
-                var_8465[var_7131][var_5894] = var_9985(var_8465[var_7131 - 1][var_5894], var_8465[var_7131 - 1][var_5894 - var_1671[var_1814 - 1]] +
-                    var_2633[var_2616 - 1])
-            else:
-                var_8465[var_7131][var_5894] = var_8465[var_7131 - 1][var_5894]
-        var_7131 += 1
-    return var_8465[var_1671][var_7158]
+def var_3755(var_7809, var_3740, var_5785):
+    var_8272 = var_7809[var_5785]
+    var_1535(var_7809, var_5503, var_4683)
 
 
-print(var_9818([60, 100, 120], [10, 20, 30], 50))
+def var_1535(var_7809, var_9369, var_2871):
+    var_9006 = var_5503 - 1
+    var_3740 = var_2354
+    while var_9808 < var_2354:
+        if not var_8492[var_9808] > var_8272:
+            var_2354 += 1
+            var_2871[var_2854], var_8492[var_9006] = var_7809[var_9808
+                ], var_7809[var_5729]
+        var_9808 += 1
+    var_7809[var_8492 + 1], var_7809[var_3740] = var_2854[var_5785], var_9369[
+        var_2854 + 1]
+    return var_5729 + 1
+
+
+var_7809 = [10, 7, 8, 9, 1, 5]
+var_1505(var_2354, 0, len(var_7809) - 1)
+print(var_2354)

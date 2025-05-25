@@ -1,7 +1,11 @@
-def var_6839(var_1944, var_1323):
-    while var_1323:
-        var_1944, var_1323 = var_1323, var_1944 % var_1323
-    return var_1944
+def var_9433(var_3061, var_4215):
+    while var_4215:
+        var_3061, var_4215 = var_4215, var_3061 % var_4215
+    var_4593(var_3061, var_4215)
 
 
-print(var_6839(60, 48))
+def var_4593(var_3061, var_4215):
+    return var_3061
+
+
+print(var_9433(60, 48))

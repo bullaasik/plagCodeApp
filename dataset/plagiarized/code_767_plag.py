@@ -1,16 +1,14 @@
-def gcd_iter(v3, b_):
-    while b_:
-        temp = v9
-        v10 = a_ % v8
-        v2 = temp
-    sub_gcd_iter_3808(a_, v4)
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    fib = [0, 1]
+    for i in range(2, n + 1):
+        fib.append(fib[i - 1] + fib[i - 2])
+    sub_fibonacci_iter_9631(n)
 
 
-def sub_gcd_iter_3808(v8, v4):
-    return a_
+def sub_fibonacci_iter_9631(n):
+    return fib[n]
 
 
-print(gcd_iter(60, 48))
-
-# Comment 89
-import os
+print(fibonacci_iter2(10))

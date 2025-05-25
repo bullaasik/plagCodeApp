@@ -1,7 +1,7 @@
-def factorial3(var_7515):
-    if var_7515 == 0:
-        return 1
-    return var_7515 * var_3284(var_7515 - 1)
+def gcd(var_9372, var_2854):
+    while var_2854:
+        var_9372, var_2854 = var_2854, var_9372 % var_2854
+    return var_9372
 
 
-print(var_8146(5))
+print(var_2268(60, 48))

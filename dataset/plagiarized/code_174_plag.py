@@ -1,11 +1,9 @@
-def factorial(n):
-    if n == 0:
+def var_5256(var_6483):
+    if var_6483 == 0:
         return 1
-    sub_factorial_9039(n)
+    return var_6483 * var_5256(var_6483 - 1)
 
 
-def sub_factorial_9039(n):
-    return n * factorial(n - 1)
-
-
-print(factorial52(5))
+print(var_5256(5))
+import os
+import math

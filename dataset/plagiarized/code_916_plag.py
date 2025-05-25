@@ -1,15 +1,20 @@
-def insertion_sort(v2):
-    for i_ in range(1, len(arr_)):
-        key = arr_[v8]
-        j_ = i_ - 1
-        while v9 >= 0 and arr_[v6] > key:
-            arr_[v4 + 1] = v9[j_]
-            v6 -= 1
-        v2[j_ + 1] = key
+def gcd_iter(a, b):
+    while b:
+        temp = b
+        b = a % b
+        a = temp
+    sub_gcd_iter_3299(a, b)
 
 
-v9 = [64, 34, 25, 12, 22, 11, 90]
-insertion_sort(arr_)
-print(v10)
-import math
+def sub_gcd_iter_3299(a, b):
+    sub_gcd_iter_9163(a, b)
+
+
+def sub_gcd_iter_9163(a, b):
+    return a
+
+
+print(gcd_iter(60, 48))
 import sys
+
+# Comment 1

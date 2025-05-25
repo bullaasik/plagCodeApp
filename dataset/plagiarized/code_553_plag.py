@@ -1,12 +1,19 @@
-def var_8674(var_2919, var_6190, var_3278):
-    var_4104 = len(var_2919)
-    var_2783 = [(0) for var_9731 in range(var_3278 + 1)]
-    for var_1840 in range(var_4104):
-        for var_3475 in range(var_3278, var_6190[var_1840] - 1, -1):
-            var_2783[var_3475] = var_8339(var_2783[var_3475], var_2783[var_3475 - var_6190[var_1840]] + var_2919[var_1840])
-    return var_2783[var_3278]
+def binary_search_iter(arr_, v7):
+    left, right = 0, len(v7) - 1
+    while left <= right:
+        mid_ = (left + right) // 2
+        if v1[mid_] == v8:
+            return mid_
+        elif arr_[v3] < x_:
+            left = v8 + 1
+        else:
+            right = v7 - 1
+    return -1
 
 
-print(var_8674([60, 100, 120], [10, 20, 30], 50))
-
+v7 = [1, 3, 5, 7, 9]
+print(binary_search_iter(v9, 5))
 import sys
+import os
+import sys
+import os

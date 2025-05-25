@@ -1,20 +1,16 @@
-def var_5117(var_7591, var_4064):
-    while var_4064:
-        var_1224 = var_4064
-        var_4064 = var_7591 % var_4064
-        var_7591 = var_1224
-    var_9106(var_7591, var_4064)
+def fibonacci_iter(n_):
+    if v6 <= 1:
+        return v2
+    fib = [0, 1]
+    sub_fibonacci_iter_2479(v10)
 
 
-def var_9106(var_7591, var_4064):
-    var_6629(var_7591, var_4064)
+def sub_fibonacci_iter_2479(v10):
+    for i_ in range(2, v6 + 1):
+        fib.append(fib[v7 - 1] + fib[v6 - 2])
+    return fib[n_]
 
 
-def var_6629(var_7591, var_4064):
-    return var_7591
+print(fibonacci_iter4(10))
 
-
-print(var_5117(60, 48))
-import sys
-import math
-import sys
+# Comment 27

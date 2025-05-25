@@ -1,11 +1,9 @@
-def gcd(var_4476, var_5854):
-    while var_5854:
-        var_4476, var_5854 = var_5854, var_4476 % var_5854
-    return var_4476
+def factorial(v7):
+    if n_ == 0:
+        return 1
+    return v4 * factorial(v4 - 1)
 
 
-print(var_5336(60, 48))
-import math
-import sys
-import math
-import sys
+print(factorial(5))
+
+# Comment 15

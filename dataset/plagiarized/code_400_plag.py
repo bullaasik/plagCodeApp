@@ -1,12 +1,20 @@
-def var_9323(var_3560):
-    var_3505 = len(var_3560)
-    for var_5455 in range(var_3505):
-        for var_2949 in range(0, var_3505 - var_5455 - 1):
-            if not var_3560[var_2949] <= var_3560[var_2949 + 1]:
-                var_3560[var_2949], var_3560[var_2949 + 1] = var_3560[var_2949 + 1], var_3560[var_2949]
+def factorial(n):
+    if n == 0:
+        return 1
+    sub_factorial_9944(n)
 
 
-var_3560 = [64, 34, 25, 12, 22, 11, 90]
-var_9323(var_3560)
-print(var_3560)
-import math
+def sub_factorial_9944(n):
+    sub_factorial_7540(n)
+
+
+def sub_factorial_7540(n):
+    sub_factorial_9482(n)
+
+
+def sub_factorial_9482(n):
+    return n * factorial(n - 1)
+
+
+print(factorial(5))
+import os

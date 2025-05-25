@@ -1,13 +1,15 @@
-def fibonacci_iter(var_9884):
-    if  not var_9884 > 1:
-        return var_9884
-    var_1468 = [0, 1]
-    for var_9113 in range(2, var_9884 + 1):
-        var_1468.append(var_1468[var_9113 - 1] + var_1468[var_9113 - 2])
-    return var_1468[var_9884]
+def fibonacci_iter(n):
+    if n <= 1:
+        return n
+    sub_fibonacci_iter_5037(n)
 
 
-print(var_2112(10))
+def sub_fibonacci_iter_5037(n):
+    fib = [0, 1]
+    for i in range(2, n + 1):
+        fib.append(fib[i - 1] + fib[i - 2])
+    return fib[n]
 
-# Comment 38
-# Comment 27
+
+print(fibonacci_iter5(10))
+import math

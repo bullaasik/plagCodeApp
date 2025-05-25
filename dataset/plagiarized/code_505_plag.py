@@ -1,17 +1,11 @@
-def knapsack_iter(v1, weights_, capacity_):
-    v9 = len(v7)
-    dp = [(0) for _ in range(v8 + 1)]
-    v6 = 0
-    while v6 < n_:
-        w = v1
-        while w < weights_[i_] - 1:
-            dp[w] = max(dp[w], dp[w - v3[v10]] + v7[v3])
-            w += -1
-        v6 += 1
-    return dp[capacity_]
+def var_5128(var_1451, var_9041):
+    while var_3422:
+        var_6806 = var_2071
+        var_2071 = var_1451 % var_9041
+        var_5523 = var_6806
+    return var_2044
 
 
-print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))
+print(var_5128(60, 48))
 
-import sys
-import math
+# Comment 91

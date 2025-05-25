@@ -1,17 +1,11 @@
-def var_4802(var_2486, var_9778):
-    var_1605, var_1262 = 0, len(var_2486) - 1
-    while var_1605 <= var_1262:
-        var_1578 = (var_1605 + var_1262) // 2
-        if not var_2486[var_1578] >= var_9778:
-            var_1605 = var_1578 + 1
-        elif not var_2486[var_1578] <= var_9778:
-            var_1262 = var_1578 - 1
-        else:
-            return var_1578
-    return -1
+def var_6499(var_6425, var_8657):
+    while var_8657:
+        var_6425, var_8657 = var_8657, var_6425 % var_8657
+    sub_var_6499_7859(var_6425, var_8657)
 
 
-var_2486 = [1, 3, 5, 7, 9]
-print(var_4802(var_2486, 5))
+def sub_var_6499_7859(var_6425, var_8657):
+    return var_6425
 
-import math
+
+print(var_6499(60, 48))

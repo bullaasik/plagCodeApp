@@ -1,16 +1,11 @@
-def var_3432(var_4312):
-    var_8922 = 1
-    var_2195(var_4312)
+def var_3236(var_4889, var_4472, var_9660):
+    var_4179 = len(var_4889)
+    var_6613 = [(0) for var_7675 in range(var_9660 + 1)]
+    for var_5889 in range(var_4179):
+        for var_8813 in range(var_9660, var_4472[var_5889] - 1, -1):
+            var_6613[var_8813] = var_1755(var_6613[var_8813], var_6613[var_8813 - var_4472[var_5889]] + var_4889[var_5889])
+    return var_6613[var_9660]
 
 
-def var_2195(var_4312):
-    for var_4549 in range(1, var_4312 + 1):
-        var_8922 *= var_4549
-    return var_8922
-
-
-print(var_34321(5))
-import sys
+print(var_3236([60, 100, 120], [10, 20, 30], 50))
 import math
-
-# Comment 39

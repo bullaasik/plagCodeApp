@@ -1,31 +1,15 @@
-def var_7345(var_2645):
-    if  not len(var_2645) <= 1:
-        var_3814 = len(var_2645) // 2
-        var_1392 = var_2645[:var_3814]
-        var_1114 = var_2645[var_3814:]
-        var_7345(var_1392)
-        var_7345(var_1114)
-        var_2543 = var_2610 = var_5097 = 0
-        while var_2543 < len(var_1392) and var_2610 < len(var_1114):
-            if  not var_1392[var_2543] > var_1114[var_2610]:
-                var_2645[var_5097] = var_1392[var_2543]
-                var_2543 += 1
-            else:
-                var_2645[var_5097] = var_1114[var_2610]
-                var_2610 += 1
-            var_5097 += 1
-        while var_2543 < len(var_1392):
-            var_2645[var_5097] = var_1392[var_2543]
-            var_2543 += 1
-            var_5097 += 1
-        while var_2610 < len(var_1114):
-            var_2645[var_5097] = var_1114[var_2610]
-            var_2610 += 1
-            var_5097 += 1
+def insertion_sort(arr_):
+    i_ = 1
+    while i_ < len(v6):
+        key = arr_[i_]
+        j_ = i_ - 1
+        while v5 >= 0 and arr_[j_] > key:
+            v1[v1 + 1] = v2[v10]
+            v3 -= 1
+        arr_[v5 + 1] = key
+        i_ += 1
 
 
-var_2645 = [10, 7, 8, 9, 1, 5]
-var_7345(var_2645)
-print(var_2645)
-
-import os
+v10 = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr_)
+print(v9)

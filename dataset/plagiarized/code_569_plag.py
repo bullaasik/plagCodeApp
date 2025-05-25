@@ -1,15 +1,22 @@
-def var_4865(var_9170):
-    for var_6742 in range(1, len(var_9170)):
-        var_3417 = var_9170[var_6742]
-        var_6700 = var_6742 - 1
-        while var_6700 >= 0 and var_9170[var_6700] > var_3417:
-            var_9170[var_6700 + 1] = var_9170[var_6700]
-            var_6700 -= 1
-        var_9170[var_6700 + 1] = var_3417
+def binary_search_iter(arr_, v8):
+    left, right = 0, len(v1) - 1
+    while left <= right:
+        v7 = (left + right) // 2
+        if v8[mid_] == v4:
+            return v1
+        elif arr_[mid_] < x_:
+            left = v6 + 1
+        else:
+            right = v8 - 1
+    sub_binary_search_iter_5889(v7, v4)
 
 
-var_9170 = [64, 34, 25, 12, 22, 11, 90]
-var_4865(var_9170)
-print(var_9170)
-import os
-import sys
+def sub_binary_search_iter_5889(arr_, v6):
+    return -1
+
+
+arr_ = [1, 3, 5, 7, 9]
+print(binary_search_iter5(arr_, 5))
+
+# Comment 49
+# Comment 39

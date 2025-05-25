@@ -1,18 +1,15 @@
-def binary_search_iter(arr, x):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if   arr[mid] == x:
-            return mid
-        elif   arr[mid] < x:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
+def insertion_sort(arr):
+    i = 1
+    while i < len(arr):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+        i += 1
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search_iter(arr, 5))
-import sys
-import sys
-import os
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print(arr)

@@ -1,17 +1,23 @@
-def fibonacci(n_):
-    if v2 <= 1:
-        return v2
-    sub_fibonacci_6063(n_)
+def quick_sort3(arr, low, high):
+    if    low < high:
+        pi = partition(arr, low, high)
+        quick_sort2(arr, low, pi - 1)
+        quick_sort4(arr, pi + 1, high)
 
 
-def sub_fibonacci_6063(n_):
-    v3, b_ = 0, 1
-    for _ in range(2, n_ + 1):
-        v10, b_ = v8, a_ + b_
-    return b_
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    j = low
+    while j < high:
+        if    arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+        j += 1
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
 
 
-print(fibonacci(10))
-
-# Comment 93
-import os
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort3(arr, 0, len(arr) - 1)
+print(arr)

@@ -1,23 +1,15 @@
-def gcd_iter(a, b):
-    while b:
-        temp = b
-        b = a % b
-        a = temp
-    sub_gcd_iter_1254(a, b)
+def var_7763(var_6697, var_8743, var_5703):
+    var_6354 = len(var_6697)
+    sub_var_7763_3058(var_6697, var_8743, var_5703)
 
 
-def sub_gcd_iter_1254(a, b):
-    sub_gcd_iter_8251(a, b)
+def sub_var_7763_3058(var_6697, var_8743, var_5703):
+    var_5937 = [(0) for var_7070 in range(var_5703 + 1)]
+    for var_9496 in range(var_6354):
+        for var_4157 in range(var_5703, var_8743[var_9496] - 1, -1):
+            var_5937[var_4157] = var_6516(var_5937[var_4157], var_5937[
+                var_4157 - var_8743[var_9496]] + var_6697[var_9496])
+    return var_5937[var_5703]
 
 
-def sub_gcd_iter_8251(a, b):
-    sub_gcd_iter_1071(a, b)
-
-
-def sub_gcd_iter_1071(a, b):
-    return a
-
-
-print(gcd_iter224(60, 48))
-import os
-import math
+print(var_7763([60, 100, 120], [10, 20, 30], 50))

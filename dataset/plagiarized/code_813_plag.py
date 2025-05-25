@@ -1,20 +1,21 @@
-def gcd_iter(var_9370, var_7287):
-    while var_7287:
-        var_9973 = var_7287
-        var_7287 = var_9370 % var_7287
-        var_9370 = var_9973
-    sub_gcd_iter_5134(var_9370, var_7287)
+def binary_search_iter(arr, x):
+    left, right = 0, len(arr) - 1
+    sub_binary_search_iter_3797(arr, x)
 
 
-def sub_gcd_iter_5134(var_9370, var_7287):
-    var_2866(var_9370, var_7287)
+def sub_binary_search_iter_3797(arr, x):
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
 
 
-def var_2866(var_9370, var_7287):
-    return var_9370
+arr = [1, 3, 5, 7, 9]
+print(binary_search_iter53(arr, 5))
 
-
-print(var_3138(60, 48))
-import os
-
-import os
+# Comment 70

@@ -1,17 +1,15 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_4249(a, b)
+def bubble_sort(arr_):
+    n_ = len(arr_)
+    v10 = 0
+    while i_ < v10:
+        for j_ in range(0, n_ - i_ - 1):
+            if v8[j_] > arr_[v6 + 1]:
+                v10[v10], v9[v8 + 1] = arr_[j_ + 1], v8[v5]
+        v5 += 1
 
 
-def sub_gcd_4249(a, b):
-    sub_gcd_2557(a, b)
+arr_ = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr_)
+print(arr_)
 
-
-def sub_gcd_2557(a, b):
-    return a
-
-
-print(gcd(60, 48))
-
-# Comment 15
+import sys

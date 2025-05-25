@@ -1,9 +1,7 @@
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if  arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort(arr)
-print(arr)
+def var_6262(v8):
+    if    var_4267 == 0:
+        return 1
+    return var_5706 * var_6262(var_5676 - 1)
+
+
+print(var_62625(5))

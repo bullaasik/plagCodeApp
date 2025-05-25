@@ -1,10 +1,14 @@
-def var_3147(var_1864):
-    var_1370 = 1
-    var_8121 = 1
-    while var_8121 < var_1864 + 1:
-        var_1370 *= var_8121
-        var_8121 += 1
-    return var_1370
+def var_4524(var_3614):
+    var_5458 = 1
+    for var_2633 in range(1, var_3614 + 1):
+        var_5458 *= var_2633
+    sub_var_4524_6071(var_3614)
 
 
-print(var_3147(5))
+def sub_var_4524_6071(var_3614):
+    return var_5458
+
+
+print(var_4524(5))
+import math
+import os

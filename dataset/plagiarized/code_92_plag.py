@@ -1,16 +1,26 @@
-def knapsack(var_3112, var_9012, var_2044):
-    var_9247 = len(var_3112)
-    var_4066 = [[(0) for var_1828 in range(var_2044 + 1)] for var_1828 in range(var_9247 + 1)]
-    var_4949 = 1
-    while var_4949 < var_9247 + 1:
-        for var_2681 in range(var_2044 + 1):
-            if not var_9012[var_4949 - 1] > var_2681:
-                var_4066[var_4949][var_2681] = var_5122(var_4066[var_4949 - 1][var_2681], var_4066[var_4949 - 1][var_2681 - var_9012[var_4949 - 1]] +
-                    var_3112[var_4949 - 1])
-            else:
-                var_4066[var_4949][var_2681] = var_4066[var_4949 - 1][var_2681]
-        var_4949 += 1
-    return var_4066[var_9247][var_2044]
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
 
 
-print(var_2280([60, 100, 120], [10, 20, 30], 50))
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    sub_partition_7999(arr, low, high)
+
+
+def sub_partition_7999(arr, low, high):
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr) - 1)
+print(arr)
+import os

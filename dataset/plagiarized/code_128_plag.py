@@ -1,24 +1,16 @@
-def fibonacci1(n_):
-    if n_ <= 1:
-        return n_
-    a_, v7 = 0, 1
-    sub_fibonacci1_8777(n_)
+def var_6234(var_4435):
+    if not var_4435 > 1:
+        return var_4435
+    var_5088(var_4435)
 
 
-def sub_fibonacci1_8777(n_):
-    sub_fibonacci1_2342(n_)
+def var_5088(var_4435):
+    var_2110, var_5345 = 0, 1
+    var_1186 = 2
+    while var_1186 < var_4435 + 1:
+        var_2110, var_5345 = var_5345, var_2110 + var_5345
+        var_1186 += 1
+    return var_5345
 
 
-def sub_fibonacci1_2342(n_):
-    for _ in range(2, n_ + 1):
-        a_, b_ = v7, a_ + v9
-    sub_sub_fibonacci1_2342_1939(n_)
-
-
-def sub_sub_fibonacci1_2342_1939(n_):
-    return b_
-
-
-print(fibonacci1(10))
-
-# Comment 11
+print(var_6742(10))

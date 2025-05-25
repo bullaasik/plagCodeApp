@@ -1,16 +1,13 @@
-def var_2842(var_5548, var_8343, var_1276):
-    var_9143 = len(var_5548)
-    var_2827 = [[(0) for var_1012 in range(var_1276 + 1)] for var_1012 in
-        range(var_9143 + 1)]
-    for var_6081 in range(1, var_9143 + 1):
-        for var_9920 in range(var_1276 + 1):
-            if not var_8343[var_6081 - 1] > var_9920:
-                var_2827[var_6081][var_9920] = var_2763(var_2827[var_6081 -
-                    1][var_9920], var_2827[var_6081 - 1][var_9920 -
-                    var_8343[var_6081 - 1]] + var_5548[var_6081 - 1])
-            else:
-                var_2827[var_6081][var_9920] = var_2827[var_6081 - 1][var_9920]
-    return var_2827[var_9143][var_1276]
-
-
-print(var_2842([60, 100, 120], [10, 20, 30], 50))
+def binary_search(arr, x):
+    low, high = 0, len(arr)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x: low = mid + 1
+        elif arr[mid] > x: high = mid - 1
+        else: return mid
+    return -1
+arr = [1, 3, 5, 7, 9]
+print(binary_search3(arr, 5))
+# Comment 66
+import sys
+import math

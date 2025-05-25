@@ -1,19 +1,19 @@
-def fibonacci(v10):
-    if v2 <= 1:
-        return n_
-    a_, v1 = 0, 1
-    sub_fibonacci_3968(v10)
+def knapsack(var_4076, var_9764, var_1317):
+    var_8418 = len(var_4076)
+    var_5458 = [[(0) for var_1813 in range(var_1317 + 1)] for var_1813 in range(var_8418 + 1)]
+    var_9060 = 1
+    while var_9060 < var_8418 + 1:
+        for var_6253 in range(var_1317 + 1):
+            if not var_9764[var_9060 - 1] > var_6253:
+                var_5458[var_9060][var_6253] = var_1362(var_5458[var_9060 - 1][var_6253], var_5458[var_9060 - 1][var_6253 - var_9764[var_9060 - 1]] +
+                    var_4076[var_9060 - 1])
+            else:
+                var_5458[var_9060][var_6253] = var_5458[var_9060 - 1][var_6253]
+        var_9060 += 1
+    return var_5458[var_8418][var_1317]
 
 
-def sub_fibonacci_3968(v10):
-    for _ in range(2, v10 + 1):
-        v5, v6 = b_, v9 + v10
-    return v7
-
-
-print(fibonacci(10))
-
-# Comment 93
-import os
+print(var_3492([60, 100, 120], [10, 20, 30], 50))
+import sys
 import math
 import os

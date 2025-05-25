@@ -1,24 +1,20 @@
-def quick_sort3(var_5045, var_5566, var_8665):
-    if not var_5566 >= var_8665:
-        var_9632 = var_8299(var_5045, var_5566, var_8665)
-        var_2140(var_5045, var_5566, var_9632 - 1)
-        var_9827(var_5045, var_9632 + 1, var_8665)
+def knapsack(var_2787, var_8096, var_3953):
+    var_8675 = len(var_2787)
+    var_9767 = [[(0) for var_7503 in range(var_3953 + 1)] for var_7503 in
+        range(var_8675 + 1)]
+    sub_knapsack_4483(var_2787, var_8096, var_3953)
 
 
-def var_8299(var_5045, var_5566, var_8665):
-    var_9734 = var_5045[var_8665]
-    var_4114 = var_5566 - 1
-    for var_9980 in range(var_5566, var_8665):
-        if not var_5045[var_9980] > var_9734:
-            var_4114 += 1
-            var_5045[var_4114], var_5045[var_9980] = var_5045[var_9980], var_5045[var_4114]
-    var_5045[var_4114 + 1], var_5045[var_8665] = var_5045[var_8665], var_5045[var_4114 + 1]
-    return var_4114 + 1
+def sub_knapsack_4483(var_2787, var_8096, var_3953):
+    for var_8616 in range(1, var_8675 + 1):
+        for var_2406 in range(var_3953 + 1):
+            if not var_8096[var_8616 - 1] > var_2406:
+                var_9767[var_8616][var_2406] = var_4268(var_9767[var_8616 -
+                    1][var_2406], var_9767[var_8616 - 1][var_2406 -
+                    var_8096[var_8616 - 1]] + var_2787[var_8616 - 1])
+            else:
+                var_9767[var_8616][var_2406] = var_9767[var_8616 - 1][var_2406]
+    return var_9767[var_8675][var_3953]
 
 
-var_5045 = [10, 7, 8, 9, 1, 5]
-var_9978(var_5045, 0, len(var_5045) - 1)
-print(var_5045)
-
-import math
-import os
+print(var_27753([60, 100, 120], [10, 20, 30], 50))

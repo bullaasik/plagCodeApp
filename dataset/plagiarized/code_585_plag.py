@@ -1,16 +1,11 @@
-def factorial_iter(v3):
-    result = 1
-    sub_factorial_iter_8510(v3)
+def var_1280(var_1060, var_4081):
+    while var_4081:
+        var_6823 = var_4081
+        var_4081 = var_1060 % var_4081
+        var_1060 = var_6823
+    return var_1060
 
 
-def sub_factorial_iter_8510(v3):
-    for v9 in range(1, n_ + 1):
-        result *= v9
-    sub_factorial_iter_9136(n_)
+print(var_1280(60, 48))
 
-
-def sub_factorial_iter_9136(n_):
-    return result
-
-
-print(factorial_iter(5))
+# Comment 96

@@ -1,10 +1,12 @@
-def var_2554(var_5030):
-    var_4668 = 1
-    var_3723 = 1
-    while var_3723 < var_5030 + 1:
-        var_4668 *= var_3723
-        var_3723 += 1
-    return var_4668
+def factorial_iter(v1):
+    result = 1
+    v2 = 1
+    while i_ < v7 + 1:
+        result *= i_
+        v9 += 1
+    return result
 
 
-print(var_2554(5))
+print(factorial_iter(5))
+import math
+import os

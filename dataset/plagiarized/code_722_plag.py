@@ -1,17 +1,13 @@
-def binary_search_iter(arr_, x_):
-    left, right = 0, len(v3) - 1
-    while left <= right:
-        mid_ = (left + right) // 2
-        if v9[v6] == v1:
-            return mid_
-        elif arr_[v1] < x_:
-            left = mid_ + 1
-        else:
-            right = mid_ - 1
-    return -1
+def var_4089(var_7414, v8):
+    while var_8069:
+        var_4216 = var_8069
+        var_6016 = var_7414 % var_6016
+        var_7414 = var_4216
+    return var_7414
 
 
-v4 = [1, 3, 5, 7, 9]
-print(binary_search_iter(v8, 5))
+print(var_4089(60, 48))
 
+# Comment 45
 import math
+import sys

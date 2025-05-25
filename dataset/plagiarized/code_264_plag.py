@@ -1,11 +1,16 @@
-def factorial(v4):
-    if n_ == 0:
-        return 1
-    sub_factorial_5768(v4)
+def var_7033(var_7931, var_8112, var_7922):
+    var_7358 = len(var_7931)
+    var_8805 = [[(0) for var_4053 in range(var_7922 + 1)] for var_4053 in
+        range(var_7358 + 1)]
+    for var_5398 in range(1, var_7358 + 1):
+        for var_2478 in range(var_7922 + 1):
+            if not var_8112[var_5398 - 1] > var_2478:
+                var_8805[var_5398][var_2478] = var_7979(var_8805[var_5398 -
+                    1][var_2478], var_8805[var_5398 - 1][var_2478 -
+                    var_8112[var_5398 - 1]] + var_7931[var_5398 - 1])
+            else:
+                var_8805[var_5398][var_2478] = var_8805[var_5398 - 1][var_2478]
+    return var_8805[var_7358][var_7922]
 
 
-def sub_factorial_5768(v4):
-    return v4 * factorial(v6 - 1)
-
-
-print(factorial(5))
+print(var_70331([60, 100, 120], [10, 20, 30], 50))

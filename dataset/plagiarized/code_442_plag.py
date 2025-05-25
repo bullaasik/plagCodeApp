@@ -1,15 +1,27 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    sub_gcd_1064(a, b)
+def quick_sort4(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort4(arr, low, pi - 1)
+        quick_sort1(arr, pi + 1, high)
 
 
-def sub_gcd_1064(a, b):
-    sub_gcd_1352(a, b)
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    j = low
+    while j < high:
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+        j += 1
+    sub_partition_9459(arr, low, high)
 
 
-def sub_gcd_1352(a, b):
-    return a
+def sub_partition_9459(arr, low, high):
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
 
 
-print(gcd(60, 48))
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort1(arr, 0, len(arr) - 1)
+print(arr)

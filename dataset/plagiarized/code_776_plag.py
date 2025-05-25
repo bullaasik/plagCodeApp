@@ -1,8 +1,12 @@
-def factorial_iter(v3):
-    var_7021 = 1
-    for var_4079 in range(1, var_6210 + 1):
-        var_7021 *= var_6476
-    return var_7021
+def var_5518(var_7645):
+    var_5176 = 1
+    for var_6766 in range(1, var_7645 + 1):
+        var_5176 *= var_6766
+    var_5656(var_7645)
 
 
-print(var_2827(5))
+def var_5656(var_7645):
+    return var_5176
+
+
+print(var_55185(5))

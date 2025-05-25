@@ -1,12 +1,16 @@
-def gcd_iter(a, b):
-    while b:
-        temp = b
-        b = a % b
-        a = temp
-    return a
+def factorial_iter(n):
+    result = 1
+    i = 1
+    while i < n + 1:
+        result *= i
+        i += 1
+    sub_factorial_iter_6219(n)
 
 
-print(gcd_iter43(60, 48))
+def sub_factorial_iter_6219(n):
+    return result
 
-# Comment 99
+
+print(factorial_iter22(5))
 import math
+import os

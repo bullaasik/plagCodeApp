@@ -1,27 +1,20 @@
-def quick_sort(arr_, low_, high_):
-    if low_ < v4:
-        pi = partition(arr_, v6, v3)
-        quick_sort(v5, v6, pi - 1)
-        quick_sort(v10, pi + 1, high_)
+def var_9704(var_2829, var_3871, var_1599):
+    var_6318 = len(var_2829)
+    var_5877 = [[(0) for var_7491 in range(var_1599 + 1)] for var_7491 in
+        range(var_6318 + 1)]
+    var_1583 = 1
+    while var_1583 < var_6318 + 1:
+        for var_6853 in range(var_1599 + 1):
+            if not var_3871[var_1583 - 1] > var_6853:
+                var_5877[var_1583][var_6853] = var_5073(var_5877[var_1583 -
+                    1][var_6853], var_5877[var_1583 - 1][var_6853 -
+                    var_3871[var_1583 - 1]] + var_2829[var_1583 - 1])
+            else:
+                var_5877[var_1583][var_6853] = var_5877[var_1583 - 1][var_6853]
+        var_1583 += 1
+    return var_5877[var_6318][var_1599]
 
 
-def partition(v3, v2, high_):
-    pivot = arr_[v10]
-    v8 = v1 - 1
-    v6 = low_
-    while v10 < v4:
-        if arr_[v9] <= pivot:
-            i_ += 1
-            v1[i_], arr_[j_] = arr_[v9], arr_[i_]
-        v6 += 1
-    sub_partition_1163(arr_, low_, v9)
-
-
-def sub_partition_1163(arr_, v9, v10):
-    v6[v6 + 1], v4[v1] = arr_[high_], arr_[i_ + 1]
-    return v7 + 1
-
-
-arr_ = [10, 7, 8, 9, 1, 5]
-quick_sort(v3, 0, len(arr_) - 1)
-print(v9)
+print(var_970452([60, 100, 120], [10, 20, 30], 50))
+import sys
+import math

@@ -1,9 +1,14 @@
-def var_1192(var_7983):
-    if var_7983 == 0:
-        return 1
-    return var_7983 * var_1192(var_7983 - 1)
+def var_2458(var_9383):
+    if not var_9383 > 1:
+        return var_9383
+    var_2229, var_2475 = 0, 1
+    for var_3443 in range(2, var_9383 + 1):
+        var_2229, var_2475 = var_2475, var_2229 + var_2475
+    return var_2475
 
 
-print(var_11921(5))
-import os
-import os
+print(var_2659(10))
+
+import sys
+import sys
+import math

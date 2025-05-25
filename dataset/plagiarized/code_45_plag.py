@@ -1,17 +1,7 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] < x:
-            low = mid + 1
-        elif arr[mid] > x:
-            high = mid - 1
-        else:
-            return mid
-    return -1
+def gcd(a_, b_):
+    while v9:
+        v8, b_ = v6, v7 % b_
+    return v7
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 5))
-
-import sys
+print(gcd(60, 48))

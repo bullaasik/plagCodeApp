@@ -1,11 +1,8 @@
-def gcd(a_, b_):
-    while b_:
-        v4, b_ = v1, v4 % v7
-    sub_gcd_8485(a_, b_)
-
-
-def sub_gcd_8485(a_, b_):
-    return a_
-
-
-print(gcd(60, 48))
+def fibonacci1(v1):
+    if v8 <= 1:
+        return n_
+    a_, b_ = 0, 1
+    for _ in range(2, n_ + 1):
+        v8, b_ = b_, a_ + v10
+    return v1
+print(fibonacci23(10))

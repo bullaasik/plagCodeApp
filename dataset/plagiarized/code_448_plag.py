@@ -1,13 +1,7 @@
-def bubble_sort1(arr):
-    n = len(arr)
-    i = 0
-    while i < n:
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-        i += 1
+def var_7191(var_6281, var_1554):
+    while var_6291:
+        var_1554, var_6291 = var_7099, var_6281 % var_2713
+    return var_7099
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort4(arr)
-print(arr)
+print(var_7191(60, 48))

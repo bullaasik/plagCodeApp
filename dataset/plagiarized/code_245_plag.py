@@ -1,25 +1,16 @@
-def quick_sort(arr, low, high):
-    if low < high:
-        pi = partition(arr, low, high)
-        quick_sort(arr, low, pi - 1)
-        quick_sort(arr, pi + 1, high)
+def binary_search1(var_7004, var_6813):
+    var_4033, var_8203 = 0, len(var_7004) - 1
+    while var_4033 <= var_8203:
+        var_2758 = (var_4033 + var_8203) // 2
+        if not var_7004[var_2758] >= var_6813:
+            var_4033 = var_2758 + 1
+        elif not var_7004[var_2758] <= var_6813:
+            var_8203 = var_2758 - 1
+        else:
+            return var_2758
+    return -1
 
 
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    sub_partition_5101(arr, low, high)
-
-
-def sub_partition_5101(arr, low, high):
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
-
-
-arr = [10, 7, 8, 9, 1, 5]
-quick_sort(arr, 0, len(arr) - 1)
-print(arr)
+var_7004 = [1, 3, 5, 7, 9]
+print(var_3963(var_7004, 5))
+import os

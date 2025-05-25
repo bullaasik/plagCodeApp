@@ -1,8 +1,15 @@
-def var_1348(var_7650, var_8070):
-    while var_8070:
-        var_7650, var_8070 = var_8070, var_7650 % var_8070
-    return var_7650
+def var_8147(var_6681):
+    if var_6681 == 0:
+        return 1
+    var_8345(var_6681)
 
 
-print(var_1348(60, 48))
+def var_8345(var_6681):
+    return var_6681 * var_8147(var_6681 - 1)
+
+
+print(var_8147(5))
+import sys
 import math
+
+import sys

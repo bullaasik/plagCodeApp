@@ -1,18 +1,15 @@
-def var_1235(var_5046, var_2181, var_9758):
-    var_8442 = len(var_5046)
-    var_6089 = [[(0) for var_6675 in range(var_9758 + 1)] for var_6675 in
-        range(var_8442 + 1)]
-    var_2632 = 1
-    while var_2632 < var_8442 + 1:
-        for var_1209 in range(var_9758 + 1):
-            if not var_2181[var_2632 - 1] > var_1209:
-                var_6089[var_2632][var_1209] = var_7696(var_6089[var_2632 -
-                    1][var_1209], var_6089[var_2632 - 1][var_1209 -
-                    var_2181[var_2632 - 1]] + var_5046[var_2632 - 1])
-            else:
-                var_6089[var_2632][var_1209] = var_6089[var_2632 - 1][var_1209]
-        var_2632 += 1
-    return var_6089[var_8442][var_9758]
+def binary_search(arr_, x_):
+    low_, high_ = 0, len(arr_) - 1
+    while v10 <= v9:
+        v10 = (low_ + v10) // 2
+        if v1[mid_] < x_:
+            v10 = mid_ + 1
+        elif arr_[mid_] > x_:
+            v2 = mid_ - 1
+        else:
+            return mid_
+    return -1
 
 
-print(var_1235([60, 100, 120], [10, 20, 30], 50))
+v8 = [1, 3, 5, 7, 9]
+print(binary_search(v6, 5))

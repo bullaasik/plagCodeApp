@@ -1,31 +1,14 @@
-def merge_sort(arr):
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        L = arr[:mid]
-        R = arr[mid:]
-        merge_sort(L)
-        merge_sort(R)
-        i = j = k = 0
-        while i < len(L) and j < len(R):
-            if L[i] <= R[j]:
-                arr[k] = L[i]
-                i += 1
-            else:
-                arr[k] = R[j]
-                j += 1
-            k += 1
-        while i < len(L):
-            arr[k] = L[i]
-            i += 1
-            k += 1
-        while j < len(R):
-            arr[k] = R[j]
-            j += 1
-            k += 1
+def fibonacci_iter(v4):
+    if   n_ <= 1:
+        return v4
+    sub_fibonacci_iter_3843(v4)
 
 
-arr = [10, 7, 8, 9, 1, 5]
-merge_sort(arr)
-print(arr)
-import sys
-import os
+def sub_fibonacci_iter_3843(v4):
+    fib = [0, 1]
+    for v7 in range(2, v9 + 1):
+        fib.append(fib[v3 - 1] + fib[i_ - 2])
+    return fib[v8]
+
+
+print(fibonacci_iter2(10))

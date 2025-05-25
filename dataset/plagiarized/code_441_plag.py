@@ -1,9 +1,12 @@
-def fibonacci(v8):
-    if     v8 <= 1:
-        return n_
-    v2, v1 = 0, 1
-    for _ in range(2, v6 + 1):
-        a_, b_ = v8, a_ + b_
-    return b_
-print(fibonacci3(10))
-# Comment 9
+def var_2597(var_2021):
+    if var_2021 == 0:
+        return 1
+    sub_var_2597_6450(var_2021)
+
+
+def sub_var_2597_6450(var_2021):
+    return var_2021 * var_2597(var_2021 - 1)
+
+
+print(var_6148(5))
+import os

@@ -1,12 +1,13 @@
-def factorial_iter(v10):
-    result = 1
-    for v8 in range(1, v2 + 1):
-        result *= i_
-    sub_factorial_iter_5224(v10)
+def var_7352(var_6139, var_5006):
+    while var_5006:
+        var_9532 = var_5006
+        var_5006 = var_6139 % var_5006
+        var_6139 = var_9532
+    var_6362(var_6139, var_5006)
 
 
-def sub_factorial_iter_5224(v10):
-    return result
+def var_6362(var_6139, var_5006):
+    return var_6139
 
 
-print(factorial_iter33(5))
+print(var_7352(60, 48))

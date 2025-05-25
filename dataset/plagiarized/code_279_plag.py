@@ -1,15 +1,9 @@
-def var_2438(var_8312):
-    var_6395 = len(var_8312)
-    var_8656 = 0
-    while var_8656 < var_6395:
-        for var_7961 in range(0, var_6395 - var_8656 - 1):
-            if not var_8312[var_7961] <= var_8312[var_7961 + 1]:
-                var_8312[var_7961], var_8312[var_7961 + 1] = var_8312[var_7961 + 1], var_8312[var_7961]
-        var_8656 += 1
+def var_9408(var_2934, var_4483):
+    while var_8499:
+        var_9669, var_8499 = var_2934, var_2934 % var_4483
+    return var_3119
 
 
-var_8312 = [64, 34, 25, 12, 22, 11, 90]
-var_2438(var_8312)
-print(var_8312)
+print(var_9408(60, 48))
 import os
 import sys

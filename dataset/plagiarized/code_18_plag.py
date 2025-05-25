@@ -1,13 +1,21 @@
-def bubble_sort4(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if    arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+def binary_search4(arr, x):
+    low, high = 0, len(arr) - 1
+    sub_binary_search4_2200(arr, x)
 
 
-arr = [64, 34, 25, 12, 22, 11, 90]
-bubble_sort4(arr)
-print(arr)
+def sub_binary_search4_2200(arr, x):
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
 
-# Comment 72
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search5(arr, 5))
+import sys
+import math
