@@ -7,6 +7,7 @@ from code_mutations.if_to_ternary import if_to_ternary_mutation
 from code_mutations.obfuscator import custom_obfuscate_code
 from code_mutations.function_splitter import split_function_mutation
 from code_mutations.syntax_checker import is_valid_code
+from similarity_metrics.code2vec import train_word2vec
 
 logger = logging.getLogger(__name__)
 
@@ -216,55 +217,62 @@ print(knapsack_iter([60, 100, 120], [10, 20, 30], 50))"""
 
     orig_dir = Path("dataset/original")
     plag_dir = Path("dataset/plagiarized")
-    log_dir = Path("logs")
     orig_dir.mkdir(parents=True, exist_ok=True)
     plag_dir.mkdir(parents=True, exist_ok=True)
-    log_dir.mkdir(parents=True, exist_ok=True)
+
+    all_codes = [] 
 
     for i in range(num_pairs):
-        if i < num_pairs // 2:  # Плагиат
+        if i < num_pairs // 2:
             template = random.choice(templates).strip()
             orig_file = orig_dir / f"code_{i+1}_orig.py"
             plag_file = plag_dir / f"code_{i+1}_plag.py"
+            
             with open(orig_file, "w", encoding="utf-8") as f:
                 f.write(template)
+            all_codes.append(template)
+            
             mutated = template
             for _ in range(random.randint(3, 6)):
-                new_mutated = random.choice(mutations)(mutated)
+                mut_func = random.choice(mutations)
+                new_mutated = mut_func(mutated)
                 if new_mutated and is_valid_code(new_mutated):
                     mutated = new_mutated
-                else:
-                    logger.warning(f"Мутация отклонена для пары {i+1}: некорректный синтаксис")
-                    if new_mutated:
-                        with open(log_dir / f"invalid_code_{i+1}.py", "w", encoding="utf-8") as f:
-                            f.write(new_mutated)
+            
             if is_valid_code(mutated):
                 with open(plag_file, "w", encoding="utf-8") as f:
                     f.write(mutated)
-            else:
-                logger.warning(f"Итоговый код для пары {i+1} невалиден, пропуск")
-                continue
-        else:  # Не плагиат
+                all_codes.append(mutated)
+        else: 
             template = random.choice(templates).strip()
             template_key = re.search(r"def (factorial|binary_search|gcd|bubble_sort|fibonacci|quick_sort|knapsack)", template)
+            
             if template_key and template_key.group(1) in alt_templates:
                 non_plag_template = alt_templates[template_key.group(1)].strip()
             else:
                 non_plag_template = random.choice(non_plag_templates).strip()
+            
             mutated = non_plag_template
             for _ in range(random.randint(5, 8)):
-                new_mutated = random.choice(mutations)(mutated)
+                mut_func = random.choice(mutations)
+                new_mutated = mut_func(mutated)
                 if new_mutated and is_valid_code(new_mutated):
                     mutated = new_mutated
+            
             orig_file = orig_dir / f"code_{i+1}_orig.py"
             plag_file = plag_dir / f"code_{i+1}_plag.py"
+            
             with open(orig_file, "w", encoding="utf-8") as f:
                 f.write(template)
+            all_codes.append(template)
+            
             if is_valid_code(mutated):
                 with open(plag_file, "w", encoding="utf-8") as f:
                     f.write(mutated)
-            else:
-                logger.warning(f"Итоговый код для пары {i+1} невалиден, пропуск")
-                continue
+                all_codes.append(mutated)
 
-    logger.info(f"{num_pairs} пар файлов успешно сгенерировано.")
+    # Обучение Word2Vec на всем датасете
+    logger.info("Обучение Word2Vec на %d примерах кода...", len(all_codes))
+    train_word2vec(all_codes)
+    
+    logger.info(f"{num_pairs} пар файлов успешно сгенерировано. Word2Vec обучен.")
