@@ -1,14 +1,19 @@
 import ast
+from difflib import SequenceMatcher
 
 def ast_similarity(s1, s2):
-    """
-    Вычисляет сходство на основе абстрактного синтаксического дерева (AST).
-    Возвращает значение от 0.0 до 1.0 (заглушка, требует реальной реализации).
-    """
+    """Вычисляет сходство AST деревьев двух фрагментов кода"""
     try:
         tree1 = ast.parse(s1)
         tree2 = ast.parse(s2)
-        # Здесь должна быть логика сравнения AST, пока возвращаем заглушку
-        return 0.5  # Заглушка
-    except SyntaxError:
+        
+        # Сравнение структуры AST
+        dump1 = ast.dump(tree1)
+        dump2 = ast.dump(tree2)
+        
+        # Используем SequenceMatcher для сравнения
+        similarity = SequenceMatcher(None, dump1, dump2).ratio()
+        
+        return similarity
+    except:
         return 0.0

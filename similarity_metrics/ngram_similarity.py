@@ -1,8 +1,5 @@
 def ngram_similarity(s1, s2, n=3):
-    """
-    Вычисляет сходство на основе n-грамм (по умолчанию 3-граммы).
-    Возвращает значение от 0.0 до 1.0.
-    """
+
     def get_ngrams(text, n):
         words = text.split()
         ngrams = [tuple(words[i:i + n]) for i in range(len(words) - n + 1)]

@@ -1,11 +1,17 @@
 import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+import re
+
+def tokenize_code(code):
+    tokens = re.findall(r'\b\w+\b', code)
+    return ' '.join(tokens)
+
+vectorizer = TfidfVectorizer(max_features=50)
 
 def code2vec(code):
-    """
-    Преобразует код в векторное представление (заглушка).
-    Возвращает массив размером (n, 50), где n - количество строк/токенов.
-    """
-    # Разбиваем код на строки или токены (пример)
-    lines = code.split('\n')
-    n_samples = max(1, len(lines))  # Минимум 1 строка
-    return np.random.rand(n_samples, 50)  # Случайный вектор размером (n, 50)
+    try:
+        tokens = tokenize_code(code)
+        vec = vectorizer.fit_transform([tokens])
+        return vec.toarray()
+    except:
+        return np.zeros((1, 50))
